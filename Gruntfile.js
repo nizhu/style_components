@@ -8,8 +8,8 @@ module.exports = function(grunt){
 			src: ['**/*']
 		}
 	});
-}
 
-grunt.loadNpmTasks('grunt-gh-pages');
+	grunt.loadNpmTasks('grunt-gh-pages');
 
-grunt.registerTask('delpoy', ['gh-pages'])
+	grunt.registerTask('deploy', ['gh-pages']);
+};

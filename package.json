@@ -18,6 +18,10 @@
   "homepage": "https://github.com/amindunited/style_components",
   "devDependencies": {
     "broccoli": "^0.13.2",
+    "broccoli-concat": "0.0.12",
+    "broccoli-less": "^1.0.0",
+    "broccoli-merge-trees": "^0.2.1",
+    "broccoli-static-compiler": "^0.2.1",
     "grunt": "^0.4.5",
     "grunt-gh-pages": "^0.9.1"
   }

@@ -1,3 +1,5 @@
-node_modues/**
+node_modules/**
+tmp/**
+public/**
 bower_components/**
 .DS_Store

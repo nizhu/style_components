@@ -16,5 +16,12 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "ember": "~1.8.1",
+    "less": "~1.7.5",
+    "iCheck": "~1.0.2",
+    "customSelect": "~3.0.1",
+    "iscroll": "~5.1.3"
+  }
 }
