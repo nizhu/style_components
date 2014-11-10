@@ -18,30 +18,251 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <div class="body_content_wrap">
+            <!--[if lt IE 8]>
+                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <h1>Site Styles, and Elements</h1>
+            <!-- Add your site or application content here -->
+            <h1>Site Styles, and Elements</h1>
+            <button onclick="javascript:introJs().start();">Show Details</button>
+    <!--
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+            <script src="js/plugins.js"></script>
+            <script src="js/main.js"></script>
+             data-step="2" data-intro="Ok, wasn't that fun?" data-position='right'
+    -->
+
+            <div class="module">
+                <h2>Colours</h2>
+                <table class="colour-table"
+                    data-step="1" 
+                    data-intro="Each of the Primary brand colours are supplied with an ancillary Light and Dark variation which can be used to create depth, texture, or state variation" 
+                    data-position='bottom'>
+                    <thead>
+                        <th></th>
+                        <th>Feature</th>
+                        <th>Complimentary</th>
+                        <th>Primary</th>
+                        <th>Secondary</th>
+                        <th>Supp 1</th>
+                        <!-- <th>Supp 2</th> -->
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="row_header">Standard</th>
+                            <td class="feature_colour" 
+                                data-step="2" 
+                                data-intro="The feature colour is taken from the 'x' in Luxbet, and should be used to draw focus toward the most key elements." 
+                                data-position='right'>
+                            </td>
+                            <td class="complimentary_colour" 
+                                data-step="3" 
+                                data-intro="The complimentary colour is the green." 
+                                data-position='right'>
+                            </td>
+                            <td class="primary_colour"></td>
+                            <td class="secondary_colour"></td>
+                            <td class="supplementary_colour"></td>
+                            <!-- <td class="supplementary_colour_2"></td> -->
+                        </tr>
+                        <tr>
+                            <th class="row_header">Dark</th>
+                            <td class="feature_colour_dark"></td>
+                            <td class="complimentary_colour_dark"></td>
+                            <td class="primary_colour_dark"></td>
+                            <td class="secondary_colour_dark"></td>
+                            <td class="supplementary_colour_dark"></td>
+                            <!-- <td class="supplementary_colour_2_dark"></td> -->
+                        </tr>
+                        
+                        <tr>
+                            <th class="row_header">Light</th>
+                            <td class="feature_colour_light"></td>
+                            <td class="complimentary_colour_light"></td>
+                            <td class="primary_colour_light"></td>
+                            <td class="secondary_colour_light"></td>
+                            <td class="supplementary_colour_light"></td>
+                            <!-- <td class="supplementary_colour_2_light"></td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="module">
+                <h2>Buttons</h2>
+
+                <button>Default</button>
+                <!-- <button class="neutral">Neutral</button> -->
+                <button class="affirmative">Affirmative</button>
+                <button class="negative">Negative</button>
+                <!-- <button class="negative_alt">Negative alt</button> -->
+            </div>
+
+            <div class="module">
+                <h2>Inputs</h2>
+                <h3>Dropdowns</h3>
+                <select class="styled">
+                    <option value="">choose preset...</option>
+                    <option value="one">two</option>
+                    <option value="two">something</option>
+                    <option value="three">4</option>
+                    <option value="four">5</option>
+                </select>
+
+                <h3>Radio Buttons</h3>
+
+                <div class="example radio_buttons radio_buttons_labeled">
+                    <p>Labeled</p>
+                    <hr/>
+                    <div class="input_wrap col">
+                        <label for="radio_1">First option</label>
+                        <input type="radio" name="iCheck" id="radio_1">
+                    </div>
+                    <div class="input_wrap col">
+                        <label for="radio_2">Second option</label>
+                        <input type="radio" name="iCheck" id="radio_2" checked>
+                    </div>
+                </div>
+
+                <div class="example radio_buttons radio_buttons_positive_negative">
+                    <p>Yes / No (Positive / Negative)</p>
+                    <hr/>
+                    <div class="input_wrap col">
+                        <label for="radio_1">Yes</label>
+                        <input type="radio" name="iCheck_3" id="radio_positive">
+                    </div>
+                    <div class="input_wrap negative col">
+                        <label for="radio_2">No</label>
+                        <input type="radio" name="iCheck_3" id="radio_negative" class="negative" checked>
+                    </div>
+                </div>
+
+                <h3>Check Boxes</h3>
+
+                    <input type="checkbox">
+                    <input type="checkbox" checked>
+            </div>
+
+            <div class="module">
+                <h2>Breadcrumb Navigation</h2>
+                
+
+                <!-- the div that iScroll references (used as 'clipping area', or mask) -->
+                <div id="example_1" class="horizontal_scroll_wrap">
+                    <!-- a container that (the width should be set to the full scroll width) -->
+                    <div class="scroller">
+                        <ul class="clearfix">
+                            <li>
+                                <a class="icon-crest-2" href="javascript:void();">
+                                    <div class="label">R1</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R2</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2 green current">
+                                    <div class="label">R3</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2 green">
+                                    <div class="label">R4</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R5</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R6</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R7</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R8</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R9</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R10</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R11</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R12</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R13</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon-crest-2">
+                                    <div class="label">R14</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
 <!--
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+            <div class="module">
+                <h2>Lists</h2>
+
+                <h3>Navigation Page</h3>
+                <div class="example">
+                    <ul>
+                        <li>
+                            <a></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 -->
-        <script src="js/vendor.js"></script>
-        <script src="js/main.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<!--
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
--->
+
+            <footer>
+                <h1>
+                    <br>
+                </h1>
+            </footer>
+
+            <script src="js/vendor.js"></script>
+            <script src="js/main.js"></script>
+            <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--
+            <script>
+                (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                e.src='//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+                ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            </script>
+    -->
+        </div>
     </body>
 </html>
