@@ -5,7 +5,7 @@ $(function(){
 });
 
 $(function(){
-    $('input').iCheck({
+    $('input.icheck').iCheck({
         checkboxClass: 'icheckbox_square-grey',
         radioClass: 'iradio_square-grey',
         increaseArea: '20%' // optional
@@ -38,4 +38,14 @@ $(function(){
         preventDefault: true,//prevent default scroll events from triggering 
         
     });
+});
+
+
+$(function(){
+	/*
+	var elem = document.querySelector('.js-switch');
+	var init = new Switchery(elem);
+	*/
+	console.log($('.jquery-onoff'));
+	$('.jquery-onoff').onoff();
 });

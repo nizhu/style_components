@@ -36,6 +36,7 @@
 
             <div class="module">
                 <h2>Colours</h2>
+                <button class="help_button" onclick="javascript:introJs().start().goToStep(1);">?</button>
                 <table class="colour-table"
                     data-step="1" 
                     data-intro="Each of the Primary brand colours are supplied with an ancillary Light and Dark variation which can be used to create depth, texture, or state variation" 
@@ -52,38 +53,126 @@
                     <tbody>
                         <tr>
                             <th class="row_header">Standard</th>
-                            <td class="feature_colour" 
+                            <td class="" 
                                 data-step="2" 
                                 data-intro="The feature colour is taken from the 'x' in Luxbet, and should be used to draw focus toward the most key elements." 
                                 data-position='right'>
+                                <div class="feature_colour colour_swatch">
+                                    <div class="cmyk">C18 M100 Y73 K07</div>
+                                    <div class="rgb">R191 G29 B64</div>
+                                    <div class="hex">#BF1D40</div>
+                                </div>
                             </td>
-                            <td class="complimentary_colour" 
+                            <td class="" 
                                 data-step="3" 
-                                data-intro="The complimentary colour is the green." 
+                                data-intro="The complimentary colour is the green. " 
                                 data-position='right'>
+
+                                <div class="complimentary_colour colour_swatch">
+                                    <div class="cmyk">C60 M20 Y100 K03</div>
+                                    <div class="rgb">R118 G157 B57</div>
+                                    <div class="hex">#769D39</div>
+                                </div>
                             </td>
-                            <td class="primary_colour"></td>
+                            <td class=""
+                                data-step="4" 
+                                data-intro="The Primary colours are the grayscale tones that make up common headers, list backgrounds and common use fonr colours." 
+                                data-position='right'
+                            >
+
+                                <div class="primary_colour colour_swatch">
+                                    <div class="cmyk">C68 M61 Y60 K49</div>
+                                    <div class="rgb">R61 G61 B61</div>
+                                    <div class="hex">#3D3D3D</div>
+                                </div>
+                            </td>
                             <td class="secondary_colour"></td>
-                            <td class="supplementary_colour"></td>
+                            <td class=""
+                                data-step="5" 
+                                data-intro="The Supplementary colour is a neutral yellow, that can be used for a variety of non-polarized, or unopinionated actions, notifications and guide elements."
+                                >
+
+                                <div class="supplementary_colour colour_swatch">
+                                    <div class="cmyk">C18 M29 Y100 K00</div>
+                                    <div class="rgb">R216 G175 B35</div>
+                                    <div class="hex">#D8AF23</div>
+                                </div>
+                            </td>
                             <!-- <td class="supplementary_colour_2"></td> -->
                         </tr>
+
                         <tr>
-                            <th class="row_header">Dark</th>
-                            <td class="feature_colour_dark"></td>
-                            <td class="complimentary_colour_dark"></td>
-                            <td class="primary_colour_dark"></td>
+                            <th class="row_header">Dark </th>
+                            <td class="">
+                                <div class="feature_colour_dark colour_swatch">
+                                    <div class="cmyk">C49 M84 Y68 K72</div>
+                                    <div class="rgb">R63 G10 B21</div>
+                                    <div class="hex">#3F0A15</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="complimentary_colour_dark colour_swatch">
+                                    <div class="cmyk">C69 M38 Y100 K26</div>
+                                    <div class="rgb">R80 G106 B38</div>
+                                    <div class="hex">#506A26</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="primary_colour_dark colour_swatch">
+                                    <div class="cmyk">C73 M67 Y66 K81</div>
+                                    <div class="rgb">R19 G19 B19</div>
+                                    <div class="hex">#131313</div>
+                                </div>
+                            </td>
                             <td class="secondary_colour_dark"></td>
-                            <td class="supplementary_colour_dark"></td>
+                            <td class="">
+
+                                <div class="supplementary_colour_dark colour_swatch">
+                                    <div class="cmyk">C39 M45 Y100 K15</div>
+                                    <div class="rgb">R148 G120 B24</div>
+                                    <div class="hex">#947818</div>
+                                </div>
+                            </td>
                             <!-- <td class="supplementary_colour_2_dark"></td> -->
                         </tr>
                         
                         <tr>
                             <th class="row_header">Light</th>
-                            <td class="feature_colour_light"></td>
-                            <td class="complimentary_colour_light"></td>
-                            <td class="primary_colour_light"></td>
+                            
+                            <td class="">
+                                <div class="feature_colour_light colour_swatch">
+                                    <div class="cmyk">C18 M78 Y40 K01</div>
+                                    <div class="rgb">R202 G91 B115</div>
+                                    <div class="hex">#CA5B73</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="complimentary_colour_light colour_swatch">
+                                    <div class="cmyk">C46 M06 Y86 K00</div>
+                                    <div class="rgb">R150 G191 B87</div>
+                                    <div class="hex">#96BF57</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="primary_colour_light colour_swatch">
+                                    <div class="cmyk">C11 M08 Y09 K00</div>
+                                    <div class="rgb">R224 G224 B224</div>
+                                    <div class="hex">#E0E0E0</div>
+                                </div>
+                            </td>
                             <td class="secondary_colour_light"></td>
-                            <td class="supplementary_colour_light"></td>
+                            <td class="">
+
+                                <div class="supplementary_colour_light colour_swatch">
+                                    <div class="cmyk">C14 M19 Y72 K00</div>
+                                    <div class="rgb">R222 G195 B103</div>
+                                    <div class="hex">#DEC367</div>
+                                </div>
+                            </td>
                             <!-- <td class="supplementary_colour_2_light"></td> -->
                         </tr>
                     </tbody>
@@ -92,12 +181,30 @@
 
             <div class="module">
                 <h2>Buttons</h2>
+                <button class="help_button" onclick="javascript:introJs().start().goToStep(7);">?</button>
+                <div data-step="6" 
+                    data-intro="Buttons should be flat, with a 5px corner radius, and 5px padding. When clicked (or :active) buttons should animate through it's respective colour shades and scale with enough subtlety <i>(down (scale(.95) then up scale(1.1))</i>, that it is not immediately obvious to the user. " 
+                    data-position='bottom'
+                >
+                    <button
+                        data-step="7"
+                        data-intro="By default buttons should use the supplementary colour, as it does not allude to any positive, nor negative intent"
+                    >Default</button>
 
-                <button>Default</button>
-                <!-- <button class="neutral">Neutral</button> -->
-                <button class="affirmative">Affirmative</button>
-                <button class="negative">Negative</button>
-                <!-- <button class="negative_alt">Negative alt</button> -->
+                    <!-- <button class="neutral">Neutral</button> -->
+                    <button class="affirmative"
+                        data-step="8"
+                        data-intro="Affirmative classed buttons, are elements who's action have positive, or affirmative connotation from the user. Use cases include 'Confirm', 'Yes', and 'I Agree'. The positive nature of the buttons is denoted by the use of the green complimentary colour."
+                    >Affirmative</button>
+
+                    <button class="negative"
+                        data-step="9"
+                        data-intro="Negative classed buttons, or elements which represent Dissenting actions and denoted by the use of the Feature colour: red."
+                    >
+                        Negative
+                    </button>
+                    <!-- <button class="negative_alt">Negative alt</button> -->
+                </div>
             </div>
 
             <div class="module">
@@ -118,11 +225,11 @@
                     <hr/>
                     <div class="input_wrap col">
                         <label for="radio_1">First option</label>
-                        <input type="radio" name="iCheck" id="radio_1">
+                        <input type="radio" name="iCheck" class="icheck" id="radio_1">
                     </div>
                     <div class="input_wrap col">
                         <label for="radio_2">Second option</label>
-                        <input type="radio" name="iCheck" id="radio_2" checked>
+                        <input type="radio" name="iCheck" class="icheck" id="radio_2" checked>
                     </div>
                 </div>
 
@@ -131,18 +238,23 @@
                     <hr/>
                     <div class="input_wrap col">
                         <label for="radio_1">Yes</label>
-                        <input type="radio" name="iCheck_3" id="radio_positive">
+                        <input type="radio" name="iCheck_3" class="icheck" id="radio_positive">
                     </div>
                     <div class="input_wrap negative col">
                         <label for="radio_2">No</label>
-                        <input type="radio" name="iCheck_3" id="radio_negative" class="negative" checked>
+                        <input type="radio" name="iCheck_3" class="icheck" id="radio_negative" class="negative" checked>
                     </div>
                 </div>
 
                 <h3>Check Boxes</h3>
 
-                    <input type="checkbox">
-                    <input type="checkbox" checked>
+                    <input type="checkbox" class="icheck">
+                    <input type="checkbox" class="icheck" checked>
+
+
+                <h3>Switches / Toggles </h3>
+                    <input type="checkbox" class="jquery-onoff" checked />
+
             </div>
 
             <div class="module">
