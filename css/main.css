@@ -1558,3 +1558,11 @@ h6 {
   box-sizing: border-box;
   min-width: 32%;
 }
+.note:before {
+  content: "Note: ";
+}
+.note {
+  margin: 10px;
+  font-style: italic;
+  font-size: 0.8em;
+}

@@ -203,20 +203,25 @@
                     >
                         Negative
                     </button>
+                    <p class="note">The Negative will be changed to black/grey scale</p>
                     <!-- <button class="negative_alt">Negative alt</button> -->
                 </div>
             </div>
 
             <div class="module">
                 <h2>Inputs</h2>
+
+                <button class="help_button" onclick="javascript:introJs().start().goToStep(10);">?</button>
                 <h3>Dropdowns</h3>
-                <select class="styled">
-                    <option value="">choose preset...</option>
-                    <option value="one">two</option>
-                    <option value="two">something</option>
-                    <option value="three">4</option>
-                    <option value="four">5</option>
-                </select>
+                <div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">
+                    <select class="styled">
+                        <option value="">choose preset...</option>
+                        <option value="one">two</option>
+                        <option value="two">something</option>
+                        <option value="three">4</option>
+                        <option value="four">5</option>
+                    </select>
+                </div>
 
                 <h3>Radio Buttons</h3>
 
@@ -245,6 +250,7 @@
                         <input type="radio" name="iCheck_3" class="icheck" id="radio_negative" class="negative" checked>
                     </div>
                 </div>
+                <p class="note">The Negative will be changed to black/grey scale</p>
 
                 <h3>Check Boxes</h3>
 
@@ -254,6 +260,7 @@
 
                 <h3>Switches / Toggles </h3>
                     <input type="checkbox" class="jquery-onoff" checked />
+                    <p class="note">The Negative will be changed to black/grey scale</p>
 
             </div>
 
@@ -339,7 +346,7 @@
                         </ul>
                     </div>
                 </div>
-
+                <p class="note">The mousedown / click animation, and colour here is incomplete, and the colour (red) is not correct</p>
             </div>
 <!--
             <div class="module">
