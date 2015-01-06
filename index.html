@@ -43,9 +43,8 @@
             <script src="js/main.js"></script>
              data-step="2" data-intro="Ok, wasn't that fun?" data-position='right'
     -->
-
             <div class="module">
-                <h2>Colours</h2>
+                <h2 class="center">Colours</h2>
                 <button class="help_button" onclick="javascript:introJs().start().goToStep(1);">?</button>
                 <table class="colour-table"
                     data-step="1" 
@@ -53,11 +52,11 @@
                     data-position='bottom'>
                     <thead>
                         <th></th>
-                        <th>Feature</th>
-                        <th>Complimentary</th>
-                        <th>Primary</th>
-                        <th>Secondary</th>
-                        <th>Supp 1</th>
+                        <th><h5>Feature</h5></th>
+                        <th><h5>Complimentary</h5></th>
+                        <th><h5>Primary</h5></th>
+                        <!-- <th>Secondary</th> -->
+                        <th><h5>Supp 1</h5></th>
                         <!-- <th>Supp 2</th> -->
                     </thead>
                     <tbody>
@@ -96,7 +95,7 @@
                                     <div class="hex">#3D3D3D</div>
                                 </div>
                             </td>
-                            <td class="secondary_colour"></td>
+                            <!-- <td class="secondary_colour"></td> -->
                             <td class=""
                                 data-step="5" 
                                 data-intro="The Supplementary colour is a neutral yellow, that can be used for a variety of non-polarized, or unopinionated actions, notifications and guide elements."
@@ -131,12 +130,12 @@
                             <td class="">
 
                                 <div class="primary_colour_dark colour_swatch">
-                                    <div class="cmyk">C73 M67 Y66 K81</div>
-                                    <div class="rgb">R19 G19 B19</div>
-                                    <div class="hex">#131313</div>
+                                    <div class="cmyk">C0 M0 Y0 K76</div>
+                                    <div class="rgb">R61 G61 B61</div>
+                                    <div class="hex">#3d3d3d</div>
                                 </div>
                             </td>
-                            <td class="secondary_colour_dark"></td>
+                            <!-- <td class="secondary_colour_dark"></td> -->
                             <td class="">
 
                                 <div class="supplementary_colour_dark colour_swatch">
@@ -147,7 +146,7 @@
                             </td>
                             <!-- <td class="supplementary_colour_2_dark"></td> -->
                         </tr>
-                        
+                        <!--
                         <tr>
                             <th class="row_header">Light</th>
                             
@@ -174,7 +173,6 @@
                                     <div class="hex">#E0E0E0</div>
                                 </div>
                             </td>
-                            <td class="secondary_colour_light"></td>
                             <td class="">
 
                                 <div class="supplementary_colour_light colour_swatch">
@@ -183,14 +181,103 @@
                                     <div class="hex">#DEC367</div>
                                 </div>
                             </td>
-                            <!-- <td class="supplementary_colour_2_light"></td> -->
+                            
+                        </tr>
+                        -->
+                        <tr>
+                            <th class="row_header">Light</th>
+                            
+                            <td class="">
+                                <div class="feature_colour_light colour_swatch">
+                                    <div class="cmyk">C00 M26 Y42 K21</div>
+                                    <div class="rgb">R202 G149 B162</div>
+                                    <div class="hex">#CA95A2</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="complimentary_colour_light colour_swatch">
+                                    <div class="cmyk">C02 M00 Y06 K13</div>
+                                    <div class="rgb">R217 G222 B209</div>
+                                    <div class="hex">#D9DED1</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="primary_colour_light colour_swatch">
+                                    <div class="cmyk">C11 M08 Y09 K00</div>
+                                    <div class="rgb">R224 G224 B224</div>
+                                    <div class="hex">#E0E0E0</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="supplementary_colour_light colour_swatch">
+                                    <div class="cmyk">C00 M05 Y21 K05</div>
+                                    <div class="rgb">R241 G230 B190</div>
+                                    <div class="hex">#F1E6BE</div>
+                                </div>
+                            </td>
+                            
                         </tr>
                     </tbody>
                 </table>
+                <div class="black_and_white_warp">
+                    <h5 class="center">Black</h5>
+                    <div class="black colour_swatch">
+                        <div class="cmyk">C73 M67 Y66 K81</div>
+                        <div class="rgb">R19 G19 B19</div>
+                        <div class="hex">#131313</div>
+                    </div>
+                    <h5 class="center">White</h5>
+                    <div class="white colour_swatch">
+                        <div class="cmyk">C0 M0 Y0 K01</div>
+                        <div class="rgb">R252 G252 B252</div>
+                        <div class="hex">#131313</div>
+                    </div>
+
+                </div>
             </div>
 
             <div class="module">
-                <h2>Buttons</h2>
+            <h2 class="center">Fonts</h2>
+                <h5>All Heading and title texts are in Helvetica Condensed Bold.</h5>
+                <p>All standard text is arial.</p>
+            </div>
+
+            <div class="module">
+                <h2 class="center">Headings</h2>
+                <button class="help_button" onclick="javascript:introJs().start().goToStep(6);">?</button>
+                <h1>H1</h1>
+                <h2>H2</h2>
+                <h3>H3</h3>
+                <h4>H4</h4>
+                <h5>H5</h5>
+                <h6>H6</h6>
+
+                <div class="example" data-step="6" data-intro="All Heading uses HelveticaNeueBdCn, and progress in size from .9 to 2.0em. <br/> Here, set on a black backgound with white text the ">
+                    <h3 class="title">List heading example</h3>
+                    <div class="wrap">
+                        <h3 class="list_header">Section Title <span class="float_right">Subsection Title</span></h3>
+                        <!--
+                        <ul class="luxbet_list_page">
+                            <li>Baseball</li>
+                            <li>Basketball</li>
+                            <li>AFL</li>
+                            <li>Channel Surfing</li>
+                            <li>Darts</li>
+                            <li>Rugby</li>
+                            <li>Bowling</li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="module">
+                <h2 class="center">Buttons</h2>
                 <button class="help_button" onclick="javascript:introJs().start().goToStep(7);">?</button>
                 <div data-step="6" 
                     data-intro="Buttons should be flat, with a 5px corner radius, and 5px padding. When clicked (or :active) buttons should animate through it's respective colour shades and scale with enough subtlety <i>(down (scale(.95) then up scale(1.1))</i>, that it is not immediately obvious to the user. " 
@@ -205,7 +292,11 @@
                     <button class="affirmative"
                         data-step="8"
                         data-intro="Affirmative classed buttons, are elements who's action have positive, or affirmative connotation from the user. Use cases include 'Confirm', 'Yes', and 'I Agree'. The positive nature of the buttons is denoted by the use of the green complimentary colour."
-                    >Affirmative</button>
+                    >Positive</button>
+
+                    <button class="alternative">
+                        Alternative
+                    </button>
 
                     <button class="negative"
                         data-step="9"
@@ -213,16 +304,16 @@
                     >
                         Negative
                     </button>
-                    <p class="note">The Negative will be changed to black/grey scale</p>
                     <!-- <button class="negative_alt">Negative alt</button> -->
                 </div>
             </div>
 
             <div class="module">
-                <h2>Inputs</h2>
+                <h2 class="center">Inputs</h2>
 
                 <button class="help_button" onclick="javascript:introJs().start().goToStep(10);">?</button>
                 <h3>Dropdowns</h3>
+<!--
                 <div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">
                     <select class="styled">
                         <option value="">choose preset...</option>
@@ -232,7 +323,23 @@
                         <option value="four">5</option>
                     </select>
                 </div>
+-->
 
+                <div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">
+                    <select class="fancySelect">
+                        <option value="">choose preset...</option>
+                        <option value="one">two</option>
+                        <option value="two">something</option>
+                        <option value="three">Three</option>
+                        <option value="four">Four</option>
+                        <optgroup label="A Group ">
+                            <option value="five">Five</option>
+                            <option value="six">Six</option>
+                            <option value="seven">Seven</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="clearspace"></div>
                 <h3>Radio Buttons</h3>
 
                 <div class="example radio_buttons radio_buttons_labeled">
@@ -251,16 +358,15 @@
                 <div class="example radio_buttons radio_buttons_positive_negative">
                     <p>Yes / No (Positive / Negative)</p>
                     <hr/>
-                    <div class="input_wrap col">
+                    <div class="input_wrap affirmative col">
                         <label for="radio_1">Yes</label>
                         <input type="radio" name="iCheck_3" class="icheck" id="radio_positive">
                     </div>
                     <div class="input_wrap negative col">
                         <label for="radio_2">No</label>
-                        <input type="radio" name="iCheck_3" class="icheck" id="radio_negative" class="negative" checked>
+                        <input type="radio" name="iCheck_3" class="icheck" id="radio_negative" checked>
                     </div>
                 </div>
-                <p class="note">The Negative will be changed to black/grey scale</p>
 
                 <h3>Check Boxes</h3>
 
@@ -270,108 +376,301 @@
 
                 <h3>Switches / Toggles </h3>
                     <input type="checkbox" class="jquery-onoff" checked />
-                    <p class="note">The Negative will be changed to black/grey scale</p>
 
             </div>
 
             <div class="module">
-                <h2>Breadcrumb Navigation</h2>
-                
+                <h2 class="center">Icons</h2>
+                <p>All Icon classes (including duplicates):</p>
+                <div class="example_icons">
+                    <div class="icon icon-sports-horse-racing"></div>
+                    <div class="icon icon-sports-greyhound-racing"></div>
+
+                    <div class="icon icon-sports-harness-racing"></div>
+
+                    <div class="icon run"></div>
+                    <div class="icon icon-sports-athletics"></div>
+
+                    <div class="icon icon-sports-internat-rules"></div>
+                    <div class="icon icon-sports-australian-rules"></div>
+                    <div class="icon icon-sports-baseball"></div>
+                    <div class="icon icon-sports-handball"></div>
+                    <div class="icon icon-sports-basketball"></div>
+                    <div class="icon icon-sports-boxing"></div>
+
+
+                    <div class="icon icon-sports-cricket"></div>
+                    <div class="icon icon-sports-cycling"></div>
+                    <div class="icon icon-sports-darts"></div>
+                    <div class="icon icon-sports-elections"></div>
+                    <div class="icon icon-undecided"></div>
+                    <div class="icon icon-sports-special-events"></div>
+                    <!--
+                    /* alternate special event icon (probably better)
+                    -->
+                    <div class="icon icon-sports-special-events"></div>
+
+                    <div class="icon icon-statement"></div>
+                    <div class="icon icon-sports-financial"></div>
+                    <div class="icon icon-sports-soccer-matches"></div>
+                    <div class="icon icon-sports-golf"></div>
+
+                    <div class="icon icon-sports-greyhound-racing"></div>
+
+                    <div class="icon icon-sports-harness-racing"></div>
+
+                    <div class="icon icon-help"></div>
+
+                    <div class="icon icon-sports-horse-racing"></div>
+                    <div class="icon icon-sports-trainers-challenge"></div>
+                    <div class="icon icon-sports-jockeys-challenge"></div>
+                    <div class="icon icon-sports-feature-racing"></div>
+                    <div class="icon icon-sports-racing-live"></div>
+                    <div class="icon icon-sports-horse"></div>
+
+                    <div class="icon icon-sports-floorball"></div>
+                    <div class="icon icon-sports-field-hockey"></div>
+                    <div class="icon icon-sports-bandy"></div>
+                    <div class="icon icon-sports-ice-hockey"></div>
+                    <div class="icon icon-sports-hockey"></div>
+                    <div class="icon icon-sports-martial-arts"></div>
+                    <div class="icon icon-sports-motor-sport"></div>
+
+                    <div class="icon icon-sports-motor-netball"></div>
+
+                    <div class="icon icon-sports-time"></div>
+
+
+                    <div class="icon icon-sports-rugby"></div>
+                    <div class="icon icon-sports-rugby-league"></div>
+
+                    <div class="icon icon-sports-snooker"></div>
+
+                    <div class="icon icon-sports-soccer-futures"></div>
+
+                    <div class="icon icon-sports-soccer-world-cup"></div>
+                    <div class="icon icon-sports-football"></div>
+                    <div class="icon icon-sports-beach-soccer"></div>
+                    <div class="icon icon-sports-soccer-matches"></div>
+
+                    <div class="icon icon-sports-yachting"></div>
+                    <div class="icon icon-sports-wintersports"></div>
+                    <div class="icon icon-sports-ludicrous-lux-lines"></div>
+                    <div class="icon icon-sports-london-games"></div>
+                    <div class="icon icon-sports-live-betting"></div>
+                    <div class="icon icon-sports-entertainment"></div>
+                    <div class="icon icon-sports-e-sports"></div>
+                    <div class="icon icon-sports-commonwealth-games"></div>
+                    <div class="icon icon-sports-gaelic-football"></div>
+
+                    <div class="icon icon-sports-surfing"></div>
+
+                    <div class="icon icon-sports-waterpolo"></div>
+                    <div class="icon icon-sports-swimming"></div>
+
+                    <div class="icon icon-tabcorp"></div>
+
+                    <div class="icon icon-luxbet"></div>
+
+                    <div class="icon icon-sports-tennis"></div>
+
+                    <div class="icon icon-time"></div>
+
+                    <div class="icon icon-sports-volleyball"></div>
+
+
+                    <div class="icon icon-next-to-go"></div>
+
+                    <div class="icon icon-racing"></div>
+
+                    <div class="icon icon-sports"></div>
+
+
+                    <div class="icon icon-other"></div>
+
+                    <div class="icon icon-betslip"></div>
+
+                </div>
+                <div class="clearspace"></div>
+                <p> Large: </p>
+                <div class="example_icons">
+
+                    <div class="icon large icon-sports-horse-racing"></div>
+                    <div class="icon large icon-sports-greyhound-racing "></div>
+
+                    <div class="icon large icon-sports-harness-racing"></div>
+
+                    <div class="icon large run"></div>
+                </div>
+
+                <div class="clearspace"></div>
+                <p> Default: </p>
+                <div class="example_icons">
+
+                    <div class="icon icon-sports-horse-racing"></div>
+                    <div class="icon icon-sports-greyhound-racing "></div>
+
+                    <div class="icon icon-sports-harness-racing"></div>
+
+                    <div class="icon run"></div>
+                </div>
+
+                <div class="clearspace"></div>
+                <p> Small: </p>
+                <div class="example_icons">
+
+                    <div class="icon small icon-sports-horse-racing"></div>
+                    <div class="icon small icon-sports-greyhound-racing "></div>
+
+                    <div class="icon small icon-sports-harness-racing"></div>
+
+                    <div class="icon small run"></div>
+                </div>
+            </div>
+            <div class="module">
+                <h2 class="center">Cheverons</h2>
+                <div class="clearspace"></div>
+                <p> Default: </p>
+                <div class="example_icons">
+                    <div class="icon-cheveron">
+                        <div class="label">R44</div>
+                    </div>
+
+                    <div class="icon-cheveron current">
+                        <div class="label">R45</div>
+                    </div>
+
+                    <div class="icon-cheveron positive">
+                        <div class="label">R46</div>
+                    </div>
+                    <div class="icon-cheveron negative">
+                        <div class="label">R47</div>
+                    </div>
+                </div>
+
+                <div class="clearspace"></div>
+                <p> Large: </p>
+                <div class="example_icons">
+                    <div class="icon-cheveron large">
+                        <div class="label">R44</div>
+                    </div>
+
+                    <div class="icon-cheveron current large">
+                        <div class="label">R45</div>
+                    </div>
+
+                    <div class="icon-cheveron positive large">
+                        <div class="label">R46</div>
+                    </div>
+                    <div class="icon-cheveron negative large">
+                        <div class="label">R47</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module">
+                <h2 class="center">Breadcrumb Navigation</h2>
 
                 <!-- the div that iScroll references (used as 'clipping area', or mask) -->
-                <div id="example_1" class="horizontal_scroll_wrap">
+                <div id="example_2" class="horizontal_scroll_wrap">
                     <!-- a container that (the width should be set to the full scroll width) -->
                     <div class="scroller">
                         <ul class="clearfix">
                             <li>
-                                <a class="icon-crest-2" href="javascript:void();">
-                                    <div class="label">R1</div>
-                                </a>
+                                <div class="icon-cheveron red">
+                                    <div class="label">R40</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R2</div>
-                                </a>
+                                <div class="icon-cheveron red">
+                                    <div class="label">R41</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2 green current">
-                                    <div class="label">R3</div>
-                                </a>
+                                <div class="icon-cheveron current green">
+                                    <div class="label">R42</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2 green">
-                                    <div class="label">R4</div>
-                                </a>
+                                <div class="icon-cheveron green">
+                                    <div class="label">R43</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R5</div>
-                                </a>
+                                <div class="icon-cheveron">
+                                    <div class="label">R44</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R6</div>
-                                </a>
+                                <div class="icon-cheveron">
+                                    <div class="label">R45</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R7</div>
-                                </a>
+                                <div class="icon-cheveron">
+                                    <div class="label">R46</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R8</div>
-                                </a>
+                                <div class="icon-cheveron">
+                                    <div class="label">R47</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R9</div>
-                                </a>
+                                <div class="icon-cheveron">
+                                    <div class="label">R48</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R10</div>
-                                </a>
+                                <div class="icon-cheveron">
+                                    <div class="label">R49</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R11</div>
-                                </a>
+                                <div class="icon-cheveron">
+                                    <div class="label">R50</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R12</div>
-                                </a>
+                                <div class="icon-cheveron">
+                                    <div class="label">R51</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R13</div>
-                                </a>
+                                <div class="icon-cheveron">
+                                    <div class="label">R52</div>
+                                </div>
                             </li>
                             <li>
-                                <a class="icon-crest-2">
-                                    <div class="label">R14</div>
-                                </a>
+                                <div class="icon-cheveron">
+                                    <div class="label">R53</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R54</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R55</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R56</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R57</div>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <p class="note">The mousedown / click animation, and colour here is incomplete, and the colour (red) is not correct</p>
             </div>
-<!--
-            <div class="module">
-                <h2>Lists</h2>
 
-                <h3>Navigation Page</h3>
-                <div class="example">
-                    <ul>
-                        <li>
-                            <a></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
--->
 
             <footer>
                 <h1>
@@ -393,5 +692,7 @@
             </script>
     -->
         </div>
+
+
     </body>
 </html>
