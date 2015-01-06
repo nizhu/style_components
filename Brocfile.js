@@ -20,13 +20,15 @@ var vendorJSFiles = [
     /*"bower_components/ember-cloaking/ember-cloaking.js",
     "bower_components/ace-builds/src/ace.js",
     "bower_components/mousetrap/mousetrap.js"*/
-
-    //"bower_components/customSelect/jquery.customSelect.js",
+    "intro.js/intro.js",
+    "jquery.customSelect/jquery.customSelect.js",
+    "jquery.onoff/dist/jquery.onoff.js",
     "iCheck/icheck.min.js",
     "jscrollpane/script/mwheelintent.js",
     "jscrollpane/script/jquery.mousewheel.js",
     "jscrollpane/script/jquery.jscrollpane.min.js",
-    "iscroll/build/iscroll.js"
+    "iscroll/build/iscroll.js",
+    "fancyselect/fancySelect.js"
 ];
 
 
@@ -54,7 +56,12 @@ appLess = compileLess('src/styles', 'main.less', '/css/main.css');
 
 
 var cssLibs = [
-	
+	"iCheck/skins/square/grey.css",
+    "iCheck/skins/all.css",
+    "intro.js/introjs.css",
+    "jquery.onoff/dist/jquery.onoff.css",
+    "fancySelect/fancyselect.css"
+
 ];
 
 

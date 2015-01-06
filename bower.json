@@ -22,6 +22,11 @@
     "less": "~1.7.5",
     "iCheck": "~1.0.2",
     "customSelect": "~3.0.1",
-    "iscroll": "~5.1.3"
+    "iscroll": "~5.1.3",
+    "jquery.customSelect": "*",
+    "intro.js": "~1.0.0",
+    "switchery": "~0.6.3",
+    "jquery.onoff": "~0.3.6",
+    "fancyselect": "amindunited/FancySelect"
   }
 }

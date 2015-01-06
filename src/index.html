@@ -18,30 +18,681 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <div class="body_content_wrap">
+            <!--[if lt IE 8]>
+                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <h1>Site Styles, and Elements</h1>
+            <!-- Add your site or application content here -->
+            <h1>Living Style Guide</h1>
+            <p>
+                Examples of Elements and Components for the site.
+                <p>More information is available through the 
+                    <span style="position:relative; width: 1.8em; height: 1.8em; display: inline-block; margin-left:5px;">
+                        <button class="help_button">?</button>
+                    </span>
+                 buttons </p>
+            </p>
+            <!--
+            <button onclick="javascript:introJs().start();">Show Details</button>
+            -->
+    <!--
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+            <script src="js/plugins.js"></script>
+            <script src="js/main.js"></script>
+             data-step="2" data-intro="Ok, wasn't that fun?" data-position='right'
+    -->
+            <div class="module">
+                <h2 class="center">Colours</h2>
+                <button class="help_button" onclick="javascript:introJs().start().goToStep(1);">?</button>
+                <table class="colour-table"
+                    data-step="1" 
+                    data-intro="Each of the Primary brand colours are supplied with an ancillary Light and Dark variation which can be used to create depth, texture, or state variation" 
+                    data-position='bottom'>
+                    <thead>
+                        <th></th>
+                        <th><h5>Feature</h5></th>
+                        <th><h5>Complimentary</h5></th>
+                        <th><h5>Primary</h5></th>
+                        <!-- <th>Secondary</th> -->
+                        <th><h5>Supp 1</h5></th>
+                        <!-- <th>Supp 2</th> -->
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th class="row_header">Standard</th>
+                            <td class="" 
+                                data-step="2" 
+                                data-intro="The feature colour is taken from the 'x' in Luxbet, and should be used to draw focus toward the most key elements." 
+                                data-position='right'>
+                                <div class="feature_colour colour_swatch">
+                                    <div class="cmyk">C18 M100 Y73 K07</div>
+                                    <div class="rgb">R191 G29 B64</div>
+                                    <div class="hex">#BF1D40</div>
+                                </div>
+                            </td>
+                            <td class="" 
+                                data-step="3" 
+                                data-intro="The complimentary colour is the green. " 
+                                data-position='right'>
+
+                                <div class="complimentary_colour colour_swatch">
+                                    <div class="cmyk">C60 M20 Y100 K03</div>
+                                    <div class="rgb">R118 G157 B57</div>
+                                    <div class="hex">#769D39</div>
+                                </div>
+                            </td>
+                            <td class=""
+                                data-step="4" 
+                                data-intro="The Primary colours are the grayscale tones that make up common headers, list backgrounds and common use fonr colours." 
+                                data-position='right'
+                            >
+
+                                <div class="primary_colour colour_swatch">
+                                    <div class="cmyk">C68 M61 Y60 K49</div>
+                                    <div class="rgb">R61 G61 B61</div>
+                                    <div class="hex">#3D3D3D</div>
+                                </div>
+                            </td>
+                            <!-- <td class="secondary_colour"></td> -->
+                            <td class=""
+                                data-step="5" 
+                                data-intro="The Supplementary colour is a neutral yellow, that can be used for a variety of non-polarized, or unopinionated actions, notifications and guide elements."
+                                >
+
+                                <div class="supplementary_colour colour_swatch">
+                                    <div class="cmyk">C18 M29 Y100 K00</div>
+                                    <div class="rgb">R216 G175 B35</div>
+                                    <div class="hex">#D8AF23</div>
+                                </div>
+                            </td>
+                            <!-- <td class="supplementary_colour_2"></td> -->
+                        </tr>
+
+                        <tr>
+                            <th class="row_header">Dark </th>
+                            <td class="">
+                                <div class="feature_colour_dark colour_swatch">
+                                    <div class="cmyk">C49 M84 Y68 K72</div>
+                                    <div class="rgb">R63 G10 B21</div>
+                                    <div class="hex">#3F0A15</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="complimentary_colour_dark colour_swatch">
+                                    <div class="cmyk">C69 M38 Y100 K26</div>
+                                    <div class="rgb">R80 G106 B38</div>
+                                    <div class="hex">#506A26</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="primary_colour_dark colour_swatch">
+                                    <div class="cmyk">C0 M0 Y0 K76</div>
+                                    <div class="rgb">R61 G61 B61</div>
+                                    <div class="hex">#3d3d3d</div>
+                                </div>
+                            </td>
+                            <!-- <td class="secondary_colour_dark"></td> -->
+                            <td class="">
+
+                                <div class="supplementary_colour_dark colour_swatch">
+                                    <div class="cmyk">C39 M45 Y100 K15</div>
+                                    <div class="rgb">R148 G120 B24</div>
+                                    <div class="hex">#947818</div>
+                                </div>
+                            </td>
+                            <!-- <td class="supplementary_colour_2_dark"></td> -->
+                        </tr>
+                        <!--
+                        <tr>
+                            <th class="row_header">Light</th>
+                            
+                            <td class="">
+                                <div class="feature_colour_light colour_swatch">
+                                    <div class="cmyk">C18 M78 Y40 K01</div>
+                                    <div class="rgb">R202 G91 B115</div>
+                                    <div class="hex">#CA5B73</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="complimentary_colour_light colour_swatch">
+                                    <div class="cmyk">C46 M06 Y86 K00</div>
+                                    <div class="rgb">R150 G191 B87</div>
+                                    <div class="hex">#96BF57</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="primary_colour_light colour_swatch">
+                                    <div class="cmyk">C11 M08 Y09 K00</div>
+                                    <div class="rgb">R224 G224 B224</div>
+                                    <div class="hex">#E0E0E0</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="supplementary_colour_light colour_swatch">
+                                    <div class="cmyk">C14 M19 Y72 K00</div>
+                                    <div class="rgb">R222 G195 B103</div>
+                                    <div class="hex">#DEC367</div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                        -->
+                        <tr>
+                            <th class="row_header">Light</th>
+                            
+                            <td class="">
+                                <div class="feature_colour_light colour_swatch">
+                                    <div class="cmyk">C00 M26 Y42 K21</div>
+                                    <div class="rgb">R202 G149 B162</div>
+                                    <div class="hex">#CA95A2</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="complimentary_colour_light colour_swatch">
+                                    <div class="cmyk">C02 M00 Y06 K13</div>
+                                    <div class="rgb">R217 G222 B209</div>
+                                    <div class="hex">#D9DED1</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="primary_colour_light colour_swatch">
+                                    <div class="cmyk">C11 M08 Y09 K00</div>
+                                    <div class="rgb">R224 G224 B224</div>
+                                    <div class="hex">#E0E0E0</div>
+                                </div>
+                            </td>
+                            <td class="">
+
+                                <div class="supplementary_colour_light colour_swatch">
+                                    <div class="cmyk">C00 M05 Y21 K05</div>
+                                    <div class="rgb">R241 G230 B190</div>
+                                    <div class="hex">#F1E6BE</div>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="black_and_white_warp">
+                    <h5 class="center">Black</h5>
+                    <div class="black colour_swatch">
+                        <div class="cmyk">C73 M67 Y66 K81</div>
+                        <div class="rgb">R19 G19 B19</div>
+                        <div class="hex">#131313</div>
+                    </div>
+                    <h5 class="center">White</h5>
+                    <div class="white colour_swatch">
+                        <div class="cmyk">C0 M0 Y0 K01</div>
+                        <div class="rgb">R252 G252 B252</div>
+                        <div class="hex">#131313</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="module">
+            <h2 class="center">Fonts</h2>
+                <h5>All Heading and title texts are in Helvetica Condensed Bold.</h5>
+                <p>All standard text is arial.</p>
+            </div>
+
+            <div class="module">
+                <h2 class="center">Headings</h2>
+                <button class="help_button" onclick="javascript:introJs().start().goToStep(6);">?</button>
+                <h1>H1</h1>
+                <h2>H2</h2>
+                <h3>H3</h3>
+                <h4>H4</h4>
+                <h5>H5</h5>
+                <h6>H6</h6>
+
+                <div class="example" data-step="6" data-intro="All Heading uses HelveticaNeueBdCn, and progress in size from .9 to 2.0em. <br/> Here, set on a black backgound with white text the ">
+                    <h3 class="title">List heading example</h3>
+                    <div class="wrap">
+                        <h3 class="list_header">Section Title <span class="float_right">Subsection Title</span></h3>
+                        <!--
+                        <ul class="luxbet_list_page">
+                            <li>Baseball</li>
+                            <li>Basketball</li>
+                            <li>AFL</li>
+                            <li>Channel Surfing</li>
+                            <li>Darts</li>
+                            <li>Rugby</li>
+                            <li>Bowling</li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="module">
+                <h2 class="center">Buttons</h2>
+                <button class="help_button" onclick="javascript:introJs().start().goToStep(7);">?</button>
+                <div data-step="6" 
+                    data-intro="Buttons should be flat, with a 5px corner radius, and 5px padding. When clicked (or :active) buttons should animate through it's respective colour shades and scale with enough subtlety <i>(down (scale(.95) then up scale(1.1))</i>, that it is not immediately obvious to the user. " 
+                    data-position='bottom'
+                >
+                    <button
+                        data-step="7"
+                        data-intro="By default buttons should use the supplementary colour, as it does not allude to any positive, nor negative intent"
+                    >Default</button>
+
+                    <!-- <button class="neutral">Neutral</button> -->
+                    <button class="affirmative"
+                        data-step="8"
+                        data-intro="Affirmative classed buttons, are elements who's action have positive, or affirmative connotation from the user. Use cases include 'Confirm', 'Yes', and 'I Agree'. The positive nature of the buttons is denoted by the use of the green complimentary colour."
+                    >Positive</button>
+
+                    <button class="alternative">
+                        Alternative
+                    </button>
+
+                    <button class="negative"
+                        data-step="9"
+                        data-intro="Negative classed buttons, or elements which represent Dissenting actions and denoted by the use of the Feature colour: red."
+                    >
+                        Negative
+                    </button>
+                    <!-- <button class="negative_alt">Negative alt</button> -->
+                </div>
+            </div>
+
+            <div class="module">
+                <h2 class="center">Inputs</h2>
+
+                <button class="help_button" onclick="javascript:introJs().start().goToStep(10);">?</button>
+                <h3>Dropdowns</h3>
 <!--
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+                <div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">
+                    <select class="styled">
+                        <option value="">choose preset...</option>
+                        <option value="one">two</option>
+                        <option value="two">something</option>
+                        <option value="three">4</option>
+                        <option value="four">5</option>
+                    </select>
+                </div>
 -->
-        <script src="js/vendor.js"></script>
-        <script src="js/main.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<!--
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
--->
+
+                <div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">
+                    <select class="fancySelect">
+                        <option value="">choose preset...</option>
+                        <option value="one">two</option>
+                        <option value="two">something</option>
+                        <option value="three">Three</option>
+                        <option value="four">Four</option>
+                        <optgroup label="A Group ">
+                            <option value="five">Five</option>
+                            <option value="six">Six</option>
+                            <option value="seven">Seven</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="clearspace"></div>
+                <h3>Radio Buttons</h3>
+
+                <div class="example radio_buttons radio_buttons_labeled">
+                    <p>Labeled</p>
+                    <hr/>
+                    <div class="input_wrap col">
+                        <label for="radio_1">First option</label>
+                        <input type="radio" name="iCheck" class="icheck" id="radio_1">
+                    </div>
+                    <div class="input_wrap col">
+                        <label for="radio_2">Second option</label>
+                        <input type="radio" name="iCheck" class="icheck" id="radio_2" checked>
+                    </div>
+                </div>
+
+                <div class="example radio_buttons radio_buttons_positive_negative">
+                    <p>Yes / No (Positive / Negative)</p>
+                    <hr/>
+                    <div class="input_wrap affirmative col">
+                        <label for="radio_1">Yes</label>
+                        <input type="radio" name="iCheck_3" class="icheck" id="radio_positive">
+                    </div>
+                    <div class="input_wrap negative col">
+                        <label for="radio_2">No</label>
+                        <input type="radio" name="iCheck_3" class="icheck" id="radio_negative" checked>
+                    </div>
+                </div>
+
+                <h3>Check Boxes</h3>
+
+                    <input type="checkbox" class="icheck">
+                    <input type="checkbox" class="icheck" checked>
+
+
+                <h3>Switches / Toggles </h3>
+                    <input type="checkbox" class="jquery-onoff" checked />
+
+            </div>
+
+            <div class="module">
+                <h2 class="center">Icons</h2>
+                <p>All Icon classes (including duplicates):</p>
+                <div class="example_icons">
+                    <div class="icon icon-sports-horse-racing"></div>
+                    <div class="icon icon-sports-greyhound-racing"></div>
+
+                    <div class="icon icon-sports-harness-racing"></div>
+
+                    <div class="icon run"></div>
+                    <div class="icon icon-sports-athletics"></div>
+
+                    <div class="icon icon-sports-internat-rules"></div>
+                    <div class="icon icon-sports-australian-rules"></div>
+                    <div class="icon icon-sports-baseball"></div>
+                    <div class="icon icon-sports-handball"></div>
+                    <div class="icon icon-sports-basketball"></div>
+                    <div class="icon icon-sports-boxing"></div>
+
+
+                    <div class="icon icon-sports-cricket"></div>
+                    <div class="icon icon-sports-cycling"></div>
+                    <div class="icon icon-sports-darts"></div>
+                    <div class="icon icon-sports-elections"></div>
+                    <div class="icon icon-undecided"></div>
+                    <div class="icon icon-sports-special-events"></div>
+                    <!--
+                    /* alternate special event icon (probably better)
+                    -->
+                    <div class="icon icon-sports-special-events"></div>
+
+                    <div class="icon icon-statement"></div>
+                    <div class="icon icon-sports-financial"></div>
+                    <div class="icon icon-sports-soccer-matches"></div>
+                    <div class="icon icon-sports-golf"></div>
+
+                    <div class="icon icon-sports-greyhound-racing"></div>
+
+                    <div class="icon icon-sports-harness-racing"></div>
+
+                    <div class="icon icon-help"></div>
+
+                    <div class="icon icon-sports-horse-racing"></div>
+                    <div class="icon icon-sports-trainers-challenge"></div>
+                    <div class="icon icon-sports-jockeys-challenge"></div>
+                    <div class="icon icon-sports-feature-racing"></div>
+                    <div class="icon icon-sports-racing-live"></div>
+                    <div class="icon icon-sports-horse"></div>
+
+                    <div class="icon icon-sports-floorball"></div>
+                    <div class="icon icon-sports-field-hockey"></div>
+                    <div class="icon icon-sports-bandy"></div>
+                    <div class="icon icon-sports-ice-hockey"></div>
+                    <div class="icon icon-sports-hockey"></div>
+                    <div class="icon icon-sports-martial-arts"></div>
+                    <div class="icon icon-sports-motor-sport"></div>
+
+                    <div class="icon icon-sports-motor-netball"></div>
+
+                    <div class="icon icon-sports-time"></div>
+
+
+                    <div class="icon icon-sports-rugby"></div>
+                    <div class="icon icon-sports-rugby-league"></div>
+
+                    <div class="icon icon-sports-snooker"></div>
+
+                    <div class="icon icon-sports-soccer-futures"></div>
+
+                    <div class="icon icon-sports-soccer-world-cup"></div>
+                    <div class="icon icon-sports-football"></div>
+                    <div class="icon icon-sports-beach-soccer"></div>
+                    <div class="icon icon-sports-soccer-matches"></div>
+
+                    <div class="icon icon-sports-yachting"></div>
+                    <div class="icon icon-sports-wintersports"></div>
+                    <div class="icon icon-sports-ludicrous-lux-lines"></div>
+                    <div class="icon icon-sports-london-games"></div>
+                    <div class="icon icon-sports-live-betting"></div>
+                    <div class="icon icon-sports-entertainment"></div>
+                    <div class="icon icon-sports-e-sports"></div>
+                    <div class="icon icon-sports-commonwealth-games"></div>
+                    <div class="icon icon-sports-gaelic-football"></div>
+
+                    <div class="icon icon-sports-surfing"></div>
+
+                    <div class="icon icon-sports-waterpolo"></div>
+                    <div class="icon icon-sports-swimming"></div>
+
+                    <div class="icon icon-tabcorp"></div>
+
+                    <div class="icon icon-luxbet"></div>
+
+                    <div class="icon icon-sports-tennis"></div>
+
+                    <div class="icon icon-time"></div>
+
+                    <div class="icon icon-sports-volleyball"></div>
+
+
+                    <div class="icon icon-next-to-go"></div>
+
+                    <div class="icon icon-racing"></div>
+
+                    <div class="icon icon-sports"></div>
+
+
+                    <div class="icon icon-other"></div>
+
+                    <div class="icon icon-betslip"></div>
+
+                </div>
+                <div class="clearspace"></div>
+                <p> Large: </p>
+                <div class="example_icons">
+
+                    <div class="icon large icon-sports-horse-racing"></div>
+                    <div class="icon large icon-sports-greyhound-racing "></div>
+
+                    <div class="icon large icon-sports-harness-racing"></div>
+
+                    <div class="icon large run"></div>
+                </div>
+
+                <div class="clearspace"></div>
+                <p> Default: </p>
+                <div class="example_icons">
+
+                    <div class="icon icon-sports-horse-racing"></div>
+                    <div class="icon icon-sports-greyhound-racing "></div>
+
+                    <div class="icon icon-sports-harness-racing"></div>
+
+                    <div class="icon run"></div>
+                </div>
+
+                <div class="clearspace"></div>
+                <p> Small: </p>
+                <div class="example_icons">
+
+                    <div class="icon small icon-sports-horse-racing"></div>
+                    <div class="icon small icon-sports-greyhound-racing "></div>
+
+                    <div class="icon small icon-sports-harness-racing"></div>
+
+                    <div class="icon small run"></div>
+                </div>
+            </div>
+            <div class="module">
+                <h2 class="center">Cheverons</h2>
+                <div class="clearspace"></div>
+                <p> Default: </p>
+                <div class="example_icons">
+                    <div class="icon-cheveron">
+                        <div class="label">R44</div>
+                    </div>
+
+                    <div class="icon-cheveron current">
+                        <div class="label">R45</div>
+                    </div>
+
+                    <div class="icon-cheveron positive">
+                        <div class="label">R46</div>
+                    </div>
+                    <div class="icon-cheveron negative">
+                        <div class="label">R47</div>
+                    </div>
+                </div>
+
+                <div class="clearspace"></div>
+                <p> Large: </p>
+                <div class="example_icons">
+                    <div class="icon-cheveron large">
+                        <div class="label">R44</div>
+                    </div>
+
+                    <div class="icon-cheveron current large">
+                        <div class="label">R45</div>
+                    </div>
+
+                    <div class="icon-cheveron positive large">
+                        <div class="label">R46</div>
+                    </div>
+                    <div class="icon-cheveron negative large">
+                        <div class="label">R47</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module">
+                <h2 class="center">Breadcrumb Navigation</h2>
+
+                <!-- the div that iScroll references (used as 'clipping area', or mask) -->
+                <div id="example_2" class="horizontal_scroll_wrap">
+                    <!-- a container that (the width should be set to the full scroll width) -->
+                    <div class="scroller">
+                        <ul class="clearfix">
+                            <li>
+                                <div class="icon-cheveron red">
+                                    <div class="label">R40</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron red">
+                                    <div class="label">R41</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron current green">
+                                    <div class="label">R42</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron green">
+                                    <div class="label">R43</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R44</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R45</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R46</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R47</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R48</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R49</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R50</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R51</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R52</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R53</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R54</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R55</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R56</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="icon-cheveron">
+                                    <div class="label">R57</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <footer>
+                <h1>
+                    <br>
+                </h1>
+            </footer>
+
+            <script src="js/vendor.js"></script>
+            <script src="js/main.js"></script>
+            <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!--
+            <script>
+                (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                e.src='//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+                ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            </script>
+    -->
+        </div>
+
+
     </body>
 </html>

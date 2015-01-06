@@ -1,0 +1,93 @@
+// select.less
+div.fancy-select {
+	color: @white;
+}
+div.fancy-select select:active + div.trigger {
+	color: pink;
+}
+
+
+div.fancy-select select:focus + div.trigger {
+	box-shadow: none;//0 0 0 2px #4B5468;
+
+	//.button-click-animation(button_color_change_affirmative);
+}
+//.keyframes(button_color_change_affirmative, @complimentary_colour, @complimentary_colour_light, @complimentary_colour_dark);
+
+
+div.fancy-select div.trigger {
+	background: @complimentary_colour;//#99A5BE;
+	//border: 1px solid #99A5BE;
+	//border-top-color: #A5B2CB;
+	border: none;
+	color: @white;//#4B5468;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: none;
+}
+div.fancy-select div.trigger:after {
+	border-top-color: @white;//none;//#4B5468;
+	top: 15px;
+	color: @white;
+}
+
+div.fancy-select div.trigger.open {
+	background: @complimentary_colour_dark;//#4A5368;
+	border: none;//1px solid #475062;
+	color: @white;//#7A8498;
+	box-shadow: none;
+}
+
+div.fancy-select div.trigger.open:after {
+	border-top-color: @white;//none;//#7A8498;
+}
+
+div.fancy-select ul.options {
+	background: @supplementary_colour_light;//#62C8BF;
+	border-radius: 4px;
+	border-top: none;//1px solid #7DD8D2;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+div.fancy-select ul.options,
+div.fancy-select ul.options.open {
+	top: 40px;
+	//padding-left: 5px;
+}
+
+div.fancy-select ul.options li {
+	//color: #2B8686;
+	color: @black;
+	padding-left: 10px;
+}
+
+div.fancy-select ul.options ul {
+	list-style-type: square;
+	list-style-position: outside;
+	list-style-image: none;
+}
+div.fancy-select ul.options h2 {
+	color: @primary_colour;
+	margin: 0px;
+	margin-left: 10px;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: normal;
+
+}
+div.fancy-select ul.options ul li {
+	list-style-type: square;
+	padding-left: 25px;
+	list-style-position: inside;
+	list-style-image: none;
+}
+
+
+div.fancy-select ul.options li.selected {
+	background: @complimentary_colour_light;//@supplementary_colour_dark;//rgba(43,134,134,0.3);
+	color: @complimentary_colour_dark;//rgba(255,255,255,0.75);
+}
+
+div.fancy-select ul.options li.hover {
+	background: @complimentary_colour_light;//@supplementary_colour_dark;//rgba(43,134,134,0.3);
+	color: @complimentary_colour_dark;//rgba(255,255,255,0.75);
+}
