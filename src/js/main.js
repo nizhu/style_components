@@ -70,3 +70,13 @@ $(function(){
 	console.log($('.jquery-onoff'));
 	$('.jquery-onoff').onoff();
 });
+
+
+
+$(function(){
+    var inTime = moment.utc().add(3, 'hours').add(22, 'minutes');
+    var endTime = moment(inTime).fromNow();
+    var localTime = moment(inTime._d).format("HH:mm");
+    $('#time_example_1 .time-until').html(endTime);
+    $('#time_example_1 .time-local').html(localTime);
+});

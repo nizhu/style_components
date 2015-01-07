@@ -1,9 +1,116 @@
 .luxbet_list_page {
+	@local_white: @white;
+	@local_dark: @primary_colour;
+	@local_complimentary: @complimentary_colour;
+	@local_complimentary_dark: @complimentary_colour_dark;
+	@local_supplementary: @supplementary_colour_dark;
 	li {
 		min-height: 47px;
-		background-color: @white;
+		background-color: @local_white;
 		color: @black;
-		border-bottom: solid 1px @primary_colour;
-		line-height: 47px;
+		border-bottom: solid 1px @local_dark;
+		//line-height: 47px;
+		position: relative;
 	}
+	li a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		min-height: 47px;
+		position: relative;
+	}
+	li .category-icon {
+		width: 40px;
+		height: 40px;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 25%;
+		bottom: 25%;
+		margin: 0;
+		&:after {
+			line-height: 0px;
+		}
+	}
+	li .icon-cheveron {
+		position: absolute;
+		left: 0;
+		top: 5%;
+		bottom: 25%;
+		margin: 0;
+		line-height: 0px;
+	}
+	li .arrowWrap {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		height: auto;
+		width: 35px;
+		background: @local_complimentary;
+	}
+	li .arrowWrap .arrow {
+		color: @local_white;////#fcfcfc;
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		line-height: 35px;
+		font-size: 30px;
+		display: block;
+		width: 35px;
+		height: 40px;
+		text-align: center;
+	}
+	li .titleWrap {
+		padding-left: 40px;
+		padding-right: 40px;
+		display: block;
+
+		.title {
+			display: inline-block;
+			width: 100%;
+			line-height: 15px;
+			height: auto;
+			padding-right: 0;
+			overflow: visible;
+			text-overflow: ellipsis;
+			white-space: pre-wrap;
+			font-size: 15px;
+			font-weight: bold;
+			box-sizing: border-box;
+			vertical-align: middle;
+		}
+	}
+	li .time .message {
+		color: @local_supplementary;
+	}
+
+	li .products {
+		margin-left: 40px;
+		margin-bottom: 5px;
+	}
+	li .products .product {
+		padding: 3px 5px;
+		border-radius: 5px;
+		color: @local_white;
+		font-size: 9px;
+		text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	}
+
+	li:active {
+		.list-item-click-animation(list_item_color_change_default);
+		.paperShadow-inset;
+		.arrowWrap {
+			background: @local_complimentary_dark;
+		}
+	}
+	.list-item-click-keyframes(list_item_color_change_default, @white, @white, @primary_colour_light);
+
+
+}
+
+.menu {
+
 }
