@@ -1,0 +1,72 @@
+.mainNav {
+	@local_primary_colour_light: @primary_colour_light;
+	@local_primary_colour: @primary_colour;
+	@local_primary_colour_dark: @primary_colour_dark;
+	@local_supplementary_colour: @supplementary_colour;
+
+
+	@local_feature_colour_light: @feature_colour_light;
+	@local_feature_colour_dark: @feature_colour_dark;
+	@local_feature_colour: @feature_colour;
+
+	@local_white: @white;
+
+
+	width: 250px;
+	padding-top: 1px;
+	background-color: @local_primary_colour_light;
+	li {
+		border-bottom: solid 1px @local_primary_colour_dark;
+	}
+	li a:hover {
+		//background-color: @local_primary_colour;
+	}
+	li:last-of-type {
+		border-bottom: none;
+	}
+	li a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		padding: 5px;
+		padding-left: 15px;
+
+	}
+	li .no-link {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 5px;
+		padding-left: 15px;
+	}
+	li h3 {
+		padding-top: 30px;
+		margin-bottom: 10px;
+	}
+	li ul li {
+		&:last-of-type {
+			padding-bottom: 0px;
+		}
+	}
+	.accountInfo {
+		color: @local_white;
+		background-color: @local_primary_colour_dark;
+		padding: 5px;
+		padding-left: 15px;
+
+		.userBalance {
+			color: @local_supplementary_colour;
+		}
+	}
+
+	li a.active {
+		background-color: @local_feature_colour;
+		color: @local_white;
+	}
+	li a:active {
+		.list-item-click-animation(main_nav_color_change_default);
+		.paperShadow-inset;
+	}
+	.keyframes(main_nav_color_change_default, @local_primary_colour_light, @local_feature_colour, @local_feature_colour_light);//@local_feature_colour_dark);
+}
