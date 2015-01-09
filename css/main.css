@@ -196,8 +196,27 @@ h6 {
 .list_header .float_right {
   float: right;
 }
-.luxbet_list_page li {
+.luxbet_list_page.with-arrows li .titleWrap {
+  padding-right: 40px;
+}
+.luxbet_list_page.with-icons li .titleWrap {
+  padding-top: 0px;
+  padding-left: 45px;
+  padding-right: 40px;
+}
+.luxbet_list_page.detailed li {
   min-height: 47px;
+}
+.luxbet_list_page.detailed li a {
+  min-height: 47px;
+}
+.luxbet_list_page.detailed li .titleWrap {
+  padding-top: 0px;
+  padding-left: 45px;
+  padding-right: 40px;
+}
+.luxbet_list_page li {
+  min-height: 32px;
   background-color: #fcfcfc;
   color: #131313;
   border-bottom: solid 1px #7d7d7d;
@@ -207,7 +226,7 @@ h6 {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 47px;
+  min-height: 32px;
   position: relative;
   cursor: pointer;
 }
@@ -256,9 +275,10 @@ h6 {
   text-align: center;
 }
 .luxbet_list_page li .titleWrap {
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 15px;
+  padding-right: 10px;
   display: block;
+  padding-top: 5px;
 }
 .luxbet_list_page li .titleWrap .title {
   display: inline-block;
@@ -278,7 +298,7 @@ h6 {
   color: #947818;
 }
 .luxbet_list_page li .products {
-  margin-left: 40px;
+  margin-left: 45px;
   margin-bottom: 5px;
 }
 .luxbet_list_page li .products .product {
@@ -2719,7 +2739,9 @@ EOF Small
   clear: both;
 }
 .horizontal_scroll_wrap {
-  width: 380px;
+  width: 85%;
+  max-width: 380px;
+  min-width: 220px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
@@ -2753,119 +2775,128 @@ EOF Small
   color: white;
   text-decoration: none;
 }
+/*
+
 .icon-crest-2 {
-  width: 35px;
-  height: 100%;
-  position: relative;
-  text-align: center;
-  display: inline-block;
+    width: 35px;//100%;
+    height: 100%;
+    position:relative;
+    text-align: center;
+    display: inline-block;
 }
 .icon-crest-2:before {
-  font-family: 'LuxIcon';
-  content: '\e02f';
-  display: inline-block;
-  position: absolute;
-  min-width: 95%;
-  min-height: 95%;
-  line-height: 95%;
-  color: #d8af23;
-  font-size: 36px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: top;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+    font-family: 'LuxIcon';
+    content: '\e02f';
+
+    display: inline-block;
+    position: absolute;
+    min-width: 95%;
+    min-height: 95%;
+    line-height: 95%;//25px;
+    //text-shadow: 0.05em 0.05em 0.05em @grey;
+    color: @colour-lux-yellow-dark;//@colour-lux-green;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top;
+    left: 0;
+    right: 0;
+    margin-left:auto;
+    margin-right: auto;
 }
 .icon-crest-2 .label {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  color: white;
-  text-shadow: 0.05em 0.05em 0.05em #7d7d7d;
-  line-height: 30px;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-shadow: 0.05em 0.05em 0.05em @grey;
+    line-height: 30px;
 }
 .icon-crest-2.current:before {
-  font-size: 40px;
-  line-height: 30px;
-  left: -2px;
+    font-size: 40px;
+    line-height: 30px;
+    left: -2px;
 }
 .icon-crest-2.green:before {
-  color: #769d39;
+    color: @colour-lux-green;
 }
+
+
 .icon-crest-2:active:before {
-  -webkit-animation: crest_color_change_default 1s 1 alternate;
-  -moz-animation: crest_color_change_default 1s 1 alternate;
-  -ms-animation: crest_color_change_default 1s 1 alternate;
-  -o-animation: crest_color_change_default 1s 1 alternate;
-  animation: crest_color_change_default 1s 1 alternate;
+    -webkit-animation: crest_color_change_default 1s 1 alternate;
+    -moz-animation: crest_color_change_default 1s 1 alternate;
+    -ms-animation: crest_color_change_default 1s 1 alternate;
+    -o-animation: crest_color_change_default 1s 1 alternate;
+    animation: crest_color_change_default 1s 1 alternate;
 }
+
 @keyframes crest_color_change_default {
-  25% {
-    transform: scale(0.95);
-    color: #ca95a2;
-  }
-  95% {
-    transform: scale(1.01);
-  }
-  100% {
-    color: #bf1d40;
-    transform: scale(1);
-  }
+    25%{
+        transform: scale(.95);
+        color: @feature_colour_light;
+    }
+    95% {
+        transform: scale(1.01);
+    }
+    100% {
+        color: @feature_colour;
+        transform: scale(1);
+    }
 }
 @-webkit-keyframes crest_color_change_default {
-  25% {
-    -webkit-transform: scale(0.95);
-    color: #ca95a2;
-  }
-  95% {
-    -webkit-transform: scale(1.01);
-  }
-  100% {
-    color: #bf1d40;
-    -webkit-transform: scale(1);
-  }
+    25%{
+        -webkit-transform: scale(.95);
+        color: @feature_colour_light;
+    }
+    95% {
+        -webkit-transform: scale(1.01);
+    }
+    100% {
+        color: @feature_colour;
+        -webkit-transform: scale(1);
+    }
 }
 @-moz-keyframes crest_color_change_default {
-  25% {
-    -moz-transform: scale(0.95);
-    background-color: #ca95a2;
-  }
-  95% {
-    -moz-transform: scale(1.01);
-  }
-  100% {
-    background-color: #bf1d40;
-    -moz-transform: scale(1);
-  }
+    25%{
+        -moz-transform: scale(.95);
+        background-color: @feature_colour_light;
+    }
+    95% {
+        -moz-transform: scale(1.01);
+    }
+    100% {
+        background-color: @feature_colour;
+        -moz-transform: scale(1);
+    }
 }
 @-ms-keyframes crest_color_change_default {
-  25% {
-    -ms-transform: scale(0.95);
-    background-color: #ca95a2;
-  }
-  95% {
-    -ms-transform: scale(1.01);
-  }
-  100% {
-    background-color: #bf1d40;
-    -ms-transform: scale(1);
-  }
+    25%{
+        -ms-transform: scale(.95);
+        background-color: @feature_colour_light;
+    }
+    95% {
+        -ms-transform: scale(1.01);
+    }
+    100% {
+        background-color: @feature_colour;
+        -ms-transform: scale(1);
+    }
 }
 @-o-keyframes crest_color_change_default {
-  25% {
-    -o-transform: scale(0.95);
-    background-color: #ca95a2;
-  }
-  95% {
-    -o-transform: scale(1.01);
-  }
-  100% {
-    background-color: #bf1d40;
-    -o-transform: scale(1);
-  }
+    25%{
+        -o-transform: scale(.95);
+        background-color: @feature_colour_light;
+    }
+    95% {
+        -o-transform: scale(1.01);
+    }
+    100% {
+        background-color: @feature_colour;
+        -o-transform: scale(1);
+    }
 }
+
+*/
 .mainNav {
   width: 250px;
   padding-top: 1px;
@@ -3049,6 +3080,7 @@ h6 {
 }
 .colour-table {
   table-layout: fixed;
+  min-width: 700px;
 }
 .colour-table .row_header {
   text-align: left;
