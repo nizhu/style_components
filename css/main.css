@@ -209,6 +209,7 @@ h6 {
   height: 100%;
   min-height: 47px;
   position: relative;
+  cursor: pointer;
 }
 .luxbet_list_page li .category-icon {
   width: 40px;
@@ -2853,6 +2854,127 @@ EOF Small
   }
 }
 @-o-keyframes crest_color_change_default {
+  25% {
+    -o-transform: scale(0.95);
+    background-color: #ca95a2;
+  }
+  95% {
+    -o-transform: scale(1.01);
+  }
+  100% {
+    background-color: #bf1d40;
+    -o-transform: scale(1);
+  }
+}
+.mainNav {
+  width: 250px;
+  padding-top: 1px;
+  background-color: #e0e0e0;
+}
+.mainNav li {
+  border-bottom: solid 1px #3d3d3d;
+}
+.mainNav li:last-of-type {
+  border-bottom: none;
+}
+.mainNav li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  padding: 5px;
+  padding-left: 15px;
+}
+.mainNav li .no-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  padding-left: 15px;
+}
+.mainNav li h3 {
+  padding-top: 30px;
+  margin-bottom: 10px;
+}
+.mainNav li ul li:last-of-type {
+  padding-bottom: 0px;
+}
+.mainNav .accountInfo {
+  color: #fcfcfc;
+  background-color: #3d3d3d;
+  padding: 5px;
+  padding-left: 15px;
+}
+.mainNav .accountInfo .userBalance {
+  color: #d8af23;
+}
+.mainNav li a.active {
+  background-color: #bf1d40;
+  color: #fcfcfc;
+}
+.mainNav li a:active {
+  -webkit-animation: main_nav_color_change_default 750ms 1 normal;
+  -moz-animation: main_nav_color_change_default 750ms 1 normal;
+  -ms-animation: main_nav_color_change_default 750ms 1 normal;
+  -o-animation: main_nav_color_change_default 750ms 1 normal;
+  animation: main_nav_color_change_default 750ms 1 normal;
+  -webkit-box-shadow: inset 0px 3px 5px 0px rgba(5, 5, 5, 0.15);
+  -moz-box-shadow: inset 0px 3px 5px 0px rgba(5, 5, 5, 0.15);
+  box-shadow: inset 0px 3px 5px 0px rgba(5, 5, 5, 0.15);
+}
+@keyframes main_nav_color_change_default {
+  25% {
+    transform: scale(0.95);
+    background-color: #ca95a2;
+  }
+  95% {
+    transform: scale(1.01);
+  }
+  100% {
+    background-color: #bf1d40;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes main_nav_color_change_default {
+  25% {
+    -webkit-transform: scale(0.95);
+    background-color: #ca95a2;
+  }
+  95% {
+    -webkit-transform: scale(1.01);
+  }
+  100% {
+    background-color: #bf1d40;
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes main_nav_color_change_default {
+  25% {
+    -moz-transform: scale(0.95);
+    background-color: #ca95a2;
+  }
+  95% {
+    -moz-transform: scale(1.01);
+  }
+  100% {
+    background-color: #bf1d40;
+    -moz-transform: scale(1);
+  }
+}
+@-ms-keyframes main_nav_color_change_default {
+  25% {
+    -ms-transform: scale(0.95);
+    background-color: #ca95a2;
+  }
+  95% {
+    -ms-transform: scale(1.01);
+  }
+  100% {
+    background-color: #bf1d40;
+    -ms-transform: scale(1);
+  }
+}
+@-o-keyframes main_nav_color_change_default {
   25% {
     -o-transform: scale(0.95);
     background-color: #ca95a2;
