@@ -1,0 +1,23 @@
+.betslip {
+	@local_sub_header_color: @supplementary_colour;
+	@local_white: @white;
+	.sub_header {
+		padding: 5px 15px;
+		background-color: @local_sub_header_color;
+		color: @local_white;
+	}
+
+	.ticketColumnHeadings {
+		background-color: @black;
+		color: @white;
+		.name .selectionPrice {
+			padding-left: 5px;
+		}
+		.stakeLabel { text-align: center; }
+		.selectionPrice, .stakeLabel {
+			line-height: 30px;
+		}
+	}
+
+
+}

@@ -1,0 +1,106 @@
+.bet {
+	@local_positive_colour: @complimentary_colour;
+	@local_positive_colour_light: @complimentary_colour_light;
+	@local_negative_colour_light: @feature_colour_light;
+	@local_alert_colour_light: @supplementary_colour_light; 
+
+	padding: 10px;
+
+	div[class*="selection"] {
+		float: left;
+		.clearspace {
+
+		}
+	}
+	.selectionDetails {
+		width: 100%;
+	}
+	.selectionName {
+		font-size: 1.1em;
+		color: @local_positive_colour;
+	}
+	.selectionBetType {
+		clear: left;
+		display: inline-block;
+		color: @local_positive_colour;
+		margin-right: 5px;
+	}
+	.selectionMarket {
+		display: inline-block;
+	}
+	.selectionParentCategory {
+		clear: left;
+		display: inline-block;
+		margin-right: 5px;
+	}
+	.selectionCategory {
+		display: inline-block;
+	}
+	.selectionEvent {
+		clear: both;
+	}
+	.ticketColumns {
+		clear: left;
+		width: 100%;
+	}
+	.col_33 {
+		width: 33%;
+	}
+	.stake, .actions, .price, .name {
+		margin-top: 15px;
+	}
+	.stakeLabel {
+		text-align: center;
+		width: 100%;
+	}
+	.stake input {
+		width: 100%;
+	}
+	.actions {
+		text-align: center; 
+		.buttonDelete {
+			font-size: .8em;
+			text-decoration: underline;
+			cursor: pointer;
+			//line-height: 30px;
+			margin-top: 25px;
+			display: block;
+		}
+	}
+	.selectionPriceLabel {
+		height: 20px;
+	}
+	.selectionPrice {
+		clear: left;
+		height: 30px;
+		line-height: 30px;
+	}
+
+	&.multi {
+		.selectionPrice {
+			line-height: 30px;
+			text-align: center;
+			width: 100%;
+		}
+		.name .selectionPrice {
+			text-align: left;
+		}
+
+
+	}
+	.placementDetails.success,
+	.placementDetails.rejectedCombins,
+	.placementDetails.partial,
+	.placementDetails.rejected {
+		margin: -10px;
+		margin-bottom: 5px;
+		background-color: @local_negative_colour_light;
+		padding: 5px;
+	}
+	.placementDetails.success {
+		background-color: @local_positive_colour_light;
+	}
+	.placementDetails.partial {
+		background-color: @local_alert_colour_light;
+	}
+}

@@ -965,6 +965,304 @@
                     </ul>
                 </nav>
             </div>
+
+            <div class="module">
+                <h2 class="center">Bet</h2>
+
+                <div class="clearspace"></div>
+                <h3>Single Bet</h3>
+
+                <div class="clearspace"></div>
+
+                <div class="bet selection clearfix">
+
+                    <div class="selectionDetails clearfix">
+                        <div class="selectionName">
+                            <span class="selectionPosition">2: </span>
+                            GOSHI
+                        </div>
+                        <div class="selectionBetType">
+                            (LuxMid,Win)
+                        </div>
+                        <div class="selectionMarket">Racing Live</div>
+                        <div class="selectionParentCategory">
+                            Greyhound Racing,
+                        </div>
+                        <div class="selectionCategory">
+                            ALBION PARK
+                        </div>
+                        <div class="selectionEvent">
+                            4: A TEAM STUD
+                        </div>
+
+                        <div class="ticketColumns">
+                            <div class="col_33 price">
+                                <div class="selectionPriceLabel">Price</div>
+                                <div class="selectionPrice">
+                                    LuxMid
+                                </div>
+                            </div>
+                            <div class="col_33 stake">
+                                <div class="stakeLabel">Stake</div>
+                                <div class="stakeInputWrap">
+                                    <input id="ember6594" class="ember-view ember-text-field" type="number" min="0">
+                                </div>
+                            </div>
+                            <div class="col_33 actions">
+                                <a class="buttonDelete clearfix" data-ember-action="6596">Delete</a>
+                            </div>
+                        </div>
+
+                        <div class="ticketAvailableBets">
+
+                        </div>
+                    </div>
+
+                </div>
+                    <!-- -->
+
+                    <!-- -->
+
+                <div class="clearspace"></div>
+                <h3>Multi Bet</h3>
+                <div class="bet selection multi clearfix">
+                    <div class="selectionDetails clearfix">
+                        <!--
+                            {{#if multi.checkoutError}}
+                                <div class="placementDetails rejected">
+                                    <div class="notice">Error: {{multi.checkoutError.error_message}}</div>
+                                </div>
+                            {{else}}
+                                {{#if multi.betplaced.has_timed_out}}
+                                    <div class="placementDetails rejected">
+                                        <div class="notice">This bet was not processed in time</div>
+                                    </div>
+                                {{else}}
+                                    {{#if multi.betplaced.is_success}}
+                                        <div class="placementDetails success">
+                                            <div class="notice">Bet placed successfully </div>
+                                            <div class="betId">
+                                                <span class="betIdLabel">ID: </span>
+                                                <span class="betIdValue">{{multi.betplaced.bet_id}}</span>
+                                            </div>
+                                        </div>
+                                    {{/if}}
+
+                                    {{#if multi.betplaced.is_rejected}}
+                                        <div class="placementDetails rejected">
+                                            <div class="notice">Your bet has been rejected </div>
+                                        </div>
+                                    {{/if}}
+
+                                    {{#if multi.betplaced.is_rejected_combins}}
+                                        <div class="placementDetails rejectedCombins">
+                                            <div class="notice">Your bet has been assessed, please check your statement for more details</div>
+                                        </div>
+                                    {{/if}}
+
+                                    {{#if multi.betplaced.is_partially_accepted}}
+                                        <div class="placementDetails partial">
+                                            <div class="notice">Bet partially placed, please check your statement for more details</div>
+                                        </div>
+                                    {{/if}}
+                                {{/if}}
+                            {{/if}}
+-->
+                        <div class="ticketColumns clearfix">
+                            <div class="col_33 name">
+                                <div class="selectionPrice">Name</div>
+                            </div>
+                            <div class="col_33 stake">
+                                <div class="stakeInputWrap">
+                                    <input type="number" min=0 />
+                                </div>
+                            </div>
+                            <div class="col_33 price">
+                                <div class="col_50">
+                                    <div class="selectionPrice">2</div>
+                                </div>
+
+                                <div class="col_50">
+                                    <div class="selectionPrice">$2.00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- -->
+            </div>
+
+            <div class="module">
+                <h2 class="center">Cart (Betslip)</h2>
+
+                <div class="clearspace"></div>
+                    <div class="betslip">
+                        <h4 class="list_header">BETSLIP</h4>
+                        <h3 class="sub_header">Single Bets</h3>
+                        
+                        <div class="bet selection clearfix">
+
+                            <div class="selectionDetails clearfix">
+                                <div class="selectionName">
+                                    <span class="selectionPosition">2: </span>
+                                    GOSHI
+                                </div>
+                                <div class="selectionBetType">
+                                    (LuxMid,Win)
+                                </div>
+                                <div class="selectionMarket">Racing Live</div>
+                                <div class="selectionParentCategory">
+                                    Greyhound Racing,
+                                </div>
+                                <div class="selectionCategory">
+                                    ALBION PARK
+                                </div>
+                                <div class="selectionEvent">
+                                    4: A TEAM STUD
+                                </div>
+
+                                <div class="ticketColumns">
+                                    <div class="col_33 price">
+                                        <div class="selectionPriceLabel">Price</div>
+                                        <div class="selectionPrice">
+                                            LuxMid
+                                        </div>
+                                    </div>
+                                    <div class="col_33 stake">
+                                        <div class="stakeLabel">Stake</div>
+                                        <div class="stakeInputWrap">
+                                            <input id="ember6594" class="ember-view ember-text-field" type="number" min="0">
+                                        </div>
+                                    </div>
+                                    <div class="col_33 actions">
+                                        <a class="buttonDelete clearfix" data-ember-action="6596">Delete</a>
+                                    </div>
+                                </div>
+
+                                <div class="ticketAvailableBets">
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                        <h3 class="sub_header">Multis</h3>
+                        <div class="ticketColumnsWrap">
+                            <div class="ticketColumnHeadings clearfix">
+                                <div class="col_33 name">
+                                <div class="selectionPrice">Name</div>
+                                </div>
+                                <div class="col_33 stake">
+                                <div class="stakeLabel">Stake</div>
+                                </div>
+                                <div class="col_33">
+                                <div class="col_50 price">
+                                <div class="stakeLabel">Bets</div>
+                                </div>
+                                <div class="col_50 price">
+                                <div class="stakeLabel">Cost</div>
+                                </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bet selection multi clearfix">
+                            <div class="selectionDetails clearfix">
+                                <div class="placementDetails rejected">
+                                    <div class="notice">Error: {{multi.checkoutError.error_message}}</div>
+                                </div>
+                                <div class="ticketColumns clearfix">
+                                    <div class="col_33 name">
+                                        <div class="selectionPrice">Name</div>
+                                    </div>
+                                    <div class="col_33 stake">
+                                        <div class="stakeInputWrap">
+                                            <input type="number" min=0 />
+                                        </div>
+                                    </div>
+                                    <div class="col_33 price">
+                                        <div class="col_50">
+                                            <div class="selectionPrice">2</div>
+                                        </div>
+
+                                        <div class="col_50">
+                                            <div class="selectionPrice">$2.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="bet selection multi clearfix">
+                            <div class="selectionDetails clearfix">
+                                <div class="placementDetails success">
+                                    <div class="notice">Bet placed successfully </div>
+                                    <div class="betId">
+                                        <span class="betIdLabel">ID: </span>
+                                        <span class="betIdValue">{{multi.betplaced.bet_id}}</span>
+                                    </div>
+                                </div>
+                                <div class="ticketColumns clearfix">
+                                    <div class="col_33 name">
+                                        <div class="selectionPrice">Name</div>
+                                    </div>
+                                    <div class="col_33 stake">
+                                        <div class="stakeInputWrap">
+                                            <input type="number" min=0 />
+                                        </div>
+                                    </div>
+                                    <div class="col_33 price">
+                                        <div class="col_50">
+                                            <div class="selectionPrice">2</div>
+                                        </div>
+
+                                        <div class="col_50">
+                                            <div class="selectionPrice">$2.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="bet selection multi clearfix">
+                            <div class="selectionDetails clearfix">
+                                <div class="placementDetails partial">
+                                    <div class="notice">Bet partially placed, please check your statement for more details</div>
+                                </div>
+                                <div class="ticketColumns clearfix">
+                                    <div class="col_33 name">
+                                        <div class="selectionPrice">Name</div>
+                                    </div>
+                                    <div class="col_33 stake">
+                                        <div class="stakeInputWrap">
+                                            <input type="number" min=0 />
+                                        </div>
+                                    </div>
+                                    <div class="col_33 price">
+                                        <div class="col_50">
+                                            <div class="selectionPrice">2</div>
+                                        </div>
+
+                                        <div class="col_50">
+                                            <div class="selectionPrice">$2.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+            </div>
+
             <footer>
                 <h1>
                     <br>

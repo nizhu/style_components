@@ -1,11 +1,34 @@
+
 button, .button {
+	//Local Variables
+	@local_border_radius: 3px;
+
+	@local_default_colour: @supplementary_colour;
+	@local_default_colour_light: @supplementary_colour_light;
+	@local_default_colour_dark: @supplementary_colour_dark;
+
+	@local_affirmative_colour: @complimentary_colour;
+	@local_affirmative_colour_light: @complimentary_colour_light;
+	@local_affirmative_colour_dark: @complimentary_colour_dark;
+
+	@local_alternative_colour: @feature_colour;
+	@local_alternative_colour_light: @feature_colour_light;
+	@local_alternative_colour_dark: @feature_colour_dark;
+
+	@local_negative_colour: @primary_colour;
+	@local_negative_colour_light: @primary_colour_light;
+	@local_negative_colour_dark: @primary_colour_dark;
+
+
+
 	border: none;
-	background-color: @supplementary_colour;
-	border-radius: 5px;
-	padding: 5px;
+	background-color: @local_default_colour;//@supplementary_colour;
+	border-radius: @local_border_radius;
+	padding: 5px 10px;
 	font-size: 1em;
+	font-family: HelveticaNeueBdCn;
 	font-weight: bold;
-	color: @secondary_colour_light;
+	color: @white;//@secondary_colour_light;
 	-webkit-tap-highlight-color: none;
 	cursor: pointer;
 
@@ -16,482 +39,31 @@ button, .button {
 	&:focus {
 		//background-color: @supplementary_colour_dark;
 	}
-}
+
+	&:active {
+		.button-click-animation(button_color_change_default);
+	}
+	.button-click-keyframes(button_color_change_default, @local_default_colour, @local_default_colour_light, @local_default_colour_dark);
 
 
-
-button:active, .button:active {
-	.button-click-animation(button_color_change_default);
-}
-.keyframes(button_color_change_default, @supplementary_colour, @supplementary_colour_light, @supplementary_colour_dark);
-
-
-button.affirmative, .button.affirmative { background-color: @complimentary_colour; }
-button.affirmative:active, .button.affirmative:active {
-	.button-click-animation(button_color_change_affirmative);
-}
-.keyframes(button_color_change_affirmative, @complimentary_colour, @complimentary_colour_light, @complimentary_colour_dark);
+	&.affirmative { background-color: @local_affirmative_colour; }
+	&.affirmative:active {
+		.button-click-animation(button_color_change_affirmative);
+	}
+	.button-click-keyframes(button_color_change_affirmative, @local_affirmative_colour, @local_affirmative_colour_light, @local_affirmative_colour_dark);
 
 
-button.alternative, .button.alternative { background-color: @feature_colour; }
-button.alternative:active, .button.alternative:active {
-	.button-click-animation(button_color_change_alternative);
-}
-.keyframes(button_color_change_alternative, @feature_colour, @feature_colour_light, @feature_colour_dark);
+	&.alternative { background-color: @local_alternative_colour; }
+	&.alternative:active {
+		.button-click-animation(button_color_change_alternative);
+	}
+	.button-click-keyframes(button_color_change_alternative, @local_alternative_colour, @local_alternative_colour_light, @local_alternative_colour_dark);
 
 
-button.negative, .button.negative { background-color: @primary_colour; }
-button.negative:active, .button.negative:active {
-	.button-click-animation(button_color_change_negative);
-}
-.keyframes(button_color_change_negative, @primary_colour, @primary_colour_light, @primary_colour_dark);
+	&.negative { background-color: @local_negative_colour; }
+	&.negative:active {
+		.button-click-animation(button_color_change_negative);
+	}
+	.button-click-keyframes(button_color_change_negative, @local_negative_colour, @local_negative_colour_light, @local_negative_colour_dark);
 
-/*
-@keyframes button_color_change_default {
-	25%{
-		transform: scale(.95);
-		background-color: @supplementary_colour_light;
-	}
-	95% {
-		transform: scale(1.01);
-	}
-	100% {
-		background-color: @supplementary_colour_dark;
-		transform: scale(1);
-	}
 }
-@-webkit-keyframes button_color_change_default {
-	25%{
-		-webkit-transform: scale(.95);
-		background-color: @supplementary_colour_light;
-	}
-	95% {
-		-webkit-transform: scale(1.01);
-	}
-	100% {
-		background-color: @supplementary_colour_dark;
-		-webkit-transform: scale(1);
-	}
-}
-@-moz-keyframes button_color_change_default {
-	25%{
-		-moz-transform: scale(.95);
-		background-color: @supplementary_colour_light;
-	}
-	95% {
-		-moz-transform: scale(1.01);
-	}
-	100% {
-		background-color: @supplementary_colour_dark;
-		-moz-transform: scale(1);
-	}
-}
-@-ms-keyframes button_color_change_default {
-	25%{
-		-ms-transform: scale(.95);
-		background-color: @supplementary_colour_light;
-	}
-	95% {
-		-ms-transform: scale(1.01);
-	}
-	100% {
-		background-color: @supplementary_colour_dark;
-		-ms-transform: scale(1);
-	}
-}
-@-o-keyframes button_color_change_default {
-	25%{
-		-o-transform: scale(.95);
-		background-color: @supplementary_colour_light;
-	}
-	95% {
-		-o-transform: scale(1.01);
-	}
-	100% {
-		background-color: @supplementary_colour_dark;
-		-o-transform: scale(1);
-	}
-}
-*/
-/*
-@-webkit-keyframes button_color_change_default {
-  from { background-color: @supplementary_colour_light; }
-  to { background-color: @supplementary_colour_dark; }
-}
-
-@-moz-keyframes button_color_change_default {
-  from { background-color: @supplementary_colour_light; }
-  to { background-color: @supplementary_colour_dark; }
-}
-@-ms-keyframes button_color_change_default {
-  from { background-color: @supplementary_colour_light; }
-  to { background-color: @supplementary_colour_dark; }
-}
-@-o-keyframes button_color_change_default {
-  from { background-color: @supplementary_colour_light; }
-  to { background-color: @supplementary_colour_dark; }
-}
-@keyframes button_color_change_default {
-  from { background-color: @supplementary_colour_light; }
-  to { background-color: @supplementary_colour_dark; }
-}
-*/
-/*
-button.neutral, .button.neutral {
-	background-color: @supplementary_colour_2;
-	&:hover, &:active, &:focus {
-		//background-color: @supplementary_colour_2_light;
-	}
-	&:focus {
-		//background-color: @supplementary_colour_2_dark;
-	}
-}
-
-button.neutral:active, .button.neutral:active, button.neutral:focus, .button.neutral:focus {
-	-webkit-animation: button_color_change_neutral 1s 1 alternate;
-	-moz-animation: button_color_change_neutral 1s 1 alternate;
-	-ms-animation: button_color_change_neutral 1s 1 alternate;
-	-o-animation: button_color_change_neutral 1s 1 alternate;
-	animation: button_color_change_neutral 1s 1 alternate;
-}
-@keyframes button_color_change_neutral {
-	25%{
-		transform: scale(.95);
-		background-color: @supplementary_colour_2_light;
-	}
-	95% {
-		transform: scale(1.01);
-	}
-	100% {
-		background-color: @supplementary_colour_2_dark;
-		transform: scale(1);
-	}
-}
-@-webkit-keyframes button_color_change_neutral {
-	25%{
-		-webkit-transform: scale(.95);
-		background-color: @supplementary_colour_2_light;
-	}
-	95% {
-		-webkit-transform: scale(1.01);
-	}
-	100% {
-		background-color: @supplementary_colour_2_dark;
-		-webkit-transform: scale(1);
-	}
-}
-@-moz-keyframes button_color_change_neutral {
-	25%{
-		-moz-transform: scale(.95);
-		background-color: @supplementary_colour_2_light;
-	}
-	95% {
-		-moz-transform: scale(1.01);
-	}
-	100% {
-		background-color: @supplementary_colour_2_dark;
-		-moz-transform: scale(1);
-	}
-}
-@-ms-keyframes button_color_change_neutral {
-	25%{
-		-ms-transform: scale(.95);
-		background-color: @supplementary_colour_2_light;
-	}
-	95% {
-		-ms-transform: scale(1.01);
-	}
-	100% {
-		background-color: @supplementary_colour_2_dark;
-		-ms-transform: scale(1);
-	}
-}
-@-o-keyframes button_color_change_neutral {
-	25%{
-		-o-transform: scale(.95);
-		background-color: @supplementary_colour_2_light;
-	}
-	95% {
-		-o-transform: scale(1.01);
-	}
-	100% {
-		background-color: @supplementary_colour_2_dark;
-		-o-transform: scale(1);
-	}
-}
-*/
-/*
-@-webkit-keyframes button_color_change_neutral {
-  from { background-color: @supplementary_colour_2_light; }
-  to { background-color: @supplementary_colour_2_dark; }
-}
-@-moz-keyframes button_color_change_neutral {
-  from { background-color: @supplementary_colour_2_light; }
-  to { background-color: @supplementary_colour_2_dark; }
-}
-@-ms-keyframes button_color_change_neutral {
-  from { background-color: @supplementary_colour_2_light; }
-  to { background-color: @supplementary_colour_2_dark; }
-}
-@-o-keyframes button_color_change_neutral {
-  from { background-color: @supplementary_colour_2_light; }
-  to { background-color: @supplementary_colour_2_dark; }
-}
-@keyframes button_color_change_neutral {
-  from { background-color: @supplementary_colour_2_light; }
-  to { background-color: @supplementary_colour_2_dark; }
-}
-*/
-
-/*
-button.affirmative, .button.affirmative {
-	background-color: @complimentary_colour;
-	&:hover, &:active, &:focus {
-		background-color: @complimentary_colour_light;
-	}
-	&:focus {
-		background-color: @complimentary_colour_dark;
-	}
-}
-
-button.affirmative:active, .button.affirmative:active, button.affirmative:focus, .button.affirmative:focus {
-	-webkit-animation: button_color_change_affirmative 1s 1 alternate;
-	-moz-animation: button_color_change_affirmative 1s 1 alternate;
-	-ms-animation: button_color_change_affirmative 1s 1 alternate;
-	-o-animation: button_color_change_affirmative 1s 1 alternate;
-	animation: button_color_change_affirmative 1s 1 alternate;
-}
-@keyframes button_color_change_affirmative {
-	25%{
-		transform: scale(.95);
-		background-color: @complimentary_colour_light;
-	}
-	95% {
-		transform: scale(1.01);
-	}
-	100% {
-		background-color: @complimentary_colour_dark;
-		transform: scale(1);
-	}
-}
-@-webkit-keyframes button_color_change_affirmative {
-	25%{
-		-webkit-transform: scale(.95);
-		background-color: @complimentary_colour_light;
-	}
-	95% {
-		-webkit-transform: scale(1.01);
-	}
-	100% {
-		background-color: @complimentary_colour_dark;
-		-webkit-transform: scale(1);
-	}
-}
-@-moz-keyframes button_color_change_affirmative {
-	25%{
-		-moz-transform: scale(.95);
-		background-color: @complimentary_colour_light;
-	}
-	95% {
-		-moz-transform: scale(1.01);
-	}
-	100% {
-		background-color: @complimentary_colour_dark;
-		-moz-transform: scale(1);
-	}
-}
-@-ms-keyframes button_color_change_affirmative {
-	25%{
-		-ms-transform: scale(.95);
-		background-color: @complimentary_colour_light;
-	}
-	95% {
-		-ms-transform: scale(1.01);
-	}
-	100% {
-		background-color: @complimentary_colour_dark;
-		-ms-transform: scale(1);
-	}
-}
-@-o-keyframes button_color_change_affirmative {
-	25%{
-		-o-transform: scale(.95);
-		background-color: @complimentary_colour_light;
-	}
-	95% {
-		-o-transform: scale(1.01);
-	}
-	100% {
-		background-color: @complimentary_colour_dark;
-		-o-transform: scale(1);
-	}
-}
-
-
-button.negative, .button.negative {
-	background-color: @feature_colour;
-	&:hover, &:active, &:focus {
-		background-color: @feature_colour_light;
-	}
-	&:focus {
-		background-color: @feature_colour_dark;
-	}
-}
-
-button.negative:active, .button.negative:active, button.negative:focus, .button.negative:focus {
-	-webkit-animation: button_color_change_negative 1s 1 alternate;
-	-moz-animation: button_color_change_negative 1s 1 alternate;
-	-ms-animation: button_color_change_negative 1s 1 alternate;
-	-o-animation: button_color_change_negative 1s 1 alternate;
-	animation: button_color_change_negative 1s 1 alternate;
-}
-@keyframes button_color_change_negative {
-	25%{
-		transform: scale(.95);
-		background-color: @feature_colour_light;
-	}
-	95% {
-		transform: scale(1.01);
-	}
-	100% {
-		background-color: @feature_colour_dark;
-		transform: scale(1);
-	}
-}
-@-webkit-keyframes button_color_change_negative {
-	25%{
-		-webkit-transform: scale(.95);
-		background-color: @feature_colour_light;
-	}
-	95% {
-		-webkit-transform: scale(1.01);
-	}
-	100% {
-		background-color: @feature_colour_dark;
-		-webkit-transform: scale(1);
-	}
-}
-@-moz-keyframes button_color_change_negative {
-	25%{
-		-moz-transform: scale(.95);
-		background-color: @feature_colour_light;
-	}
-	95% {
-		-moz-transform: scale(1.01);
-	}
-	100% {
-		background-color: @feature_colour_dark;
-		-moz-transform: scale(1);
-	}
-}
-@-ms-keyframes button_color_change_negative {
-	25%{
-		-ms-transform: scale(.95);
-		background-color: @feature_colour_light;
-	}
-	95% {
-		-ms-transform: scale(1.01);
-	}
-	100% {
-		background-color: @feature_colour_dark;
-		-ms-transform: scale(1);
-	}
-}
-@-o-keyframes button_color_change_negative {
-	25%{
-		-o-transform: scale(.95);
-		background-color: @feature_colour_light;
-	}
-	95% {
-		-o-transform: scale(1.01);
-	}
-	100% {
-		background-color: @feature_colour_dark;
-		-o-transform: scale(1);
-	}
-}
-
-
-button.negative_alt, .button.negative_alt {
-	background-color: @secondary_colour_dark;
-	&:hover, &:active, &:focus {
-		background-color: @secondary_colour;
-	}
-	&:focus {
-		background-color: @secondary_colour_dark;
-	}
-}
-
-button.negative_alt:active, .button.negative_alt:active, button.negative_alt:focus, .button.negative_alt:focus {
-	-webkit-animation: button_color_change_negative_alt 1s 1 alternate;
-	-moz-animation: button_color_change_negative_alt 1s 1 alternate;
-	-ms-animation: button_color_change_negative_alt 1s 1 alternate;
-	-o-animation: button_color_change_negative_alt 1s 1 alternate;
-	animation: button_color_change_negative_alt 1s 1 alternate;
-}
-@keyframes button_color_change_negative_alt {
-	25%{
-		transform: scale(.95);
-		background-color: @secondary_colour;
-	}
-	95% {
-		transform: scale(1.01);
-	}
-	100% {
-		background-color: @secondary_colour_dark;
-		transform: scale(1);
-	}
-}
-@-webkit-keyframes button_color_change_negative_alt {
-	25%{
-		-webkit-transform: scale(.95);
-		background-color: @secondary_colour;
-	}
-	95% {
-		-webkit-transform: scale(1.01);
-	}
-	100% {
-		background-color: @secondary_colour_dark;
-		-webkit-transform: scale(1);
-	}
-}
-@-moz-keyframes button_color_change_negative_alt {
-	25%{
-		-moz-transform: scale(.95);
-		background-color: @secondary_colour;
-	}
-	95% {
-		-moz-transform: scale(1.01);
-	}
-	100% {
-		background-color: @secondary_colour_dark;
-		-moz-transform: scale(1);
-	}
-}
-@-ms-keyframes button_color_change_negative_alt {
-	25%{
-		-ms-transform: scale(.95);
-		background-color: @secondary_colour;
-	}
-	95% {
-		-ms-transform: scale(1.01);
-	}
-	100% {
-		background-color: @secondary_colour_dark;
-		-ms-transform: scale(1);
-	}
-}
-@-o-keyframes button_color_change_negative_alt {
-	25%{
-		-o-transform: scale(.95);
-		background-color: @secondary_colour;
-	}
-	95% {
-		-o-transform: scale(1.01);
-	}
-	100% {
-		background-color: @secondary_colour_dark;
-	-o-transform: scale(1);
-	}
-}
-	*/

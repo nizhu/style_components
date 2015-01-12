@@ -120,7 +120,7 @@ span.customSelect:after {
 	.button-click-animation(radio_button_select);
 }
 
-.keyframes(radio_button_select, @supplementary_colour, @supplementary_colour_light, @supplementary_colour_dark);
+.button-click-keyframes(radio_button_select, @supplementary_colour, @supplementary_colour_light, @supplementary_colour_dark);
 
 
 
@@ -144,7 +144,7 @@ span.customSelect:after {
 	.button-click-animation(radio_button_affirmative_select);
 }
 
-.keyframes(radio_button_affirmative_select, @complimentary_colour, @complimentary_colour_light, @complimentary_colour_dark);
+.button-click-keyframes(radio_button_affirmative_select, @complimentary_colour, @complimentary_colour_light, @complimentary_colour_dark);
 
 
 
@@ -170,7 +170,7 @@ span.customSelect:after {
 	.button-click-animation(radio_button_negative_select);
 }
 
-.keyframes(radio_button_negative_select, @primary_colour, @primary_colour_light, @primary_colour_dark);
+.button-click-keyframes(radio_button_negative_select, @primary_colour, @primary_colour_light, @primary_colour_dark);
 
 
 /* Example only !!! */
@@ -198,189 +198,11 @@ span.customSelect:after {
 
 
 .icheckbox_square-grey:active {
-	.button-click-animation(button_color_change_negative);
+	.button-click-animation(checkbox_color_change_negative);
 }
-.keyframes(button_color_change_negative, @complimentary_colour, @complimentary_colour_light, @complimentary_colour_dark);
+.button-click-keyframes(checkbox_color_change_negative, @complimentary_colour, @complimentary_colour_light, @complimentary_colour_dark);
 
 
-
-
-
-
-/*
-.icheckbox_square-grey:active ,
-.iradio_square-grey:active {
-	-webkit-animation: radio_button_color_change_default 1s 1 alternate;
-	-moz-animation: radio_button_color_change_default 1s 1 alternate;
-	-ms-animation: radio_button_color_change_default 1s 1 alternate;
-	-o-animation: radio_button_color_change_default 1s 1 alternate;
-	animation: radio_button_color_change_default 1s 1 alternate;
-}
-
-@keyframes radio_button_color_change_default {
-	25%{
-		transform: scale(.95);
-		background-color: @complimentary_colour_light;
-	}
-	95% {
-		transform: scale(1.01);
-	}
-	100% {
-		background-color: @complimentary_colour;
-		transform: scale(1);
-	}
-}
-@-webkit-keyframes radio_button_color_change_default {
-	25%{
-		-webkit-transform: scale(.95);
-		background-color: @complimentary_colour_light;
-	}
-	95% {
-		-webkit-transform: scale(1.01);
-	}
-	100% {
-		background-color: @complimentary_colour;
-		-webkit-transform: scale(1);
-	}
-}
-@-moz-keyframes radio_button_color_change_default {
-	25%{
-		-moz-transform: scale(.95);
-		background-color: @complimentary_colour_light;
-	}
-	95% {
-		-moz-transform: scale(1.01);
-	}
-	100% {
-		background-color: @complimentary_colour;
-		-moz-transform: scale(1);
-	}
-}
-@-ms-keyframes radio_button_color_change_default {
-	25%{
-		-ms-transform: scale(.95);
-		background-color: @complimentary_colour_light;
-	}
-	95% {
-		-ms-transform: scale(1.01);
-	}
-	100% {
-		background-color: @complimentary_colour;
-		-ms-transform: scale(1);
-	}
-}
-@-o-keyframes radio_button_color_change_default {
-	25%{
-		-o-transform: scale(.95);
-		background-color: @complimentary_colour_light;
-	}
-	95% {
-		-o-transform: scale(1.01);
-	}
-	100% {
-		background-color: @complimentary_colour;
-		-o-transform: scale(1);
-	}
-}
-*/
-/* Negative ! */
-/*
-.input_wrap.negative .iradio_square-grey:active {
-	-webkit-animation: radio_button_color_change_negative 1s 1 alternate;
-	-moz-animation: radio_button_color_change_negative 1s 1 alternate;
-	-ms-animation: radio_button_color_change_negative 1s 1 alternate;
-	-o-animation: radio_button_color_change_negative 1s 1 alternate;
-	animation: radio_button_color_change_negative 1s 1 alternate;
-}
-
-@keyframes radio_button_color_change_negative {
-	25%{
-		transform: scale(.95);
-		background-color: @feature_colour_light;
-	}
-	95% {
-		transform: scale(1.01);
-	}
-	100% {
-		background-color: @feature_colour;
-		transform: scale(1);
-	}
-}
-@-webkit-keyframes radio_button_color_change_negative {
-	25%{
-		-webkit-transform: scale(.95);
-		background-color: @feature_colour_light;
-	}
-	95% {
-		-webkit-transform: scale(1.01);
-	}
-	100% {
-		background-color: @feature_colour;
-		-webkit-transform: scale(1);
-	}
-}
-@-moz-keyframes radio_button_color_change_negative {
-	25%{
-		-moz-transform: scale(.95);
-		background-color: @feature_colour_light;
-	}
-	95% {
-		-moz-transform: scale(1.01);
-	}
-	100% {
-		background-color: @feature_colour;
-		-moz-transform: scale(1);
-	}
-}
-@-ms-keyframes radio_button_color_change_negative {
-	25%{
-		-ms-transform: scale(.95);
-		background-color: @feature_colour_light;
-	}
-	95% {
-		-ms-transform: scale(1.01);
-	}
-	100% {
-		background-color: @feature_colour;
-		-ms-transform: scale(1);
-	}
-}
-@-o-keyframes radio_button_color_change_negative {
-	25%{
-		-o-transform: scale(.95);
-		background-color: @feature_colour_light;
-	}
-	95% {
-		-o-transform: scale(1.01);
-	}
-	100% {
-		background-color: @feature_colour;
-		-o-transform: scale(1);
-	}
-}
-
-
-.icheckbox_square-grey:active ,
-.iradio_square-grey:active ins{ background-color: @supplementary_colour; }
-
-.icheckbox_square-grey:active ,
-.iradio_square-grey:active ins{
-	.button-click-animation(button_color_change_negative);
-}
-
-.keyframes(button_color_change_negative, @supplementary_colour, @supplementary_colour_light, @supplementary_colour_dark);
-
-.icheckbox_square-grey:active ,
-.iradio_square-grey:active ins{ background-color: @supplementary_colour; }
-
-.icheckbox_square-grey:active ,
-.iradio_square-grey:active ins{
-	.button-click-animation(button_color_change_negative);
-}
-
-.keyframes(button_color_change_negative, @supplementary_colour, @supplementary_colour_light, @supplementary_colour_dark);
-
-*/
 
 /* SWITCH */
 .onoffswitch-label { border: solid 2px @secondary_colour_light; }
@@ -407,14 +229,14 @@ span.customSelect:after {
 
 
 
-input[type="text"] {
+input[type="text"], input[type="number"] {
 	border: solid 1px @primary_colour_dark;
 	border-radius: 3px;
 	padding: 5px;
-}
-input[type="text"]:focus {
-	outline: none;
-	border-color: @supplementary_colour;
-	background-color: @supplementary_colour_light;
+	&:focus {
+		outline: none;
+		border-color: @supplementary_colour;
+		background-color: @supplementary_colour_light;
+	}
 }
 
