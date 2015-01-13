@@ -79,4 +79,9 @@ $(function(){
     var localTime = moment(inTime._d).format("HH:mm");
     $('#time_example_1 .time-until').html(endTime);
     $('#time_example_1 .time-local').html(localTime);
+
+    var tom = moment().add(1, 'days');
+    var betTime = moment(tom).format('h:mm L');////.format('L');
+    $('#time_example_2').html(betTime);
+
 });
