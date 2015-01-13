@@ -684,10 +684,17 @@
                         <div class="icon x-small icon-sports-time"></div>
                          Betting Closing in 
                     </span>
+
+
                     <span class="time_text">
                         <span class="time-until"></span> at
                         <span class="time-local"></span>
                     </span>
+                </span>
+
+                <div class="clearspace"></div>
+                <span id="time_example_2" class="time">
+                    
                 </span>
             </div>
 
@@ -1090,6 +1097,52 @@
                     </div>
                 </div>
                     <!-- -->
+
+
+
+
+                <div class="clearspace"></div>
+                <h3>Exotic Bet</h3>
+
+                <div class="bet selection exotic">
+                    <div class="selectionDetails exotic clearfix">
+
+                        <div class="selectionName">Horse Racing, Kyneton</div>
+                        <div class="selectionParentCategory">Race 5: Some Racename</div>
+
+                        <div class="selectionBetType">(VIC,
+                            Quaddie)
+                        </div>
+
+                        <div class="selectionDateTime time">event_datetime</div>
+
+                        <div class="selectionInfo">
+                            Race 5: 1 / Race 6: 2 / Race 7: 5 / Race 8: 5 
+                        </div>
+
+                        <div class="ticketColumns">
+                            <div class="col_33 price">
+                                <div class="selectionPrice">Price</div>
+                                <div class="selectionPrice">product_short_name</div>
+                            </div>
+                            <div class="col_33 stake">
+                                <div class="stakeLabel">Stake</div>
+                                <div class="stakeInputWrap">
+                                    <input type="number" min=0 value=0 />
+                                </div>
+                            </div>
+                            <div class="col_33 actions">
+                                <a class="buttonDelete clearfix">Delete</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
             </div>
 
             <div class="module">
@@ -1152,22 +1205,22 @@
                         <div class="ticketColumnsWrap">
                             <div class="ticketColumnHeadings clearfix">
                                 <div class="col_33 name">
-                                <div class="selectionPrice">Name</div>
+                                    <div class="selectionPrice">Name</div>
                                 </div>
                                 <div class="col_33 stake">
-                                <div class="stakeLabel">Stake</div>
+                                    <div class="stakeLabel">Stake</div>
                                 </div>
                                 <div class="col_33">
-                                <div class="col_50 price">
-                                <div class="stakeLabel">Bets</div>
-                                </div>
-                                <div class="col_50 price">
-                                <div class="stakeLabel">Cost</div>
-                                </div>
-                                </div>
+                                    <div class="col_50 price">
+                                        <div class="stakeLabel">Bets</div>
+                                    </div>
+                                    <div class="col_50 price">
+                                        <div class="stakeLabel">Cost</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <div class="bet selection multi clearfix">
                             <div class="selectionDetails clearfix">
                                 <div class="placementDetails rejected">
@@ -1229,8 +1282,6 @@
                         </div>
 
 
-
-
                         <div class="bet selection multi clearfix">
                             <div class="selectionDetails clearfix">
                                 <div class="placementDetails partial">
@@ -1257,17 +1308,23 @@
                                 </div>
                             </div>
                         </div>
-
-
+                        <div class="betslipFooter">
+                            <div class="col_50">
+                                <a class="buttonDelete clearfix">Clear All Bets</a>
+                            </div>
+                            <div class="col_50">
+                                <button class="affirmative">Place All Bets</button>
+                            </div>
+                        </div>
 
                     </div>
-            </div>
+                </div>
 
-            <footer>
-                <h1>
-                    <br>
-                </h1>
-            </footer>
+                <footer>
+                    <h1>
+                        <br>
+                    </h1>
+                </footer>
 
             <script src="js/vendor.js"></script>
             <script src="js/main.js"></script>

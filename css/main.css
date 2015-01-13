@@ -2451,6 +2451,15 @@ EOF Small
 .bet .selectionEvent {
   clear: both;
 }
+.bet .selectionDateTime {
+  width: 100%;
+  font-size: 1em;
+  clear: both;
+}
+.bet .selectionInfo {
+  width: 100%;
+  clear: both;
+}
 .bet .ticketColumns {
   clear: left;
   width: 100%;
@@ -2466,6 +2475,7 @@ EOF Small
 }
 .bet .stakeLabel {
   text-align: center;
+  line-height: 30px;
   width: 100%;
 }
 .bet .stake input {
@@ -2478,11 +2488,12 @@ EOF Small
   font-size: .8em;
   text-decoration: underline;
   cursor: pointer;
-  margin-top: 25px;
+  line-height: 30px;
+  margin-top: 30px;
   display: block;
 }
 .bet .selectionPriceLabel {
-  height: 20px;
+  height: 30px;
 }
 .bet .selectionPrice {
   clear: left;
@@ -2530,6 +2541,21 @@ EOF Small
 .betslip .ticketColumnHeadings .selectionPrice,
 .betslip .ticketColumnHeadings .stakeLabel {
   line-height: 30px;
+}
+.betslip .buttonDelete {
+  font-size: .8em;
+  text-decoration: underline;
+  cursor: pointer;
+  line-height: 30px;
+  margin-top: 30px;
+  display: block;
+  text-align: center;
+}
+.betslip .betslipFooter .buttonDelete {
+  margin-top: 0px;
+}
+.betslip .betslipFooter .col_50 {
+  text-align: center;
 }
 * {
   box-sizing: border-box;
