@@ -29,7 +29,8 @@ var vendorJSFiles = [
     "jscrollpane/script/jquery.mousewheel.js",
     "jscrollpane/script/jquery.jscrollpane.min.js",
     "iscroll/build/iscroll.js",
-    "fancyselect/fancySelect.js"
+    "fancyselect/fancySelect.js",
+    "spin.js/spin.js"
 ];
 
 

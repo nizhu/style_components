@@ -27,6 +27,7 @@
     "intro.js": "~1.0.0",
     "switchery": "~0.6.3",
     "jquery.onoff": "~0.3.6",
-    "fancyselect": "amindunited/FancySelect"
+    "fancyselect": "amindunited/FancySelect",
+    "spin.js": "~2.0.2"
   }
 }
