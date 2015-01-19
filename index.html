@@ -146,44 +146,6 @@
                             </td>
                             <!-- <td class="supplementary_colour_2_dark"></td> -->
                         </tr>
-                        <!--
-                        <tr>
-                            <th class="row_header">Light</th>
-                            
-                            <td class="">
-                                <div class="feature_colour_light colour_swatch">
-                                    <div class="cmyk">C18 M78 Y40 K01</div>
-                                    <div class="rgb">R202 G91 B115</div>
-                                    <div class="hex">#CA5B73</div>
-                                </div>
-                            </td>
-                            <td class="">
-
-                                <div class="complimentary_colour_light colour_swatch">
-                                    <div class="cmyk">C46 M06 Y86 K00</div>
-                                    <div class="rgb">R150 G191 B87</div>
-                                    <div class="hex">#96BF57</div>
-                                </div>
-                            </td>
-                            <td class="">
-
-                                <div class="primary_colour_light colour_swatch">
-                                    <div class="cmyk">C11 M08 Y09 K00</div>
-                                    <div class="rgb">R224 G224 B224</div>
-                                    <div class="hex">#E0E0E0</div>
-                                </div>
-                            </td>
-                            <td class="">
-
-                                <div class="supplementary_colour_light colour_swatch">
-                                    <div class="cmyk">C14 M19 Y72 K00</div>
-                                    <div class="rgb">R222 G195 B103</div>
-                                    <div class="hex">#DEC367</div>
-                                </div>
-                            </td>
-                            
-                        </tr>
-                        -->
                         <tr>
                             <th class="row_header">Light</th>
                             
@@ -326,7 +288,7 @@
 -->
 
                 <div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">
-                    <select class="fancySelect">
+                    <select class="fancySelect luxInput">
                         <option value="">choose preset...</option>
                         <option value="one">two</option>
                         <option value="two">something</option>
@@ -376,13 +338,13 @@
 
                 <div class="clearspace"></div>
                 <h3>Switches / Toggles </h3>
-                    <input type="checkbox" class="jquery-onoff" checked />
+                    <input type="checkbox" class="jquery-onoff luxInput" checked />
 
 
 
                 <div class="clearspace"></div>
                 <h3>Stake</h3>
-                <input type="text" placeholder="$"/>
+                <input class="luxInput" type="text" placeholder="$"/>
 
             </div>
 
@@ -732,6 +694,9 @@
                 <ul class="luxbet_list_page with-arrows">
                     <li>
                         <a>
+                            <span class="eventCountWrap">
+                                <span class="eventCount right"> 99 </span>
+                            </span>
                             <span class="arrowWrap">
                                 <span class="arrow">&#8250;</span>
                             </span>
@@ -848,6 +813,9 @@
                                 <div class="label">R55</div>
                             </div>
 
+                            <span class="eventCountWrap">
+                                <span class="eventCount right"> 99 </span>
+                            </span>
                             <span class="arrowWrap">
                                 <span class="arrow">&#8250;</span>
                             </span>
@@ -973,6 +941,22 @@
                 </nav>
             </div>
 
+
+            <div class="module">
+                <h2 class="center">Page Layout</h2>
+                <div class="pageLayoutExample">
+                    <div class="applicationWrap">
+                        <div class="leftNavWrap"> Left Nav</div>
+                        <div class="leftShadow"></div>
+                        <div class="betslipWrap"> Betslip </div>
+                        <div class="rightShadow"></div>
+                        <div class="pageWrap"> <h3>PageWrap</h3> </div>
+                    </div>
+                </div>
+            </div>
+
+
+
             <div class="module">
                 <h2 class="center">Bet</h2>
 
@@ -1029,52 +1013,10 @@
                     <!-- -->
 
                     <!-- -->
-
                 <div class="clearspace"></div>
                 <h3>Multi Bet</h3>
                 <div class="bet selection multi clearfix">
                     <div class="selectionDetails clearfix">
-                        <!--
-                            {{#if multi.checkoutError}}
-                                <div class="placementDetails rejected">
-                                    <div class="notice">Error: {{multi.checkoutError.error_message}}</div>
-                                </div>
-                            {{else}}
-                                {{#if multi.betplaced.has_timed_out}}
-                                    <div class="placementDetails rejected">
-                                        <div class="notice">This bet was not processed in time</div>
-                                    </div>
-                                {{else}}
-                                    {{#if multi.betplaced.is_success}}
-                                        <div class="placementDetails success">
-                                            <div class="notice">Bet placed successfully </div>
-                                            <div class="betId">
-                                                <span class="betIdLabel">ID: </span>
-                                                <span class="betIdValue">{{multi.betplaced.bet_id}}</span>
-                                            </div>
-                                        </div>
-                                    {{/if}}
-
-                                    {{#if multi.betplaced.is_rejected}}
-                                        <div class="placementDetails rejected">
-                                            <div class="notice">Your bet has been rejected </div>
-                                        </div>
-                                    {{/if}}
-
-                                    {{#if multi.betplaced.is_rejected_combins}}
-                                        <div class="placementDetails rejectedCombins">
-                                            <div class="notice">Your bet has been assessed, please check your statement for more details</div>
-                                        </div>
-                                    {{/if}}
-
-                                    {{#if multi.betplaced.is_partially_accepted}}
-                                        <div class="placementDetails partial">
-                                            <div class="notice">Bet partially placed, please check your statement for more details</div>
-                                        </div>
-                                    {{/if}}
-                                {{/if}}
-                            {{/if}}
--->
                         <div class="ticketColumns clearfix">
                             <div class="col_33 name">
                                 <div class="selectionPrice">Name</div>
@@ -1141,6 +1083,72 @@
 
 
 
+                <div class="clearspace"></div>
+                <h3>Bet Ticket</h3>
+
+                <div class="bet selection ticket">
+                    <div class="selectionDetails clearfix">
+                        <div class="selectionName">
+                            <span class="selectionPosition">2: </span>
+                            GOSHI
+                        </div>
+                        <div class="selectionBetType">
+                            (LuxMid,Win)
+                        </div>
+                        <div class="selectionMarket">Racing Live</div>
+                        <div class="selectionParentCategory">
+                            Greyhound Racing,
+                        </div>
+                        <div class="selectionCategory">
+                            ALBION PARK
+                        </div>
+                        <div class="selectionEvent">
+                            4: A TEAM STUD
+                        </div>
+
+
+                        <div class="ticketColumns">
+                            <div class="col_33 price">
+                                <div class="selectionPriceLabel">Price</div>
+                                <div class="selectionPrice">
+                                    LuxMid
+                                </div>
+                            </div>
+                            <div class="col_33 stake">
+                                <div class="stakeLabel">Stake</div>
+                                <div class="stakeInputWrap">
+                                    <input id="ember6594" class="ember-view ember-text-field" type="number" min="0" />
+                                </div>
+                            </div>
+                            <div class="col_33 actions">
+                                <a class="buttonDelete clearfix" data-ember-action="6596">Delete</a>
+                            </div>
+                        </div>
+
+                        <div class="ticketAvailableBets">
+
+                        </div>
+                    </div>
+                    <div class="buttonsAndInputs clearfix">
+                        
+                        <div class="calc">
+                            <button>+50c</button>
+                            <button>+$1</button>
+                            <button>+$5</button>
+                            <button>+$10</button>
+                            <button>+$50</button>
+                            <button>+$100</button>
+                            <button>+$500</button>
+                            <button>+$1000</button>
+                        </div>
+                        <div class="buttonsWrap">
+                            <button class="buttonPlaceBet affirmative">Place Bet</button>
+                            <button class="buttonAddToBetslip alternative">Add To Betslip</button>
+                            <button class="buttonCancel negative">Cancel</button>
+                        </div>
+                    </div>
+                    
+                </div>
 
 
             </div>
@@ -1305,7 +1313,9 @@
                                             <div class="selectionPrice">$2.00</div>
                                         </div>
                                     </div>
+
                                 </div>
+
                             </div>
                         </div>
                         <div class="betslipFooter">
@@ -1320,6 +1330,28 @@
                     </div>
                 </div>
 
+                <div class="module">
+                    <h2>Notify</h2>
+                    <button class="notifyTrigger">Try It</button>
+                    <div class="notifyListExampleWrap" style="position:relative;">
+                        <ul class="notifyList">
+                            
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="module">
+                    <h2>Modal</h2>
+                    <button class="modalTrigger">Try It</button>
+                    <div class="modalWrap">
+                        <div class="modal">
+                            
+                        </div>
+                    </div>
+                </div>
+
+
                 <footer>
                     <h1>
                         <br>
@@ -1327,6 +1359,7 @@
                 </footer>
 
             <script src="js/vendor.js"></script>
+            <!--<script src="js/notify.js"></script>-->
             <script src="js/main.js"></script>
             <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <!--
