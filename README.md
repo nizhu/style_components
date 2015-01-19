@@ -3,23 +3,46 @@
 A simple scaffoling and workflow for getting example components up on github / and github pages.
 
 
- ## Getting started
+## Getting started
 
  1. Clone this repo
 
- 2. run broccoli serve
+ 2. run 
+   ```bash
+   npm install
+   ```
 
- 4. point your browser to localhost:4200
+ 3. run 
+   ```bash
+   bower install
+   ```
 
- 5. Edit your files in the src/ folder
+## Use
 
- 6. When you are happy commit
+ 1. run 
+  ```bash
+  broccoli serve
+  ```
 
- 7. to deploy github pages:
+ 2. point your browser to localhost:4200
+
+ 3. Edit your files in the src/ folder
+
+ 4. When you are happy, commit
+
+ 5. to deploy github pages:
 
  	a. delete the public directory:
- 		rm -r public/
- 	b. build you public folder:
- 		broccoli build 'public'
- 	c. commit to your github pages
+  ```bash
+  rm -r public/
+  ```
 
+ 	b. build you public folder:
+  ```bash
+ 	broccoli build 'public'
+ 	```
+
+ 	c. commit to your github pages
+ 	```bash
+ 	grunt deploy
+ 	```

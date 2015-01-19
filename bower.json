@@ -28,6 +28,7 @@
     "switchery": "~0.6.3",
     "jquery.onoff": "~0.3.6",
     "fancyselect": "amindunited/FancySelect",
-    "spin.js": "~2.0.2"
+    "spin.js": "~2.0.2",
+    "momentjs": "~2.9.0"
   }
 }

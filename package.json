@@ -20,6 +20,7 @@
     "broccoli": "^0.13.2",
     "broccoli-concat": "0.0.12",
     "broccoli-less": "^1.0.0",
+    "broccoli-less-single": "^0.1.5",
     "broccoli-merge-trees": "^0.2.1",
     "broccoli-static-compiler": "^0.2.1",
     "grunt": "^0.4.5",
