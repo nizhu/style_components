@@ -132,7 +132,7 @@ $(function(){
             'detail': {
                 notify_level: 'notify',//this param in currently not in use
                 notifyClass: 'notify',//this is the class name that will be added to the notify element (use it for styles or ref..)
-                message: "Notification From Button Click"//this is the string that will be printed inside the notification
+                message: "<h3><span>&#x2713;</span> Account Verified</h3><p>Notification From Button Click.<br/>More information on IDV can be found below</p>"//this is the string that will be printed inside the notification
             }
         });
         document.dispatchEvent(event);

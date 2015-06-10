@@ -207,9 +207,9 @@
 						</td>
 						<td class="">
 							<div class="white colour_swatch">
-								<div class="cmyk">C00 M00 Y00 K03</div>
-								<div class="rgb">R248 G248 B248</div>
-								<div class="hex">#F8F8F8</div>
+								<div class="cmyk">C00 M00 Y00 K00</div>
+								<div class="rgb">R255 G255 B255</div>
+								<div class="hex">#FFFFFF</div>
 							</div>
 						</td>
 						<td>
@@ -246,7 +246,7 @@
                 <div class="example" data-step="6" data-intro="All Heading uses HelveticaNeueBdCn, and progress in size from .9 to 2.0em. <br/> Here, set on a black backgound with white text the ">
                     <h3 class="title">List heading example</h3>
                     <div class="wrap">
-                        <h3 class="list_header">Section Title <span class="float_right">Subsection Title</span></h3>
+                        <div class="list_header">Section Title <span class="float_right">Subsection Title</span></div>
                         <!--
                         <ul class="luxbet_list_page">
                             <li>Baseball</li>
@@ -262,11 +262,11 @@
 
 					<br/>
 					<div class="wrap">
-						<h3 class="list_header">Section Title <span class="float_right">Subsection Title</span></h3>
+						<div class="list_header">Quick Multi<span class="float_right">Racing</span></div>
 						<ul class="luxbet_list_page">
 							<li><a><span class="titleWrap"><span class="">The Event name (ie TrackName R1)</span></span><span class="arrowWrap"><span class="arrow">&#8250;</span></span></a></li>
-							<li><a><span class="titleWrap"><span class="">The Event name (ie TrackName R2)</span></span></a></li>
-							<li><a><span class="titleWrap"><span class="">The Event name (ie TrackName R3)</span></span></a></li>
+							<li><a><span class="titleWrap"><span class="">The Event name (ie TrackName R2)</span></span><span class="arrowWrap"><span class="arrow">&#8250;</span></span></a></li>
+							<li><a><span class="titleWrap"><span class="">The Event name (ie TrackName R3)</span></span><span class="arrowWrap"><span class="arrow">&#8250;</span></span></a></li>
 						</ul>
 					</div>
                 </div>
@@ -807,7 +807,7 @@
                                 <span class="title">The Event name (ie TrackName R2)</span>
                                 <span id="time_example_1" class="time">
                                     <span class="warn">
-                                        <div class="icon x-small icon-sports-time"></div>
+                                        <!--<div class="icon x-small icon-sports-time"></div>-->
                                          Betting Closing in 
                                     </span>
                                     <span class="time_text">
@@ -862,7 +862,7 @@
                                 <span class="title">The Event name (ie TrackName R2)</span>
                                 <span id="time_example_1" class="time">
                                     <span class="warn">
-                                        <div class="icon x-small icon-sports-time"></div>
+                                        <!--<div class="icon x-small icon-sports-time"></div>-->
                                          Betting Closing in 
                                     </span>
                                     <span class="time_text">
@@ -888,7 +888,7 @@
                                 <span class="title">The Event name (ie TrackName R2)</span>
                                 <span id="time_example_1" class="time">
                                     <span class="warn">
-                                        <div class="icon x-small icon-sports-time"></div>
+                                        <!--<div class="icon x-small icon-sports-time"></div>-->
                                          Betting Closing in 
                                     </span>
                                     <span class="time_text">
@@ -1020,6 +1020,7 @@
                 </nav>
             </div>
 
+			<!-- Page Layout -->
             <div class="module">
                 <h2 class="center">Page Layout</h2>
                 <div class="pageLayoutExample">
@@ -1033,16 +1034,14 @@
                 </div>
             </div>
 
+			<!-- Bet -->
             <div class="module">
                 <h2 class="center">Bet</h2>
 
+				<!--Single Bet -->
                 <div class="clearspace"></div>
-                <h3>Single Bet</h3>
-
-                <div class="clearspace"></div>
-
+                <h3 class="">Single Bet</h3>
                 <div class="bet selection clearfix">
-
                     <div class="selectionDetails clearfix">
                         <div class="selectionName">
                             <span class="selectionPosition">2: </span>
@@ -1081,16 +1080,13 @@
                         </div>
 
                         <div class="ticketAvailableBets">
-
                         </div>
                     </div>
-
                 </div>
-                    <!-- -->
 
-                    <!-- -->
+				<!-- Multi Bet -->
                 <div class="clearspace"></div>
-                <h3>Multi Bet</h3>
+                <h3  class="">Multi Bet</h3>
                 <div class="bet selection multi clearfix">
                     <div class="selectionDetails clearfix">
                         <div class="ticketColumns clearfix">
@@ -1114,29 +1110,17 @@
                         </div>
                     </div>
                 </div>
-                    <!-- -->
 
-
-
-
+				<!-- Exotic Bet -->
                 <div class="clearspace"></div>
                 <h3>Exotic Bet</h3>
-
                 <div class="bet selection exotic">
                     <div class="selectionDetails exotic clearfix">
-
                         <div class="selectionName">Horse Racing, Kyneton</div>
                         <div class="selectionParentCategory">Race 5: Some Racename</div>
-
-                        <div class="selectionBetType">(VIC,
-                            Quaddie)
-                        </div>
-
+                        <div class="selectionBetType">(VIC,Quaddie)</div>
                         <div class="selectionDateTime time">event_datetime</div>
-
-                        <div class="selectionInfo">
-                            Race 5: 1 / Race 6: 2 / Race 7: 5 / Race 8: 5 
-                        </div>
+                        <div class="selectionInfo">Race 5: 1 / Race 6: 2 / Race 7: 5 / Race 8: 5</div>
 
                         <div class="ticketColumns">
                             <div class="col_33 price">
@@ -1153,90 +1137,72 @@
                                 <a class="buttonDelete clearfix">Delete</a>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-
-
+				<!-- Bet Ticket -->
                 <div class="clearspace"></div>
                 <h3>Bet Ticket</h3>
-
-                <div class="bet selection ticket">
+                <div class="bet selection ticket ticketBody">
                     <div class="selectionDetails clearfix">
                         <div class="selectionName">
                             <span class="selectionPosition">2: </span>
                             GOSHI
+							<div class="actions">
+								<a class="cancel">x</a>
+							</div>
                         </div>
-                        <div class="selectionBetType">
-                            (LuxMid,Win)
-                        </div>
+                        <div class="selectionBetType">(LuxMid,Win)</div>
                         <div class="selectionMarket">Racing Live</div>
-                        <div class="selectionParentCategory">
-                            Greyhound Racing,
-                        </div>
-                        <div class="selectionCategory">
-                            ALBION PARK
-                        </div>
-                        <div class="selectionEvent">
-                            4: A TEAM STUD
-                        </div>
+                        <div class="selectionParentCategory">Greyhound Racing,</div>
+                        <div class="selectionCategory">ALBION PARK</div>
+						<div class="selectionEvent">4: A TEAM STUD</div>
 
+						<div class="additionalOptions">
+							<div class="checkBoxWrap">
+								<input type="checkbox" name="winplace" value="winplace">Win/Place
+							</div>
+						</div>
 
-                        <div class="ticketColumns">
-                            <div class="col_33 price">
-                                <div class="selectionPriceLabel">Price</div>
-                                <div class="selectionPrice">
-                                    LuxMid
-                                </div>
-                            </div>
-                            <div class="col_33 stake">
-                                <div class="stakeLabel">Stake</div>
-                                <div class="stakeInputWrap">
-                                    <input id="ember6594" class="ember-view ember-text-field" type="number" min="0" />
-                                </div>
-                            </div>
-                            <div class="col_33 actions">
-                                <a class="buttonDelete clearfix" data-ember-action="6596">Delete</a>
-                            </div>
+                        <div class="ticketRow">
+							<span class="selectionPriceLabel">Price</span>
+							<span class="selectionPrice">LuxMid</span>
+							<span> | </span>
+							<span class="stakeLabel">Stake</span>
+							<input id="ember6594" class="ember-view ember-text-field" type="number" min="0"/>
+							<a class="buttonClear">Clear</a>
                         </div>
 
                         <div class="ticketAvailableBets">
 
                         </div>
                     </div>
-                    <div class="buttonsAndInputs clearfix">
-                        
-                        <div class="calc">
-                            <button>+50c</button>
-                            <button>+$1</button>
-                            <button>+$5</button>
-                            <button>+$10</button>
-                            <button>+$50</button>
-                            <button>+$100</button>
-                            <button>+$500</button>
-                            <button>+$1000</button>
-                        </div>
-                        <div class="buttonsWrap">
-                            <button class="buttonPlaceBet affirmative">Place Bet</button>
-                            <button class="buttonAddToBetslip alternative">Add To Betslip</button>
-                            <button class="buttonCancel negative">Cancel</button>
-                        </div>
-                    </div>
-                    
+					<div class="calc">
+						<button>+50c</button>
+						<button>+$1</button>
+						<button>+$5</button>
+						<button>+$10</button>
+						<button>+$50</button>
+						<button>+$100</button>
+						<button>+$500</button>
+						<button>+$1000</button>
+						<button class="buttonClear">Clear</button>
+					</div>
+					<div class="buttonWrap">
+						<button class="buttonPlaceBet affirmative">Place Bet</button>
+						<button class="buttonAddToBetslip alternative">Add to Betslip</button>
+					</div>
                 </div>
             </div>
 
-            <div class="module">
+			<!-- Betslip -->
+            <div class="module betslip">
                 <h2 class="center">Cart (Betslip)</h2>
-
                 <div class="clearspace"></div>
                     <div class="betslip">
-                        <h4 class="list_header">BETSLIP</h4>
-                        <h3 class="sub_header">Single Bets</h3>
-                        
+                        <div class="list_header">BET SLIP</div>
+                        <div class="sub_header list_header_invert">Single Bets</div>
                         <div class="bet selection clearfix">
-
                             <div class="selectionDetails clearfix">
                                 <div class="selectionName">
                                     <span class="selectionPosition">2: </span>
@@ -1284,9 +1250,7 @@
 
                         </div>
 
-
-
-                        <h3 class="sub_header">Multis</h3>
+                        <div class="sub_header list_header_invert">Multis</div>
                         <div class="ticketColumnsWrap">
                             <div class="ticketColumnHeadings clearfix">
                                 <div class="col_33 name">
@@ -1333,8 +1297,6 @@
                             </div>
                         </div>
 
-
-
                         <div class="bet selection multi clearfix">
                             <div class="selectionDetails clearfix">
                                 <div class="placementDetails success">
@@ -1366,7 +1328,6 @@
                             </div>
                         </div>
 
-
                         <div class="bet selection multi clearfix">
                             <div class="selectionDetails clearfix">
                                 <div class="placementDetails partial">
@@ -1396,12 +1357,12 @@
                             </div>
                         </div>
                         <div class="betslipFooter">
-                            <div class="col_50">
-                                <a class="buttonDelete clearfix">Clear All Bets</a>
-                            </div>
-                            <div class="col_50">
+                            <div class="col_66">
                                 <button class="affirmative">Place All Bets</button>
                             </div>
+							<div class="col_33">
+								<button class="buttonDelete clearfix">Clear All Bets</button>
+							</div>
                         </div>
 
                     </div>
@@ -1412,7 +1373,14 @@
 				<button class="notifyTrigger">Try It</button>
 				<div class="notifyListExampleWrap" style="position:relative;">
 					<ul class="notifyList">
-
+						<!--<li>
+							<div class="wrapper notifyWrapper">
+								<div class="message notify">
+									<h3><span>&#x2713;</span> Account Verified</h3>
+									<p>More information on IDV can be found below</p>
+								</div>
+							</div>
+						</li>-->
 					</ul>
 				</div>
 			</div>
@@ -1427,21 +1395,32 @@
 				</div>
 			</div>
 
-			<div class="module">
-				<h2 class="center">Error and notification messaging - System</h2>
-				<div>
-					<span>LOGO</span><h3>Account Verified</h3>
-					<p>More information on IDV can be found below</p>
-				</div>
-				<br/>
-				<div>
-					<span>LOGO</span><h3>Account Unverified</h3><span>Verify Now</span>
-					<p>More information on IDV can be found below</p>
+			<div class="module notification">
+				<h2 class="center">Error and notification messaging - Static</h2>
+				<div class="notifyListExampleWrap">
+				<ul class="notifyList">
+					<li>
+						<div class="wrapper notifyWrapper">
+							<div class="message notify">
+								<h3><span>&#x2713;</span> Account Verified</h3>
+								<p>More information on IDV can be found below</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="wrapper alertWrapper">
+							<div class="message alert">
+								<h3><span>&#x274c;</span> Account Unverified <button class="alternative small">Verify Now</button></h3>
+								<p>More information on IDV can be found below</p>
+							</div>
+						</div>
+					</li>
+				</ul>
 				</div>
 			</div>
 
-            <script src="js/vendor.js"></script>
-            <!--<script src="js/notify.js"></script>-->
+		<script src="js/vendor.js"></script>
+		<!--<script src="js/notify.js"></script>-->
             <script src="js/main.js"></script>
         </div>
     </body>

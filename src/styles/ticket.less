@@ -1,72 +1,126 @@
 .ticketWrap {
-	background-color: rgba(61,61,61,0.75);
+	background-color: rgba(61, 61, 61, 0.75);
 	opacity: 0;
+	padding-top: 10px;
 	&.open {
 		position: fixed;
 		top: 0;
 		left: 0;
-		height: auto;
-		width: auto;
 		bottom: 0;
 		right: 0;
+		height: auto;
+		width: auto;
 		overflow-y: scroll;
 		opacity: 1;
 		.translate3d(0, 0, 0);
 		.transition(opacity 200ms linear);
 	}
 }
+
+/* ticket body */
 .ticket {
+	@local_positive_colour: @complimentary_colour;
+	@local_positive_colour_light: @complimentary_colour_light;
+	@local_negative_colour: @feature_colour;
+	@local_negative_colour_light: @feature_colour_light;
+	@local_alert_colour: @supplementary_colour_dark;
+	@local_alert_colour_light: @supplementary_colour_light;
+
+	@local_white: @white;
+	@local_primary_colour: @primary_colour;
+	@local_secondary_colour_dark: @secondary_colour_dark;
+
 	margin-left: auto;
 	margin-right: auto;
 	width: 320px;
-	background-color: @white;
+	background-color: @local_white;
+	color: @local_secondary_colour_dark;
+
 	&.bet .selectionDetails {
 		float: none;
 	}
-	/*
-	&.bet {
-		border-bottom: none;
-	}
-	*/
 
-	.calc {
-		margin-top: 5px;
-		button {
-			float: left;
-			width: 23%;
-			margin: 1%;
-		}
+	.calc, .buttonWrap {
+		width: 100%;
+		display: inline-block;
+		padding-top: 10px;
 	}
-	.buttonAndInputs {
-		margin-top: 5px;
+
+	.calc button {
+		background-color: @local_primary_colour;
+		color: @local_secondary_colour_dark;
+		font-weight: normal;
+		float: left;
+		width: 31%;
+		margin: 1%;
 	}
-	.buttonsWrap {
-		button {
-			width: 98%;
-			margin: 1%;
+	.calc .buttonClear {
+		background-color: @local_white;
+		border: 1px solid @local_primary_colour;
+	}
+
+	.buttonWrap button {
+		margin: 1%;
+		font-weight: normal;
+	}
+	.buttonWrap .buttonPlaceBet {
+		width: 64%;
+		float: left;
+	}
+	.buttonWrap .buttonAddToBetslip, .buttonWrap .buttonEdit {
+		width: 31%;
+		float: left;
+	}
+
+	.ticketRow {
+		padding-top: 10px;
+	}
+	.ticketRow input {
+		width: 33%;
+	}
+	.ticketRow .buttonClear {
+		color: @blue;
+		padding-left: 5px;
+	}
+
+	.actions {
+		float: right;
+
+		.cancel {
+			color: @local_negative_colour;
+			padding: 5px;
+			.transition(all 0.5s ease);
+
+			&:hover {
+				color: @white;
+				background-color: @local_negative_colour;
+			}
 		}
 	}
 
 	.selectionName {
-		margin-top: 10px;
+		font-size: 1.4em;
+		font-weight: bold;
+		color: @local_positive_colour;
 	}
-
 
 	.placementDetails {
 		margin: 0px;
 
 		.success {
-			background-color: @complimentary_colour_light;
+			background-color: @local_positive_colour_light;
+			color: @local_positive_colour
 		}
 		.partial {
-			background-color: @supplementary_colour_light;
+			background-color: @local_alert_colour_light;
+			color: @local_alert_colour;
 		}
 	}
 
 	.smallNote {
-		font-size: 0.6em;
 		float: right;
 		margin: 5px;
+		.tiny;
 	}
 
 	.flexiOptions {

@@ -1,8 +1,18 @@
 .betslip {
+	@local_positive_colour: @complimentary_colour;
+	@local_positive_colour_light: @complimentary_colour_light;
+	@local_negative_colour: @feature_colour;
+	@local_negative_colour_light: @feature_colour_light;
+	@local_alert_colour: @supplementary_colour_dark;
 	@local_alert_colour_light: @supplementary_colour_light;
-	@local_sub_header_color: @white;
+
 	@local_white: @white;
-	@local_border: 1px solid @primary_colour_dark;
+	@local_primary_colour: @primary_colour;
+	@local_primary_colour_light: @primary_colour_light;
+	@local_primary_colour_dark: @primary_colour_dark;
+	@local_border: 1px solid @primary_colour;
+
+	background-color: @local_primary_colour_light;
 
 	button {
 		width: 90%;
@@ -15,10 +25,6 @@
 
 	.sub_header {
 		margin-bottom: 5px;
-		padding: 10px;
-		background-color: @local_sub_header_color;
-		border-top: @local_border;
-		border-bottom: @local_border;
 	}
 
 	.selection {
@@ -26,8 +32,7 @@
 	}
 
 	.ticketColumnHeadings {
-		background-color: @secondary_colour_dark;
-		color: @white;
+		background-color: @local_primary_colour;
 		line-height: 30px;
 		.name {
 			padding-left: 10px;
@@ -47,21 +52,21 @@
 		margin-top: 10px;
 		text-align: center;
 	}
-
-	.smallNote {
-		font-size: 0.7em;
-		padding-top: 5px;
+	.betslipFooter .buttonDelete {
+		border-color: @local_primary_colour_dark;
+		background-color: @local_primary_colour_light;
+		color: @local_primary_colour_dark;
 	}
 
 	.betSuccessAccountInfo {
-		background-color: @secondary_colour_dark;
-		color: @local_white;
-		font-size: .9em;
-		padding: 5px;
+		background-color: @local_positive_colour_light;
+		color: @local_positive_colour;
+		padding: 10px;
 	}
 
 	.validationMessage {
 		background-color: @local_alert_colour_light;
+		color: @local_alert_colour;
 		padding: 10px;
 	}
 }

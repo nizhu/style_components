@@ -1,15 +1,23 @@
 .list_header {
 	display: inline-block;
-	min-height: 50px;
 	width: 100%;
-	padding: 5px;
+	padding: 30px 10px 5px 10px;
 	background-color: @primary_colour_light;
 	color: @primary_colour_dark;
-	border-top: 1px solid @primary_colour_dark;
-	border-bottom: 1px solid @primary_colour_dark;
 	text-transform: uppercase;
+}
 
-	.float_right {
-		float: right;
-	}
+.list_header_invert {
+	display: inline-block;
+	width: 100%;
+	padding: 10px;
+	background-color: @white;
+	color: @black;
+	border: solid 1px @primary_colour;
+}
+
+.list_header .float_right, .list_header_invert .float_right {
+	float: right;
+	text-transform: capitalize;
+	font-weight: bold;
 }

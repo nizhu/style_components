@@ -13,75 +13,60 @@
 	@local_green_light: @complimentary_colour_light;
 	@local_yellow_light: @supplementary_colour_light;
 
-	list-style: none;
-	margin: 0;
-	padding:0;
-	position: fixed;
-	right: 10px;
-	top: 0px;
-	width: 33%;
-	max-width: 240px;
+	@local_black: @secondary_colour_dark;
 
+
+	list-style: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 
 	li {
 		list-style: none;
-		margin: 0;
-		padding:0;
+		margin: 5px 0 0 0;
+		padding: 0;
+		width: 100%;
+		&:first-child { margin: 0; }
 	}
-
-	//
-	//@notification_error: #f8dada;
-	//@notification_warning: #ece0b8;
-	//@notification_notify: #cedcb9;
-
-
-	li {
-		margin-top:2px;
-		width: 100% !important;
+	li p {
+		color: @local_black;
 	}
 
 	div.wrapper {
-		border-radius: 5px;
 		background-color: @white;
 		color: @local_green;
-		font-weight: bold;
 		text-align: center;
+		width: 100%;
 	}
 
 	li div.message {
-		border-radius: 5px;
-		padding:4px;
+		padding: 10px;
 		min-height: 36px;
 	}
 
 	li div.notifyWrapper {
+		background-color: @local_green_light;
 		color: @local_green;
 	}
 
 	li div.warnWrapper {
+		background-color: @local_yellow_light;
 		color: @local_yellow_dark;
 	}
 
 	li div.alertWrapper, .notifyList li div.errorWrapper {
+		background-color: @local_red_light;
 		color: @local_red;
 	}
 
-	li div.notify {
-
-	}
-
-	li div.warn {
-		//background-color: @notification_warning;
-	}
-
-	li div.alert {
-		//background-color: @notification_error;
-	}
-
-
-	li div.error {
-		//background-color: @notification_error;
-	}
+	li div.notify {}
+	li div.warn {}
+	li div.alert {}
+	li div.error {}
 
 	/* SOF animateInBlind */
 	li {
@@ -108,20 +93,10 @@
 	}
 
 	li:hover {
-		display: none;
+		//display: none;
 	}
 
 }
-/*
-@keyframes notifyAnimateInBlind {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-*/
 
 
 @keyframes notifyAnimateInBlind{

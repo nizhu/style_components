@@ -3,18 +3,19 @@
 	@local_positive_colour_light: @complimentary_colour_light;
 	@local_negative_colour: @feature_colour;
 	@local_negative_colour_light: @feature_colour_light;
+	@local_alert_colour: @supplementary_colour_dark;
 	@local_alert_colour_light: @supplementary_colour_light;
 
 	background-color: @white;
 	padding: 10px;
-	border-bottom: dashed 1px @primary_colour;
+	border: solid 1px @primary_colour;
 
 	.col_33 {
 		width: 33%;
 	}
 
 	.selectionName {
-		font-size: 1.1em;
+		font-size: 1.4em;
 		font-weight: bold;
 		color: @local_positive_colour;
 	}
@@ -61,13 +62,16 @@
 	.placementDetails.partial,
 	.placementDetails.rejected {
 		background-color: @local_negative_colour_light;
-		padding: 5px;
-		margin-bottom: 5px;
+		color: @local_negative_colour;
+		padding: 10px;
+		margin: -10px -10px 5px -10px;
 	}
 	.placementDetails.success {
 		background-color: @local_positive_colour_light;
+		color: @local_positive_colour;
 	}
 	.placementDetails.partial {
 		background-color: @local_alert_colour_light;
+		color: @local_alert_colour;
 	}
 }

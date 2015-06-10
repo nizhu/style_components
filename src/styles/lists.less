@@ -1,10 +1,13 @@
 .luxbet_list_page {
+	@local_black: @black;
 	@local_white: @white;
 	@local_primary: @primary_colour;
 	@local_primary_dark: @primary_colour_dark;
 	@local_complimentary: @complimentary_colour;
 	@local_complimentary_dark: @complimentary_colour_dark;
-	@local_supplementary: @supplementary_colour_dark;
+	@local_supplementary: @supplementary_colour;
+
+	@local_border: 1px solid @primary_colour;
 
 	overflow: hidden;
 
@@ -19,7 +22,7 @@
 			padding-top: 5px;
 			padding-left: 45px;
 			padding-right: 40px;
-			min-height: 44px;
+			min-height: 47px;
 		}
 	}
 
@@ -44,14 +47,15 @@
 
 	}
 	li {
-		color: @black;
+		color: @local_black;
 		background-color: @local_white;
-		border-bottom: solid 2px @local_primary;
+		border: @local_border;
+		border-top: none;
 		min-height: 32px;
 		padding-left: 5px;
 		position: relative;
 
-		&:last-child { border-bottom: none; }
+		&:first-child { border-top: @local_border; }
 		&:hover { background-color: @local_primary; }
 	}
 	li a {
@@ -136,7 +140,6 @@
 		border-radius: 5px;
 		color: @local_white;
 		font-size: 12px;
-		text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 	}
 
 	li:active {
@@ -146,7 +149,7 @@
 			background: @local_primary;
 		}
 	}
-	.list-item-click-keyframes(list_item_color_change_default, @white, @white, @primary_colour_light);
+	.list-item-click-keyframes(list_item_color_change_default, @local_white, @local_white, @local_primary);
 
 	li .eventCountWrap {
 		position: absolute;
@@ -157,7 +160,7 @@
 		width: 35px;
 	}
 	li .eventCount.right {
-		color: @primary_colour_dark;
+		color: @local_primary_dark;
 		position: absolute;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
