@@ -1,10 +1,12 @@
 .luxbet_list_page {
 	@local_white: @white;
-	@local_dark: @primary_colour;
+	@local_primary: @primary_colour;
+	@local_primary_dark: @primary_colour_dark;
 	@local_complimentary: @complimentary_colour;
 	@local_complimentary_dark: @complimentary_colour_dark;
 	@local_supplementary: @supplementary_colour_dark;
 
+	overflow: hidden;
 
 	&.with-arrows {
 		li .titleWrap {
@@ -12,13 +14,20 @@
 		}
 	}
 
-
 	&.with-icons {
 		li .titleWrap {
-			padding-top: 0px;
+			padding-top: 5px;
 			padding-left: 45px;
 			padding-right: 40px;
+			min-height: 44px;
 		}
+	}
+
+	.results {
+		position: absolute;
+		bottom:5px;
+		right: 40px;
+		color: @local_supplementary;
 	}
 
 	&.detailed {
@@ -30,38 +39,43 @@
 		}
 
 		li .titleWrap {
-			padding-top: 0px;
-			padding-left: 45px;
-			padding-right: 40px;
+			padding-left: 50px;
 		}
 
 	}
 	li {
-		min-height: 32px;//47px;
-		background-color: @local_white;
 		color: @black;
-		border-bottom: solid 1px @local_dark;
+		background-color: @local_white;
+		border-bottom: solid 2px @local_primary;
+		min-height: 32px;
+		padding-left: 5px;
 		position: relative;
+
+		&:last-child { border-bottom: none; }
+		&:hover { background-color: @local_primary; }
 	}
 	li a {
 		display: block;
 		width: 100%;
 		height: 100%;
-		min-height: 32px;//47px;
+		min-height: 32px;
 		position: relative;
 		cursor: pointer;
 	}
 	li .category-icon {
-		width: 40px;
-		height: 40px;
+		width: 1px;
+		height: 1px;
 		display: block;
 		position: absolute;
 		left: 0;
 		top: 25%;
 		bottom: 25%;
 		margin: 0;
+		color: @local_primary_dark;
 		&:after {
-			line-height: 0px;
+			line-height: 20px;
+			width: 40px;
+			height: 40px;
 		}
 	}
 	li .icon-cheveron {
@@ -79,10 +93,10 @@
 		bottom: 0;
 		height: auto;
 		width: 35px;
-		background: @local_complimentary;
+		background: @local_white;
 	}
 	li .arrowWrap .arrow {
-		color: @local_white;////#fcfcfc;
+		color: @local_primary_dark;
 		position: absolute;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
@@ -96,28 +110,21 @@
 		text-align: center;
 	}
 	li .titleWrap {
-		padding-left: 15px;//45px;
-		padding-right: 10px;
 		display: block;
-		padding-top: 5px;
+		padding: 5px;
 
 		.title {
 			display: inline-block;
 			width: 100%;
 			line-height: 15px;
 			height: auto;
-			padding-right: 0;
 			overflow: visible;
 			text-overflow: ellipsis;
 			white-space: pre-wrap;
 			font-size: 15px;
-			font-weight: bold;
 			box-sizing: border-box;
 			vertical-align: middle;
 		}
-	}
-	li .time .message {
-		color: @local_supplementary;
 	}
 
 	li .products {
@@ -128,7 +135,7 @@
 		padding: 3px 5px;
 		border-radius: 5px;
 		color: @local_white;
-		font-size: 9px;
+		font-size: 12px;
 		text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 	}
 
@@ -136,7 +143,7 @@
 		.list-item-click-animation(list_item_color_change_default);
 		.paperShadow-inset;
 		.arrowWrap {
-			background: @local_complimentary_dark;
+			background: @local_primary;
 		}
 	}
 	.list-item-click-keyframes(list_item_color_change_default, @white, @white, @primary_colour_light);
@@ -150,7 +157,7 @@
 		width: 35px;
 	}
 	li .eventCount.right {
-		color: @feature_colour;//@local_white;////#fcfcfc;
+		color: @primary_colour_dark;
 		position: absolute;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
@@ -162,9 +169,8 @@
 		width: 35px;
 		height: 40px;
 		text-align: center;
-		
+
 	}
-	
 
 }
 

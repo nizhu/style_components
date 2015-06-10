@@ -1,11 +1,10 @@
-
 button, .button {
 	//Local Variables
 	@local_border_radius: 3px;
 
-	@local_default_colour: @supplementary_colour;
-	@local_default_colour_light: @supplementary_colour_light;
-	@local_default_colour_dark: @supplementary_colour_dark;
+	@local_default_colour: @primary_colour;
+	@local_default_colour_light: @primary_colour_light;
+	@local_default_colour_dark: @primary_colour_dark;
 
 	@local_affirmative_colour: @complimentary_colour;
 	@local_affirmative_colour_light: @complimentary_colour_light;
@@ -20,20 +19,20 @@ button, .button {
 	@local_negative_colour_dark: @primary_colour_dark;
 
 
-
-	border: none;
-	background-color: @local_default_colour;//@supplementary_colour;
-	border-radius: @local_border_radius;
-	padding: 5px 10px;
-	font-size: 1em;
-	font-family: HelveticaNeueBdCn;
-	font-weight: bold;
-	color: @white;//@secondary_colour_light;
-	-webkit-tap-highlight-color: none;
+	display: inline-block;
+	color: @white;
 	cursor: pointer;
+	border: 1px solid @white;
+	background-color: @local_default_colour_dark;
+	margin: 5px;
+	min-width: 60px;
+	min-height: 30px;
+	font-size: 0.9em;
+	font-weight: bold;
+	-webkit-tap-highlight-color: none;
+	.border-radius(@local_border_radius);
 
 	&:hover, &:active, &:focus {
-		//background-color: @supplementary_colour_light;
 		outline: 0;
 	}
 	&:focus {
@@ -66,4 +65,30 @@ button, .button {
 	}
 	.button-click-keyframes(button_color_change_negative, @local_negative_colour, @local_negative_colour_light, @local_negative_colour_dark);
 
+	a, a:visited, a:hover, a:active, a:focus {
+		display: inline-block;
+		color: @white;
+		padding: 5px;
+		width: auto;
+		min-width: 80px;
+	}
+}
+
+
+/* live betting and quick multi button on homepage and sport */
+.live-betting, .quick-multi {
+	display: block;
+	padding: 10px;
+	margin: 0;
+	font-weight: normal;
+	.border-radius(0);
+
+	span { color: @white; }
+
+	.arrow {
+		position: relative;
+		top: -12px;
+		float: right;
+		font-size: 30px;
+	}
 }

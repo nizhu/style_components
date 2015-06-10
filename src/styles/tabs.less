@@ -1,0 +1,45 @@
+.tabs {
+	background-color: @primary_colour_dark;
+	color: @white;
+	border-radius: 3px 0px;
+
+	.tab {
+		background-color: @primary_colour_dark;
+		float: left;
+		box-sizing: border-box;
+		cursor: pointer;
+
+		&:active {
+			.button-click-animation(tab_color_change_default);
+		}
+		.button-click-keyframes(tab_color_change_default, @primary_colour_light, @primary_colour_light, @primary_colour_dark);
+
+		&.active {
+			background-color: @primary_colour_dark;
+		}
+
+		a {
+			padding: 5px;
+			padding-top: 10px;
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: @white;
+			&:visited, &:hover, &:active {
+				text-decoration: none;
+				color: @white;
+			}
+			&.active, &:active {
+				color: @secondary_colour_dark;
+				background-color: @white;
+			}
+
+		}
+	}
+}
+
+/* For each set of tabs the widths will have to be set individually */
+#tabs_example_standard { width: 85%; }
+#tabs_example_standard.tabs .tab, #tabs_example.tabs .tab {
+	width: 100px;
+}

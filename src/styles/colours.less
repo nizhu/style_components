@@ -1,14 +1,16 @@
 @black : rgba(19, 19, 19, 1);
 .black { background-color: @black;};
 
-@white: rgba(247, 247, 247, 1);
+@white: rgba(248, 248, 248, 1);
 .white { background-color: @white;};
+
+@blue : rgba(57, 158, 207, 1);
+.blue { background-color: @blue; };
 
 
 @feature_colour: rgba(191, 29, 64, 1);
 @feature_colour_dark: rgba(63, 10, 21, 1);
-//@feature_colour_light: rgba(202, 91, 115, 1);
-@feature_colour_light: rgba(202, 149, 162, 1);
+@feature_colour_light: rgb(255, 244, 243);
 
 .feature_colour { background-color: @feature_colour; };
 .feature_colour_dark { background-color: @feature_colour_dark; };
@@ -17,8 +19,7 @@
 
 @complimentary_colour: rgba(118, 157, 57, 1);
 @complimentary_colour_dark: rgba(80, 106, 38, 1);
-//@complimentary_colour_light: rgba(150, 191, 87, 1);
-@complimentary_colour_light: rgba(217, 222, 209, 1);
+@complimentary_colour_light: rgba(242, 250, 229, 1);
 
 
 .complimentary_colour { background-color: @complimentary_colour; };
@@ -26,20 +27,18 @@
 .complimentary_colour_light { background-color: @complimentary_colour_light; };
 
 
-@primary_colour: rgba(125, 125, 125, 1);//rgba(61, 61, 61, 1);
-@primary_colour_dark: rgba(61, 61, 61, 1);//rgba(19, 19, 19, 1);
-//@primary_colour_light: rgba(224, 224, 224, 1);
-@primary_colour_light: rgba(224, 224, 224, 1);
+@primary_colour: rgba(219, 219, 219, 1);
+@primary_colour_dark: rgba(132, 132, 132, 1);
+@primary_colour_light: rgba(248, 248, 248, 1);
 
 .primary_colour { background-color: @primary_colour; };
 .primary_colour_dark { background-color: @primary_colour_dark; };
 .primary_colour_light { background-color: @primary_colour_light; };
 
 
-
-@secondary_colour: rgba(172, 172, 172, 1);
-@secondary_colour_dark: rgba(19, 19, 19, 1);
-@secondary_colour_light: rgba(252, 252, 252, 1);
+@secondary_colour: rgba(125, 125, 125, 1);
+@secondary_colour_dark: rgba(61, 61, 61, 1);
+@secondary_colour_light: rgba(224, 224, 224, 1);
 
 .secondary_colour { background-color: @secondary_colour; };
 .secondary_colour_dark { background-color: @secondary_colour_dark; };
@@ -48,7 +47,6 @@
 
 @supplementary_colour: rgba(216, 175, 35, 1);
 @supplementary_colour_dark: rgba(148, 120, 24, 1);
-//@supplementary_colour_light: rgba(222, 195, 103, 1);//rgba(235, 196, 66, 1);
 @supplementary_colour_light: rgba(241, 230, 190, 1);
 
 .supplementary_colour { background-color: @supplementary_colour; };
@@ -56,27 +54,16 @@
 .supplementary_colour_light { background-color: @supplementary_colour_light; };
 
 
-//#50abdd;
-//#0f7ca1;
-
-/*
-@supplementary_colour_2: rgba(80, 171, 221, 1);
-@supplementary_colour_2_dark: rgba(34, 72, 93, 1);
-@supplementary_colour_2_light: rgba(150, 199, 227, 1);//rgba(235, 196, 66, 1);
-
-.supplementary_colour_2 { background-color: @supplementary_colour_2; };
-.supplementary_colour_2_dark { background-color: @supplementary_colour_2_dark; };
-.supplementary_colour_2_light { background-color: @supplementary_colour_2_light; };
-*/
-
 .colour_swatch {
 	margin:1px;
-	color: white;
+	color: black;
 	font-size: 10px;
 	border-radius: 5px;
 	padding-top: 15px;
 	padding: 20px 10px;
-	-webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
--moz-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
+	.box-shadow(1px 1px 2px 0px rgba(50, 50, 50, 0.75));
+}
+
+.dark .colour_swatch, .black.colour_swatch {
+	color: white;
 }

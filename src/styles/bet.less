@@ -1,115 +1,68 @@
 .bet {
 	@local_positive_colour: @complimentary_colour;
 	@local_positive_colour_light: @complimentary_colour_light;
+	@local_negative_colour: @feature_colour;
 	@local_negative_colour_light: @feature_colour_light;
-	@local_alert_colour_light: @supplementary_colour_light; 
+	@local_alert_colour_light: @supplementary_colour_light;
 
+	background-color: @white;
 	padding: 10px;
+	border-bottom: dashed 1px @primary_colour;
 
-	div[class*="selection"] {
-		float: left;
-		.clearspace {
-
-		}
-	}
-	.selectionDetails {
-		width: 100%;
-	}
-	.selectionName {
-		font-size: 1.1em;
-		color: @local_positive_colour;
-	}
-	.selectionBetType {
-		clear: left;
-		display: inline-block;
-		color: @local_positive_colour;
-		margin-right: 5px;
-	}
-	.selectionMarket {
-		display: inline-block;
-	}
-	.selectionParentCategory {
-		clear: left;
-		display: inline-block;
-		margin-right: 5px;
-	}
-	.selectionCategory {
-		display: inline-block;
-	}
-	.selectionEvent {
-		clear: both;
-	}
-
-	.selectionDateTime {
-		width: 100%;
-		font-size: 1em;
-		clear:both;
-	}
-
-	.selectionInfo {
-		width: 100%;
-		clear:both;
-	}
-
-	.ticketColumns {
-		clear: left;
-		width: 100%;
-	}
 	.col_33 {
 		width: 33%;
 	}
-	.stake, .actions, .price, .name {
-		margin-top: 15px;
+
+	.selectionName {
+		font-size: 1.1em;
+		font-weight: bold;
+		color: @local_positive_colour;
 	}
-	.stakeLabel {
-		text-align: center;
-		line-height: 30px;
-		width: 100%;
+	.selectionBetType {
+		.small;
+		padding-bottom: 5px;
 	}
-	.stake input {
-		width: 100%;
+	.stake, .price, .name {
+		input {
+			width: 90%;
+		}
 	}
 	.actions {
-		text-align: center; 
-		.buttonDelete {
-			font-size: .8em;
-			text-decoration: underline;
-			cursor: pointer;
-			line-height: 30px;
-			margin-top: 30px;
-			display: block;
+		float: right;
+
+		.delete {
+			color: @local_negative_colour;
+			padding: 5px;
+			.transition(all 0.5s ease);
+
+			&:hover {
+				color: @white;
+				background-color: @local_negative_colour;
+			}
 		}
 	}
-	.selectionPriceLabel {
-		height: 30px;
-		line-height: 30px;
-	}
-	.selectionPrice {
-		clear: left;
-		height: 30px;
-		line-height: 30px;
+
+	.ticketColumns {
+		margin-top: 15px;
 	}
 
-	&.multi {
+	.multi {
 		.selectionPrice {
-			line-height: 30px;
-			text-align: center;
-			width: 100%;
+			text-align: right;
 		}
-		.name .selectionPrice {
-			text-align: left;
-		}
-
-
 	}
+
+	.bonusBetContainer {
+		padding: 5px 0 5px 0;
+	}
+
 	.placementDetails.success,
 	.placementDetails.rejectedCombins,
 	.placementDetails.partial,
 	.placementDetails.rejected {
-		margin: -10px;
-		margin-bottom: 5px;
 		background-color: @local_negative_colour_light;
 		padding: 5px;
+		margin-bottom: 5px;
 	}
 	.placementDetails.success {
 		background-color: @local_positive_colour_light;

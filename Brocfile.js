@@ -10,22 +10,14 @@ var appStyles;
 var vendorJSFiles = [
 
     "jquery/dist/jquery.js",
-    /*"bower_components/jquery-ui/jquery-ui.js",*/
-    /*"bower_components/gridster/dist/jquery.gridster.css",*/
-    /*"bower_components/FileSaver/FileSaver.min.js",*/
-    /*"bower_components/jszip/jszip.min.js",*/
-    /*"bower_components/jquery-mockjax/jquery.mockjax.js",*/
     "handlebars/handlebars.js",
     "ember/ember.js",
-    /*"bower_components/ember-cloaking/ember-cloaking.js",
-    "bower_components/ace-builds/src/ace.js",
-    "bower_components/mousetrap/mousetrap.js"*/
     "intro.js/intro.js",
     "momentjs/min/moment.min.js",
     "jquery.customSelect/jquery.customSelect.js",
     "jquery.onoff/dist/jquery.onoff.js",
     "iCheck/icheck.min.js",
-    "jscrollpane/script/mwheelintent.js",
+    "jscrollpane/script/mwheelIntent.js",
     "jscrollpane/script/jquery.mousewheel.js",
     "jscrollpane/script/jquery.jscrollpane.min.js",
     "iscroll/build/iscroll.js",
@@ -62,7 +54,7 @@ var cssLibs = [
     "iCheck/skins/all.css",
     "intro.js/introjs.css",
     "jquery.onoff/dist/jquery.onoff.css",
-    "fancySelect/fancyselect.css"
+    "fancyselect/fancySelect.css"
 
 ];
 
@@ -82,7 +74,7 @@ appCSS = concatenate(appStyles, appLess, {
 
 appHTML = concatenate('src', {
 	inputFiles : ['index.html'],
-    outputFile : '/index.html',
+    outputFile : '/index.html'
 });
 
 module.exports = mergeTrees([vendorStyles, appLess, vendorJs, appJs, appHTML]);

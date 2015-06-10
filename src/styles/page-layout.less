@@ -1,9 +1,11 @@
 .applicationWrap {
+	background-color: @primary_colour;
+
 	margin-left: auto;
 	margin-right: auto;
 	overflow-x: hidden;
+	overflow-y: scroll;//set scroll to be always on, this prevents the page from resizing as scrollbars are added/removed
 	min-width: 320px;
-	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -11,10 +13,17 @@
 	right: 0;
 	bottom: 0;
 	position: absolute;
+	-webkit-overflow-scrolling: touch;
+
+	.box-sizing(border-box);
+
+	main {
+		margin-bottom: 117px;//the height of the footer
+		.box-shadow(0px 3px 5px 0px rgba(5, 5, 5, 0.25));
+	}
 
 	.leftNavWrap {
-
-		background-color: #efefef;
+		background-color: @primary_colour;
 
 		width: 250px;
 		height: 100%;
@@ -24,6 +33,9 @@
 		bottom: 0;
 		position: absolute;
 
+		.transform(translate3d(0, 0, 0));
+		.transition(transform .2s ease-in-out);
+
 		&:after {
 			content: " ";
 			height: auto;
@@ -32,16 +44,12 @@
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			width: 2px;
-			-webkit-box-shadow: inset -1px 0 2px 0 rgba(5,5,5,0.5);
-			-moz-box-shadow: inset -1px 0 2px 0 rgba(5,5,5,0.5);
-			box-shadow: inset -1px 0 2px 0 rgba(5,5,5,0.5);
+			width: 5px;
 		}
 	}
 
 	.betslipWrap {
-		
-		background-color: #efefef;
+		background-color: @primary_colour;
 		display: block;
 		position: absolute;
 		right: 0px;
@@ -50,6 +58,10 @@
 		height: auto;
 		min-height: 100%;
 		width: 250px;
+
+		.transform(translate3d(0, 0, 0));
+		.transition(transform .2s ease-in-out);
+
 		&:before {
 			content: " ";
 			height: auto;
@@ -58,10 +70,7 @@
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			width: 2px;
-			-webkit-box-shadow: inset 1px 0 2px 0 rgba(5,5,5,0.5);
-			-moz-box-shadow: inset 1px 0 2px 0 rgba(5,5,5,0.5);
-			box-shadow: inset 1px 0 2px 0 rgba(5,5,5,0.5);
+			width: 5px;
 		}
 	}
 
@@ -69,342 +78,213 @@
 		position: absolute;
 		top: 0;
 		min-height: 100%;
-		background-color: gray;
+		background-color: @white;
 		left: 0px;
 		right: 0px;
+		.transform(translate3d(0, 0, 0));
+		.transition(transform .2s ease-in-out);
 
 		&:before {
 			content: " ";
 			height: auto;
 			min-height: 100%;
-			left: -2px;
+			left: -5px;
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			width: 2px;
-			-webkit-box-shadow: inset -1px 0 2px 0 rgba(5,5,5,0.5);
-			-moz-box-shadow: inset -1px 0 2px 0 rgba(5,5,5,0.5);
-			box-shadow: inset -1px 0 2px 0 rgba(5,5,5,0.5);
+			width: 5px;
+			-webkit-box-shadow: inset -3px 0 3px 0 rgba(5,5,5,0.25);
+			-moz-box-shadow: inset -3px 0 3px 0 rgba(5,5,5,0.25);
+			box-shadow: inset -3px 0 3px 0 rgba(5,5,5,0.25);
 		}
 
 		&:after {
 			content: " ";
 			height: auto;
 			min-height: 100%;
-			right: -1px;
+			right: -5px;
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			width: 2px;
-			-webkit-box-shadow: inset 1px 0 2px 0 rgba(5,5,5,0.5);
-			-moz-box-shadow: inset 1px 0 2px 0 rgba(5,5,5,0.5);
-			box-shadow: inset 1px 0 2px 0 rgba(5,5,5,0.5);
+			width: 5px;
+			-webkit-box-shadow: inset 3px 0 3px 0 rgba(5,5,5,0.25);
+			-moz-box-shadow: inset 3px 0 3px 0 rgba(5,5,5,0.25);
+			box-shadow: inset 3px 0 3px 0 rgba(5,5,5,0.25);
 		}
 	}
-/*
-	.pageWrap {
+
+	&.leftNav .pageWrap {
+		.transform(translate3d(250px, 0, 0));
+		.transition(transform .2s ease-in-out);
+	}
+
+	&.leftNav .betslipWrap {
+		display: block;
+		.transform(translate3d(250px, 0, 0));
+		.transition(transform .2s ease-in-out);
+	}
+
+	&.rightNav .pageWrap {
+		.transform(translate3d(-250px, 0, 0));
+		.transition(transform .2s ease-in-out);
+	}
+
+	&.rightNav .leftNavWrap {
+		display: block;
+		.transform(translate3d(-250px, 0, 0));
+		.transition(transform .2s ease-in-out);
+	}
+
+
+	/* Blurred with overlay */
+	&.blur:not(.legacyStyles) {
+		.leftNavWrap, .pageWrap, .betslipWrap {
+			.translate3d(0, 0, 0);
+			//-webkit-filter: blur(3px);
+			.blur(3px);
+			//.transition(filter 200ms 100ms ease-in-out);
+		}
+	}
+
+}
+
+
+@media
+only screen and (min-width : 480px),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (   -moz-min-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx),
+only screen and (orientation:landscape) { }
+
+/* Landscape tablets */
+
+@media
+only screen and (min-width : 768px)
+and (min-device-width : 768px)
+and (orientation : landscape),
+
+only screen and (min-width : 1024px)
+and (min-device-width : 1200px)
+and (min-device-pixel-ratio : 1.5)
+and (min-resolution: 264dpi)
+and (orientation : landscape) {
+
+	.applicationWrap .pageWrap {
+		left: 0px;
+		right: 250px;
+		overflow-x: visible;
+
 		.transform(translate3d(0, 0, 0));
 		.transition(transform .2s ease-in-out);
 	}
 
 
+	.betslipWrap {
+		display: block;
+		.transform(translate3d(0, 0, 0));
+		.transition(transform .10ms ease-in-out);
+	}
+
+	.navBetSlip {
+		display: none;
+	}
+
+	.ticketWrap .ticket {
+		top: 50px;
+	}
 	.leftNavWrap {
 		min-height: 100%;
 		display: block;
 		.transform(translate3d(-250px, 0, 0));
 		.transition(transform .10ms .2s ease-in-out);
 	}
-
-	.betslipWrap {
-		display: block;
-		.transform(translate3d(250px, 0, 0));
-		.transition(transform .2s ease-in-out);
-	}
-*/
 }
 
 
-	@media
-	only screen and (min-width : 480px),
-	only screen and (-webkit-min-device-pixel-ratio: 2),
-	only screen and (   min--moz-device-pixel-ratio: 2),
-	only screen and (   -moz-min-device-pixel-ratio: 2),
-	only screen and (     -o-min-device-pixel-ratio: 2/1),
-	only screen and (        min-device-pixel-ratio: 2),
-	only screen and (                min-resolution: 192dpi),
-	only screen and (                min-resolution: 2dppx),
-	only screen and (orientation:landscape) { }
-
-/* Landscape tablets */
-
-	@media
-	only screen and (min-width : 768px) 
-	and (min-device-width : 768px)
-	and (orientation : landscape),
-
-	only screen and (min-width : 1024px)
-	and (min-device-width : 1200px)
-	and (min-device-pixel-ratio : 1.5)
-	and (min-resolution: 264dpi)
-	and (orientation : landscape) { 
-
-		.applicationWrap .pageWrap {
-			left: 0px;
-			right: 250px;
-			overflow-x: visible;
-		}
 
 
-		.betslipWrap {
-			display: block;
+@media only screen
+and (orientation : portrait) {
+
+	.applicationWrap .pageWrap {
+		left: 0px;
+		right: 0px;
+		overflow-x: visible;
+
+		.transform(translate3d(0, 0, 0));
+		.transition(transform .2s ease-in-out);
+	}
+
+}
+
+
+// 	/* Medium Devices, Desktops */
+@media only screen
+and (min-width : 1024px)
+and (min-resolution: 100dpi),
+
+only screen
+and (min-width : 1024px)
+and (min-device-width: 1024px),
+
+only screen
+and (min-width : 1024px)
+and (min-device-width: 1300px)
+and (min-resolution: 200dpi) {
+	.leftNavWrap, .betslipWrap {
+		display: block;
+		.transform(translate3d(0, 0, 0));
+		.transition(transform .10ms ease-in-out);
+	}
+
+	.menuButton {
+		display: none;
+	}
+	.applicationWrap.leftNav {
+
+		.pageWrap {
 			.transform(translate3d(0, 0, 0));
-			.transition(transform .10ms ease-in-out);
-		}
-
-		.navBetSlip {
-			display: none;
-		}
-
-		.ticketWrap .ticket {
-			top: 50px;
-		}
-		.leftNavWrap {
-			min-height: 100%;
-			display: block;
-			.transform(translate3d(-250px, 0, 0));
-			.transition(transform .10ms .2s ease-in-out);
+			.transition(transform .2s ease-in-out);
 		}
 	}
 
-
-
-
-	@media only screen
-	and (orientation : portrait) {
-
-		.applicationWrap .pageWrap {
-			left: 0px;
-			right: 0px;
-			overflow-x: visible;
-		}
-
+	.betslipNavButton {
+		display: none;
 	}
 
+	.applicationWrap .pageWrap {
+		left: 250px;
+		right: 250px;
+		overflow-x: visible;
 
-// 	/* Medium Devices, Desktops */
-	@media only screen 
-	and (min-width : 1024px) 
-	and (min-resolution: 100dpi),
-
-	only screen 
-	and (min-width : 1024px)
-	and (min-device-width: 1024px),
-
-	only screen 
-	and (min-width : 1024px)
-	and (min-device-width: 1300px)
-	and (min-resolution: 200dpi) {
-		.leftNavWrap, .betslipWrap {
-			display: block;
-			.transform(translate3d(0, 0, 0));
-			.transition(transform .10ms ease-in-out);
-		}
-
-		.menuButton {
-			display: none;
-		}
-		.applicationWrap.leftNav {
-
-			.pageWrap {
-				.transform(translate3d(0, 0, 0));
-				.transition(transform .2s ease-in-out);
-			}
-		}
-
-		.betslipNavButton {
-			display: none;
-		}
-
-		.applicationWrap .pageWrap {
-			left: 250px;
-			right: 250px;
-			overflow-x: visible;
-		}
-
-		.ticketWrap .ticket {
-			top: 50px;
-		}
-
-		header ul.accountNav li:first-child a.menuButton { display: none;}
-		header ul.accountNav li:first-child a.menuButton:before { display: none; }
-
+		.transform(translate3d(0, 0, 0));
+		.transition(transform .2s ease-in-out);
 	}
 
-
-
-
-
-
-// 	/*
-// 		DESKTOP!!!
-// 	*/
-// 	/* Medium Devices, Desktops */
-// 	@media only screen 
-// 	and (min-width : 1024px) 
-// 	and (min-resolution: 100dpi) {
-// /*
-// 		.applicationWrap {
-// 			padding-top: 200px;
-// 		}
-// */
-
-// 		.leftNavWrap, .betslipWrap {
-// 			display: block;
-// 			.transform(translate3d(0, 0, 0));
-// 			.transition(transform .10ms ease-in-out);
-// 		}
-
-// 		.menuButton {
-// 			display: none;
-// 		}
-// 		.applicationWrap.leftNav {
-
-// 			.pageWrap {
-// 				.transform(translate3d(0, 0, 0));
-// 				.transition(transform .2s ease-in-out);
-// 			}
-// 		}
-
-// 		.betslipNavButton {
-// 			display: none;
-// 		}
-
-
-// 		.applicationWrap .pageWrap {
-// 			//width: 792px;
-// 			left: 250px;
-// 			right: 250px;
-// 			overflow-x: visible;
-// 		}
-// 		.betslipWrap {
-// 			/*
-// 			display: block;
-// 			position: absolute;
-// 			right: 0px;
-// 			top: 0px;
-// 			bottom: 0px;
-// 			height: auto;
-// 			width: 250px;
-// 			*/
-// 		}
-
-// 		#betslip {
-// 			.selection {
-// 				/*
-// 				.selectionDetails:before {
-// 					content: " ";
-// 					height: 100%;
-// 					left: 0px;
-// 					position: absolute;
-// 					top: 0px;
-// 					width: 25px;
-// 					-webkit-box-shadow: inset 10px 0px 15px 0px rgba(35, 35, 35, 0.75);
-// 					-moz-box-shadow:    inset 10px 0px 15px 0px rgba(35, 35, 35, 0.75);
-// 					box-shadow:         inset 10px 0px 15px 0px rgba(35, 35, 35, 0.75);
-// 				}
-// 				*/
-// 			}
-// 		}
-
-// 		.ticketWrap .ticket {
-// 			top: 50px;
-// 		}
-// 	}
-
-
-	
-// 		DESKTOP!!!
-	
-// 	/* Medium Devices, Desktops */
-// 	@media 
-// 	only screen 
-// 	and (min-width : 1024px)
-// 	and (min-device-width: 1024px),
-
-// 	only screen 
-// 	and (min-width : 1024px)
-// 	and (min-device-width: 1300px)
-// 	and (min-resolution: 200dpi) {
-
-// 		.menuButton {
-// 			display: none;
-// 		}
-// 		.applicationWrap.leftNav {
-// 			.pageWrap {
-// 				.transform(translate3d(0, 0, 0));
-// 				.transition(transform .2s ease-in-out);
-// 			}
-// 		}
-
-
-// 		.leftNavWrap, .betslipWrap {
-// 			display: block;
-// 			.transform(translate3d(0, 0, 0));
-// 			.transition(transform .10ms ease-in-out);
-// 		}
-
-// 		.betslipNavButton {
-// 			display: none;
-// 		}
-
-
-// 		.applicationWrap .pageWrap {
-// 			//width: 792px;
-// 			left: 250px;
-// 			right: 250px;
-// 			overflow-x: visible;
-// 		}
-
-
-// 		.ticketWrap .ticket {
-// 			top: 50px;
-// 		}
-
-
-// 		.leftShadow, .leftNav .leftShadow {
-// 			position: fixed;
-// 			left: 247px;
-// 			top: 0;
-// 			height: 100%;
-// 			width: 3px;
-// 			.transform(translate3d(0, 0, 0));
-// 			.transition(transform 0.0ms);
-// 			-webkit-box-shadow: inset -1px 0px 2px 0px rgba(5, 5, 5, 0.75);
-// 			-moz-box-shadow:    inset -1px 0px 2px 0px rgba(5, 5, 5, 0.75);
-// 			box-shadow:         inset -1px 0px 2px 0px rgba(5, 5, 5, 0.75);
-// 		}
-
-
-// 		header ul.accountNav li:first-child a.menuButton { display: none;}
-
-// 		header ul.accountNav li:first-child a.menuButton:before { display: none; }
-
-// 	}
-
-
-
-
-
-
-	/* Large Devices, Wide Screens */
-	@media only screen and (min-width : 1200px) {
-
+	.ticketWrap .ticket {
+		top: 50px;
 	}
 
-	/* iPhone 4 ----------- */
-	@media
-	only screen and (-webkit-min-device-pixel-ratio : 1.5),
-	only screen and (min-device-pixel-ratio : 1.5) {
-		/* Styles */
+	header ul.accountNav li:first-child a.menuButton { display: none;}
+	header ul.accountNav li:first-child a.menuButton:before { display: none; }
 
-	}
+}
+
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+	/* Styles */
+
+}
