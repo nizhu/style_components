@@ -8,8 +8,8 @@ $(function(){
 */
 $(function(){
     $('input.icheck').iCheck({
-        checkboxClass: 'icheckbox_square-grey',
-        radioClass: 'iradio_square-grey',
+        checkboxClass: 'icheckbox_flat',
+        radioClass: 'iradio_flat',
         increaseArea: '20%' // optional
     });
 });

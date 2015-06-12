@@ -1,91 +1,122 @@
-// select.less
+/* Primary Dropdown */
 div.fancy-select {
-	color: @white;
-}
-div.fancy-select select:active + div.trigger {
-	color: pink;
-}
+	@local_white: @white;
+	@local_black: @black;
+
+	@local_primary: @primary_colour;
+	@local_primary_light: @primary_colour_light;
+	@local_primary_dark: @primary_colour_dark;
+
+	@local_secondary: @complimentary_colour;
+	@local_secondary_light: @complimentary_colour_light;
+	@local_secondary_dark: @complimentary_colour_dark;
+
+	select:active + div.trigger {
+		color: @local_primary;
+	}
+	select:focus + div.trigger {
+		box-shadow: none;
+	}
+
+	div.trigger {
+		background: @local_primary;
+		border: none;
+		color: @local_black;
+		font-weight: normal;
+		.box-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+	}
+	div.trigger:after {
+		border-top-color: @local_primary_dark;
+		color: @local_primary_dark;
+		top: 15px;
+	}
+
+	div.trigger.open {
+		background: @local_primary_dark;
+		color: @local_white;
+		border: none;
+		box-shadow: none;
+	}
+	div.trigger.open:after {
+		border-top-color: @local_white;
+	}
+
+	ul.options {
+		background: @local_primary;
+		border-radius: 4px;
+		border-top: none;
+		.box-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+		.paperShadow;
+	}
+
+	ul.options,
+	ul.options.open {
+		top: 36px;
+	}
+
+	ul.options.overflowing,
+	ul.options.open.overflowing {
+		bottom: 40px;
+		top: auto;
+	}
+
+	ul.options li {
+		color: @local_black;
+		padding-left: 10px;
+		list-style: none;
+		font-weight: normal;
+	}
+
+	ul.options ul {
+		list-style-position: outside;
+		list-style-image: none;
+	}
+	ul.options h2 {
+		color: @local_black;
+		margin-top: 20px;
+		margin-left: 10px;
+		font-weight: normal;
+		.small;
+	}
+	ul.options ul li {
+		padding-left: 25px;
+		list-style-type: none;
+		list-style-position: inside;
+		list-style-image: none;
+	}
+
+	ul.options li.selected {
+		background: @local_primary_light;
+		color: @secondary_colour_dark;
+	}
+
+	ul.options li.hover {
+		background: @local_primary_light;
+		color: @local_primary_dark;
+	}
 
 
-div.fancy-select select:focus + div.trigger {
-	box-shadow: none;
-}
 
-div.fancy-select div.trigger {
-	background: @primary_colour;
-	border: none;
-	color: @black;
-	font-weight: normal;
-	.box-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
-}
-div.fancy-select div.trigger:after {
-	border-top-color: @primary_colour_dark;
-	top: 15px;
-	color: @primary_colour_dark;
-}
+	/* Secondary Dropdown */
+	.ndDropdown + div.trigger {
+		background: @local_secondary_light;
+		color: @local_secondary;
+	}
 
-div.fancy-select div.trigger.open {
-	background: @primary_colour_dark;
-	border: none;
-	color: @white;
-	box-shadow: none;
-}
+	.ndDropdown + div.trigger:after {
+		border-top-color: @local_secondary;
+	}
 
-div.fancy-select div.trigger.open:after {
-	border-top-color: @white;
-}
+	.ndDropdown + div.trigger + ul.options {
+		background: @local_secondary_light;
+		color: @local_secondary;
+	}
 
-div.fancy-select ul.options {
-	background: @primary_colour;
-	border-radius: 4px;
-	border-top: none;
-	.box-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
-	.paperShadow;
-}
+	.ndDropdown + div.trigger + ul.options li {
+		color: @local_secondary;
+	}
 
-div.fancy-select ul.options,
-div.fancy-select ul.options.open {
-	top: 36px;
-}
-
-div.fancy-select ul.options.overflowing,
-div.fancy-select ul.options.open.overflowing {
-	bottom: 40px;
-	top:auto;
-}
-
-div.fancy-select ul.options li {
-	color: @black;
-	padding-left: 10px;
-	list-style: none;
-	font-weight: normal;
-}
-
-div.fancy-select ul.options ul {
-	list-style-position: outside;
-	list-style-image: none;
-}
-div.fancy-select ul.options h2 {
-	color: @black;
-	margin-top: 20px;
-	margin-left: 10px;
-	font-weight: normal;
-	.small;
-}
-div.fancy-select ul.options ul li {
-	padding-left: 25px;
-	list-style-type: none;
-	list-style-position: inside;
-	list-style-image: none;
-}
-
-
-div.fancy-select ul.options li.selected {
-	background: @primary_colour_light;
-	color: @secondary_colour_dark;
-}
-
-div.fancy-select ul.options li.hover {
-	background: @primary_colour_light;
-	color: @primary_colour_dark;
+	.ndDropdown + div.trigger + ul.options h2 {
+		color: @local_secondary_dark;
+	}
 }

@@ -1,165 +1,130 @@
 div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
+	@local_white: @white;
+	@local_black: @black;
+
+	@local_positive_colour: @complimentary_colour;
+	@local_positive_colour_light: @complimentary_colour_light;
+	@local_positive_colour_dark: @complimentary_colour_dark;
+
+	@local_primary_colour: @primary_colour;
+	@local_primary_colour_light: @primary_colour_light;
+	@local_primary_colour_dark: @primary_colour_dark;
+
+	@local_border: 1px solid @primary_colour;
+
 
 	/* iCheck plugin flat skin, black
 	----------------------------------- */
 	.icheckbox_flat,
 	.iradio_flat {
 		display: inline-block;
-		*display: inline;
 		vertical-align: middle;
 		margin: 0;
 		padding: 0;
-		width: 20px;
-		height: 20px;
-		background-color: white;
-		border: none;
+		width: 30px;
+		height: 30px;
+		border: @local_border;
+		border-radius: 3px;
+		background-color: transparent;
 		cursor: pointer;
 		position: relative;
 	}
 
-	.icheckbox_flat {
-		background-position: 0 0;
-		border:solid 2px @complimentary_colour;
-		border-radius: 14px;
-		position:relative;
-	}
-	.icheckbox_flat.checked {
-		background-color: @complimentary_colour;
-	}
+	.icheckbox_flat {}
+	.icheckbox_flat.checked {}
 	.icheckbox_flat.checked:before{
 		content: '\2713';
-		color: @white;
+		color: @local_positive_colour;
 		width:100%;
 		height:100%;
 		position:absolute;
-		top: -2px;
-		left: -2px;
+		top: 0;
+		left: 0;
 		text-align:center;
-		line-height:20px;
-		border: solid 2px @white;
-		border-radius: 50%;
-
+		font-size: 1.8em;
 	}
 	.icheckbox_flat.disabled {
 		cursor: default;
 	}
-	.icheckbox_flat.checked.disabled {
-
-	}
+	.icheckbox_flat.checked.disabled {}
 
 	&.iradio_flat {
-		border-radius: 50%;
-		border: solid 2px @complimentary_colour;;
+		border-radius: 100%;
+		border: @local_border;
 	}
 
 	&.iradio_flat.checked {
-		background-color: @complimentary_colour;
 	}
-
 	&.iradio_flat.checked ins {
 		box-sizing: border-box;
-		background-color: @complimentary_colour !important;
-		border: solid 1px white;
-		border-radius: 50%;
+		background-color: @local_positive_colour !important;
+		border-radius: 100%;
 
 		position: relative !important;
-		top: 0 !important;
-		left: 0 !important;
+		top: 32% !important;
+		left: 32% !important;
 		display: block;
-		width: 100% !important;
-		height: 100% !important;
-		margin: 0px !important;
-		padding: 0px !important;
-		border: solid 2px white !important;
+		width: 35% !important;
+		height: 35% !important;
+		margin: 0 !important;
+		padding: 0 !important;
 		opacity: 1 !important;
 	}
 
-	&.input_wrap.negative .iradio_flat {
-		border: solid 2px @primary_colour_dark;
-	}
-
-	&.input_wrap.negative .iradio_flat.checked ins {
-		background-color: @primary_colour_dark !important;
-	}
+	&.input_wrap.negative .iradio_flat {}
+	&.input_wrap.negative .iradio_flat.checked ins {}
 
 
 	.iradio_flat.disabled {
-
 		cursor: default;
 	}
-	.iradio_flat.checked.disabled {
+	.iradio_flat.checked.disabled {}
 
+
+
+	.icheckbox_flat + label, .iradio_flat + label {
+		padding-left: 10px;
+		font-size: 0.9em;
 	}
-
 
 
 	/* Default */
-	&.icheckbox_flat ins {
-		background-color: @supplementary_colour !important;
-	}
-	&.iradio_flat, .iradio_flat.checked {
-		border-color: @supplementary_colour !important;
-	}
-	&.iradio_flat.checked {
-		background-color: @supplementary_colour !important;
-	}
-	&.iradio_flat.checked ins {
-		background-color: @supplementary_colour !important;
-	}
+	&.icheckbox_flat ins {}
+	&.iradio_flat, .iradio_flat.checked {}
+	&.iradio_flat.checked {}
+	&.iradio_flat.checked ins {}
 
-
-	/*
-	.icheckbox_flat:active ,
-	.iradio_flat:active ins{ background-color: @supplementary_colour; }
-	*/
 
 	&.iradio_flat:active,
 	&.iradio_flat:active ins{
 		.button-click-animation(radio_button_select);
 	}
 
-	.button-click-keyframes(radio_button_select, @supplementary_colour, @supplementary_colour_light, @supplementary_colour_dark);
+	.button-click-keyframes(radio_button_select, @local_primary_colour, @local_primary_colour_light, @local_primary_colour_dark);
 
 
 
 	/* affirmative */
-	&.affirmative .icheckbox_flat ins {
-		background-color: @complimentary_colour !important;
-	}
-	&.affirmative .iradio_flat, .affirmative .iradio_flat.checked {
-		border-color: @complimentary_colour !important;
-	}
-	&.affirmative .iradio_flat.checked {
-		background-color: @complimentary_colour !important;
-	}
-	&.affirmative .iradio_flat.checked ins {
-		background-color: @complimentary_colour !important;
-	}
-
+	&.affirmative .icheckbox_flat ins {}
+	&.affirmative .iradio_flat, .affirmative .iradio_flat.checked {}
+	&.affirmative .iradio_flat.checked {}
+	&.affirmative .iradio_flat.checked ins {}
 
 	&.affirmative .iradio_flat:active,
 	&.affirmative .iradio_flat:active ins{
 		.button-click-animation(radio_button_affirmative_select);
 	}
 
-	.button-click-keyframes(radio_button_affirmative_select, @complimentary_colour, @complimentary_colour_light, @complimentary_colour_dark);
-
-
+	.button-click-keyframes(radio_button_affirmative_select, @local_positive_colour, @local_positive_colour_light, @local_positive_colour_dark);
 
 
 
 	/* negative */
-	.negative .icheckbox_flat ins {
-		background-color: @primary_colour_dark !important;
-	}
-	.negative .iradio_flat, .negative .iradio_flat.checked {
-		border-color: @primary_colour_dark !important;
-	}
-	.negative .iradio_flat.checked {
-		background-color: @primary_colour_dark !important;
-	}
+	.negative .icheckbox_flat ins {}
+	.negative .iradio_flat, .negative .iradio_flat.checked {}
+	.negative .iradio_flat.checked {}
 	.negative .iradio_flat.checked ins {
-		background-color: @primary_colour_dark !important;
+		background-color: @local_primary_colour_dark !important;
 	}
 
 
@@ -168,39 +133,37 @@ div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
 		.button-click-animation(radio_button_negative_select);
 	}
 
-	.button-click-keyframes(radio_button_negative_select, @primary_colour, @primary_colour_light, @primary_colour_dark);
-
-
-
-
+	.button-click-keyframes(radio_button_negative_select, @local_primary_colour, @local_primary_colour_light, @local_primary_colour_dark);
 
 
 
 	&.icheckbox_flat:active {
 		.button-click-animation(checkbox_color_change_negative);
 	}
-	.button-click-keyframes(checkbox_color_change_negative, @complimentary_colour, @complimentary_colour_light, @complimentary_colour_dark);
+	.button-click-keyframes(checkbox_color_change_negative, @local_positive_colour, @local_positive_colour_light, @local_positive_colour_dark);
 
 
 
 	/* SWITCH */
-	.onoffswitch-label { border: solid 2px @white; }
+	.onoffswitch-label {
+		border: @local_border;
+	}
 	.onoffswitch-inner:before {
-		background-color: @complimentary_colour;
-		border: solid 1px @white;
+		background-color: @local_positive_colour;
+		border: @local_border;
 		border-radius: 20px;
 	}
 	.onoffswitch-inner:after {
-		background-color: @primary_colour_dark;
-		border: solid 1px @white;
+		background-color: @local_primary_colour_dark;
+		border: @local_border;
 		border-radius: 20px;
-		color: @white
+		color: @local_white;
 	}
 	.onoffswitch-switch {
-		width: 22px;
-		height: 22px;
-		border-radius: 50%;
-		border: solid 2px @white
+		width: 20px;
+		height: 20px;
+		border-radius: 100%;
+		border: @local_border;
 	}
 	.onoffswitch:active {
 		transform: scale(0.97);
@@ -209,18 +172,18 @@ div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
 
 
 	&[type="text"], &[type="number"], &[type="password"], &[type="tel"] {
-		border: solid 1px @primary_colour_dark;
+		border: @local_border;
 		border-radius: 3px;
 		padding: 5px;
 		&:focus {
 			outline: none;
-			border-color: @supplementary_colour;
-			background-color: @supplementary_colour_light;
+			border-color: @local_positive_colour;
+			background-color: @local_positive_colour_light;
 		}
 		&:active {
 			.button-click-animation(textinput_color_change);
 		}
-		.button-click-keyframes(textinput_color_change, @white, @supplementary_colour_light, @white);
+		.button-click-keyframes(textinput_color_change, @local_primary_colour, @local_primary_colour_light, @local_primary_colour_dark);
 
 	}
 }
@@ -231,16 +194,16 @@ div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
 .module .example.radio_buttons {
 	display: inline-block;
 	padding: 10px;
-	//border: solid 1px gray;
 	border-radius: 5px;
 	box-sizing: border-box;
 }
 .module .example.radio_buttons .col {
-	width: 49%;
+	width: 50%;
 	box-sizing: border-box;
 	display: inline-block;
 	text-align: center;
 	float: left;
+	padding-right: 20px;
 }
 .module .example.radio_buttons label {
 	display: block;

@@ -17,7 +17,6 @@
                 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
 
-            <!-- Add your site or application content here -->
             <h1>Living Style Guide</h1>
             <p>
                 Examples of Elements and Components for the site.
@@ -311,23 +310,24 @@
 
                 <button class="help_button" onclick="javascript:introJs().start().goToStep(10);">?</button>
                 <h3>Dropdowns</h3>
-<!--
-                <div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">
-                    <select class="styled">
-                        <option value="">choose preset...</option>
-                        <option value="one">two</option>
-                        <option value="two">something</option>
-                        <option value="three">4</option>
-                        <option value="four">5</option>
-                    </select>
-                </div>
--->
+
+                <!--<div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">-->
+                    <!--<select>-->
+                        <!--<option value="">choose preset...</option>-->
+                        <!--<option value="one">two</option>-->
+                        <!--<option value="two">something</option>-->
+                        <!--<option value="three">4</option>-->
+                        <!--<option value="four">5</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+				<!--<div class="clearspace"></div>-->
 
                 <div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">
+					<h4>Primary dropdown</h4>
                     <select class="fancySelect luxInput">
-                        <option value="">choose preset...</option>
-                        <option value="one">two</option>
-                        <option value="two">something</option>
+                        <option value="">Choose Preset...</option>
+                        <option value="one">Two</option>
+                        <option value="two">Something</option>
                         <option value="three">Three</option>
                         <option value="four">Four</option>
                         <optgroup label="A Group ">
@@ -337,9 +337,26 @@
                         </optgroup>
                     </select>
                 </div>
-                <div class="clearspace"></div>
-                <h3>Radio Buttons</h3>
 
+				<div class="clearspace"></div>
+				<div>
+					<h4>Secondary dropdown</h4>
+					<select class="fancySelect luxInput ndDropdown">
+						<option value="">Secondary Dropdown...</option>
+						<option value="one">Two</option>
+						<option value="two">Something</option>
+						<option value="three">Three</option>
+						<option value="four">Four</option>
+						<optgroup label="A Group ">
+							<option value="five">Five</option>
+							<option value="six">Six</option>
+							<option value="seven">Seven</option>
+						</optgroup>
+					</select>
+				</div>
+
+				<div class="clearspace"></div>
+                <h3>Radio Buttons</h3>
                 <div class="example radio_buttons radio_buttons_labeled">
                     <p>Labeled</p>
                     <hr/>
@@ -369,8 +386,9 @@
                 <div class="clearspace"></div>
                 <h3>Check Boxes</h3>
 
-                    <input type="checkbox" class="icheck">
-                    <input type="checkbox" class="icheck" checked>
+                    <input type="checkbox" class="icheck" id="checkbox_1"><label for="checkbox_1">First Checkbox</label><br/><br/>
+                    <input type="checkbox" class="icheck" id="checkbox_2" checked><label for="checkbox_2">Second Checkbox</label><br/><br/>
+					<input type="checkbox" class="icheck" id="checkbox_3"><label for="checkbox_3">Third Checkbox</label><br/>
 
                 <div class="clearspace"></div>
                 <h3>Switches / Toggles </h3>
@@ -384,6 +402,7 @@
 
             </div>
 
+			<!-- Icons -->
             <div class="module">
                 <h2 class="center">Icons</h2>
                 <p>All Icon classes (including duplicates):</p>
@@ -533,6 +552,7 @@
                 </div>
             </div>
 
+			<!-- Cheverons -->
             <div class="module">
                 <h2 class="center">Cheverons</h2>
                 <div class="clearspace"></div>
@@ -574,6 +594,7 @@
                 </div>
             </div>
 
+			<!-- Breadcrumb Navigation -->
             <div class="module">
                 <h2 class="center">Breadcrumb Navigation</h2>
 
@@ -677,6 +698,7 @@
                 </div>
             </div>
 
+			<!-- Time -->
             <div class="module">
                 <h2 class="center">Time</h2>
                 <span id="time_example_1" class="time">
@@ -695,6 +717,7 @@
                 </span>
             </div>
 
+			<!-- Lists -->
             <div class="module">
                 <h2 class="center">Lists</h2>
                 <div class="clearspace"></div>
@@ -905,6 +928,7 @@
 
             </div>
 
+			<!-- Site Navigation -->
             <div class="module">
                 <h2 class="center">Site Navigation</h2>
 				<div class="clearspace"></div>
@@ -1017,22 +1041,30 @@
                         </div>
 
                         <div class="ticketColumns">
-                            <div class="col_33 price">
+                            <div class="col_50 price">
                                 <div class="selectionPriceLabel">Price</div>
                                 <div class="selectionPrice">
                                     LuxMid
                                 </div>
                             </div>
-                            <div class="col_33 stake">
+                            <div class="col_50 stake">
                                 <div class="stakeLabel">Stake</div>
                                 <div class="stakeInputWrap">
                                     <input id="ember6594" class="ember-view ember-text-field" type="number" min="0">
                                 </div>
                             </div>
-                            <div class="col_33 actions">
-                                <a class="buttonDelete clearfix" data-ember-action="6596">Delete</a>
-                            </div>
                         </div>
+
+						<br/><br/>
+
+						<div class="ticketColumns">
+							<div class="bonusBetContainer">
+								<select id="ember1196" class="ember-view fancySelect luxInput" >
+									<option id="ember1208" class="ember-view">BONUS BET</option>
+									<option id="ember1209" class="ember-view" value="PB100::_::2">100.00</option>
+								</select>
+							</div>
+						</div>
 
                         <div class="ticketAvailableBets">
                         </div>
@@ -1074,22 +1106,19 @@
                         <div class="selectionName">Horse Racing, Kyneton</div>
                         <div class="selectionParentCategory">Race 5: Some Racename</div>
                         <div class="selectionBetType">(VIC,Quaddie)</div>
-                        <div class="selectionDateTime time">event_datetime</div>
+                        <div class="selectionDateTime">11:28 12/06/2015</div>
                         <div class="selectionInfo">Race 5: 1 / Race 6: 2 / Race 7: 5 / Race 8: 5</div>
 
                         <div class="ticketColumns">
-                            <div class="col_33 price">
+                            <div class="col_50 price">
                                 <div class="selectionPrice">Price</div>
                                 <div class="selectionPrice">product_short_name</div>
                             </div>
-                            <div class="col_33 stake">
+                            <div class="col_50 stake">
                                 <div class="stakeLabel">Stake</div>
                                 <div class="stakeInputWrap">
                                     <input type="number" min=0 value=0 />
                                 </div>
-                            </div>
-                            <div class="col_33 actions">
-                                <a class="buttonDelete clearfix">Delete</a>
                             </div>
                         </div>
                     </div>
@@ -1181,20 +1210,17 @@
                                 </div>
 
                                 <div class="ticketColumns">
-                                    <div class="col_33 price">
+                                    <div class="col_50 price">
                                         <div class="selectionPriceLabel">Price</div>
                                         <div class="selectionPrice">
                                             LuxMid
                                         </div>
                                     </div>
-                                    <div class="col_33 stake">
+                                    <div class="col_50 stake">
                                         <div class="stakeLabel">Stake</div>
                                         <div class="stakeInputWrap">
                                             <input id="ember6594" class="ember-view ember-text-field" type="number" min="0">
                                         </div>
-                                    </div>
-                                    <div class="col_33 actions">
-                                        <a class="buttonDelete clearfix" data-ember-action="6596">Delete</a>
                                     </div>
                                 </div>
 
@@ -1323,23 +1349,41 @@
                     </div>
                 </div>
 
+			<!-- Notification -->
 			<div class="module">
 				<h2>Notify</h2>
 				<button class="notifyTrigger">Try It</button>
 				<div class="notifyListExampleWrap" style="position:relative;">
+					<ul class="notifyList"></ul>
+				</div>
+			</div>
+
+			<!-- Example Notification -->
+			<div class="module notification">
+				<h2 class="center">Error and notification messaging - Static</h2>
+				<div class="notifyListExampleWrap">
 					<ul class="notifyList">
-						<!--<li>
+						<li>
 							<div class="wrapper notifyWrapper">
 								<div class="message notify">
 									<h3><span>&#x2713;</span> Account Verified</h3>
 									<p>More information on IDV can be found below</p>
 								</div>
 							</div>
-						</li>-->
+						</li>
+						<li>
+							<div class="wrapper alertWrapper">
+								<div class="message alert">
+									<h3><span>&#x274c;</span> Account Unverified <button class="alternative small">Verify Now</button></h3>
+									<p>More information on IDV can be found below</p>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
 
+			<!-- Modal -->
 			<div class="module">
 				<h2>Modal</h2>
 				<button class="modalTrigger">Try It</button>
@@ -1350,29 +1394,6 @@
 				</div>
 			</div>
 
-			<div class="module notification">
-				<h2 class="center">Error and notification messaging - Static</h2>
-				<div class="notifyListExampleWrap">
-				<ul class="notifyList">
-					<li>
-						<div class="wrapper notifyWrapper">
-							<div class="message notify">
-								<h3><span>&#x2713;</span> Account Verified</h3>
-								<p>More information on IDV can be found below</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="wrapper alertWrapper">
-							<div class="message alert">
-								<h3><span>&#x274c;</span> Account Unverified <button class="alternative small">Verify Now</button></h3>
-								<p>More information on IDV can be found below</p>
-							</div>
-						</div>
-					</li>
-				</ul>
-				</div>
-			</div>
 
 		<script src="js/vendor.js"></script>
 		<!--<script src="js/notify.js"></script>-->
