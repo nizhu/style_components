@@ -8,12 +8,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-<!--
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
--->
         <link rel="stylesheet" href="css/vendor.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -23,29 +17,21 @@
                 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
             <![endif]-->
 
-            <!-- Add your site or application content here -->
             <h1>Living Style Guide</h1>
             <p>
                 Examples of Elements and Components for the site.
                 <p>More information is available through the 
-                    <span style="position:relative; width: 1.8em; height: 1.8em; display: inline-block; margin-left:5px;">
+                    <span style="position: relative;width: 1.8em;height: 2.8em;display: inline-block;margin-left: 50px;">
                         <button class="help_button">?</button>
                     </span>
                  buttons </p>
             </p>
-            <!--
-            <button onclick="javascript:introJs().start();">Show Details</button>
-            -->
-    <!--
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
-            <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-            <script src="js/plugins.js"></script>
-            <script src="js/main.js"></script>
-             data-step="2" data-intro="Ok, wasn't that fun?" data-position='right'
-    -->
+
+			<!-- Colours -->
             <div class="module">
                 <h2 class="center">Colours</h2>
                 <button class="help_button" onclick="javascript:introJs().start().goToStep(1);">?</button>
+
                 <table class="colour-table"
                     data-step="1" 
                     data-intro="Each of the Primary brand colours are supplied with an ancillary Light and Dark variation which can be used to create depth, texture, or state variation" 
@@ -55,12 +41,12 @@
                         <th><h5>Feature</h5></th>
                         <th><h5>Complimentary</h5></th>
                         <th><h5>Primary</h5></th>
-                        <!-- <th>Secondary</th> -->
+						<th><h5>Secondary</h5></th>
                         <th><h5>Supp 1</h5></th>
-                        <!-- <th>Supp 2</th> -->
+						<!--<th><h5>Supp 2</h5></th>-->
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="standard">
                             <th class="row_header">Standard</th>
                             <td class="" 
                                 data-step="2" 
@@ -76,7 +62,6 @@
                                 data-step="3" 
                                 data-intro="The complimentary colour is the green. " 
                                 data-position='right'>
-
                                 <div class="complimentary_colour colour_swatch">
                                     <div class="cmyk">C60 M20 Y100 K03</div>
                                     <div class="rgb">R118 G157 B57</div>
@@ -88,19 +73,28 @@
                                 data-intro="The Primary colours are the grayscale tones that make up common headers, list backgrounds and common use fonr colours." 
                                 data-position='right'
                             >
-
                                 <div class="primary_colour colour_swatch">
-                                    <div class="cmyk">C68 M61 Y60 K49</div>
-                                    <div class="rgb">R61 G61 B61</div>
-                                    <div class="hex">#3D3D3D</div>
+									<div class="cmyk">C00 M00 Y00 K14</div>
+									<div class="rgb">R219 G219 B219</div>
+									<div class="hex">#DBDBDB</div>
                                 </div>
                             </td>
                             <!-- <td class="secondary_colour"></td> -->
+							<td class=""
+								data-step="4"
+								data-intro="The Secondary colours are the grayscale tones that make up common headers, list backgrounds and common use fonr colours."
+								data-position='right'
+									>
+								<div class="secondary_colour colour_swatch">
+									<div class="cmyk">C0 M0 Y0 K51</div>
+									<div class="rgb">R125 G125 B125</div>
+									<div class="hex">#7D7D7D</div>
+								</div>
+							</td>
                             <td class=""
                                 data-step="5" 
                                 data-intro="The Supplementary colour is a neutral yellow, that can be used for a variety of non-polarized, or unopinionated actions, notifications and guide elements."
                                 >
-
                                 <div class="supplementary_colour colour_swatch">
                                     <div class="cmyk">C18 M29 Y100 K00</div>
                                     <div class="rgb">R216 G175 B35</div>
@@ -110,7 +104,7 @@
                             <!-- <td class="supplementary_colour_2"></td> -->
                         </tr>
 
-                        <tr>
+                        <tr class="dark">
                             <th class="row_header">Dark </th>
                             <td class="">
                                 <div class="feature_colour_dark colour_swatch">
@@ -120,7 +114,6 @@
                                 </div>
                             </td>
                             <td class="">
-
                                 <div class="complimentary_colour_dark colour_swatch">
                                     <div class="cmyk">C69 M38 Y100 K26</div>
                                     <div class="rgb">R80 G106 B38</div>
@@ -128,85 +121,117 @@
                                 </div>
                             </td>
                             <td class="">
-
                                 <div class="primary_colour_dark colour_swatch">
-                                    <div class="cmyk">C0 M0 Y0 K76</div>
-                                    <div class="rgb">R61 G61 B61</div>
-                                    <div class="hex">#3d3d3d</div>
+									<div class="cmyk">C0 M0 Y0 K48</div>
+									<div class="rgb">R132 G132 B132</div>
+									<div class="hex">#848484</div>
                                 </div>
                             </td>
-                            <!-- <td class="secondary_colour_dark"></td> -->
+							<td class="">
+								<div class="secondary_colour_dark colour_swatch">
+									<div class="cmyk">C0 M0 Y0 K76</div>
+									<div class="rgb">R61 G61 B61</div>
+									<div class="hex">#3D3D3D</div>
+								</div>
+							</td>
                             <td class="">
-
                                 <div class="supplementary_colour_dark colour_swatch">
                                     <div class="cmyk">C39 M45 Y100 K15</div>
                                     <div class="rgb">R148 G120 B24</div>
                                     <div class="hex">#947818</div>
                                 </div>
                             </td>
-                            <!-- <td class="supplementary_colour_2_dark"></td> -->
                         </tr>
-                        <tr>
+
+                        <tr class="light">
                             <th class="row_header">Light</th>
-                            
                             <td class="">
                                 <div class="feature_colour_light colour_swatch">
-                                    <div class="cmyk">C00 M26 Y42 K21</div>
-                                    <div class="rgb">R202 G149 B162</div>
-                                    <div class="hex">#CA95A2</div>
+                                    <div class="cmyk">C00 M04 Y05 K0</div>
+                                    <div class="rgb">R255 G244 B243</div>
+                                    <div class="hex">#FFF4F3</div>
                                 </div>
                             </td>
                             <td class="">
-
                                 <div class="complimentary_colour_light colour_swatch">
-                                    <div class="cmyk">C02 M00 Y06 K13</div>
-                                    <div class="rgb">R217 G222 B209</div>
-                                    <div class="hex">#D9DED1</div>
+                                    <div class="cmyk"> C00 M08 Y03 K02</div>
+                                    <div class="rgb">R242 G250 B229</div>
+                                    <div class="hex">#F2FAE5</div>
                                 </div>
                             </td>
                             <td class="">
-
                                 <div class="primary_colour_light colour_swatch">
-                                    <div class="cmyk">C11 M08 Y09 K00</div>
-                                    <div class="rgb">R224 G224 B224</div>
-                                    <div class="hex">#E0E0E0</div>
+									<div class="cmyk">C00 M00 Y00 K03</div>
+									<div class="rgb">R248 G248 B248</div>
+									<div class="hex">#F8F8F8</div>
                                 </div>
                             </td>
+							<td class="">
+								<div class="secondary_colour_light colour_swatch">
+									<div class="cmyk">C11 M08 Y09 K00</div>
+									<div class="rgb">R224 G224 B224</div>
+									<div class="hex">#E0E0E0</div>
+								</div>
+							</td>
                             <td class="">
-
                                 <div class="supplementary_colour_light colour_swatch">
                                     <div class="cmyk">C00 M05 Y21 K05</div>
                                     <div class="rgb">R241 G230 B190</div>
                                     <div class="hex">#F1E6BE</div>
                                 </div>
                             </td>
-                            
                         </tr>
                     </tbody>
                 </table>
-                <div class="black_and_white_warp">
-                    <h5 class="center">Black</h5>
-                    <div class="black colour_swatch">
-                        <div class="cmyk">C73 M67 Y66 K81</div>
-                        <div class="rgb">R19 G19 B19</div>
-                        <div class="hex">#131313</div>
-                    </div>
-                    <h5 class="center">White</h5>
-                    <div class="white colour_swatch">
-                        <div class="cmyk">C0 M0 Y0 K01</div>
-                        <div class="rgb">R252 G252 B252</div>
-                        <div class="hex">#131313</div>
-                    </div>
 
-                </div>
+				<br/>
+				<table class="colour-table">
+					<thead>
+						<th></th>
+						<th><h5>Black</h5></th>
+						<th><h5>White</h5></th>
+						<th><h5>Blue</h5></th>
+						<th><h5>-</h5></th>
+						<th><h5>-</h5></th>
+					</thead>
+					<tbody>
+					<tr class="colour">
+						<th class="row_header">Colour</th>
+						<td class="">
+							<div class="black colour_swatch">
+								<div class="cmyk">C73 M67 Y66 K81</div>
+								<div class="rgb">R19 G19 B19</div>
+								<div class="hex">#131313</div>
+							</div>
+						</td>
+						<td class="">
+							<div class="white colour_swatch">
+								<div class="cmyk">C00 M00 Y00 K00</div>
+								<div class="rgb">R255 G255 B255</div>
+								<div class="hex">#FFFFFF</div>
+							</div>
+						</td>
+						<td>
+							<div class="blue colour_swatch">
+								<div class="cmyk">C0 M0 Y0 K01</div>
+								<div class="rgb">R252 G252 B252</div>
+								<div class="hex">#131313</div>
+							</div>
+						</td>
+						<td><div class="colour_swatch"></div></td>
+						<td><div class="colour_swatch"></div></td>
+					</tbody>
+				</table>
             </div>
 
+			<!-- Fonts -->
             <div class="module">
             <h2 class="center">Fonts</h2>
-                <h5>All Heading and title texts are in Helvetica Condensed Bold.</h5>
-                <p>All standard text is arial.</p>
+                <h3>All Heading, title, and standard texts are in Helvetica</h3><br/>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sagittis libero lacus, a posuere nibh egestas id. Pellentesque sodales dui mi, et condimentum lacus facilisis et. Nulla varius tempus mi, finibus cursus ligula posuere quis. Sed non ligula erat. Vestibulum fermentum commodo nisi, et mollis risus porttitor sit amet. Vestibulum rutrum luctus urna id porttitor. Nullam sapien metus, placerat at convallis in, placerat vel sem. Sed vitae libero imperdiet, pretium diam ac, consequat ligula. Sed semper lorem id lectus posuere mattis. Nunc eu lectus eu lorem vehicula varius quis nec libero.</p>
             </div>
 
+			<!-- Headings -->
             <div class="module">
                 <h2 class="center">Headings</h2>
                 <button class="help_button" onclick="javascript:introJs().start().goToStep(6);">?</button>
@@ -220,7 +245,7 @@
                 <div class="example" data-step="6" data-intro="All Heading uses HelveticaNeueBdCn, and progress in size from .9 to 2.0em. <br/> Here, set on a black backgound with white text the ">
                     <h3 class="title">List heading example</h3>
                     <div class="wrap">
-                        <h3 class="list_header">Section Title <span class="float_right">Subsection Title</span></h3>
+                        <div class="list_header">Section Title <span class="float_right">Subsection Title</span></div>
                         <!--
                         <ul class="luxbet_list_page">
                             <li>Baseball</li>
@@ -233,11 +258,20 @@
                         </ul>
                         -->
                     </div>
+
+					<br/>
+					<div class="wrap">
+						<div class="list_header">Quick Multi<span class="float_right">Racing</span></div>
+						<ul class="luxbet_list_page">
+							<li><a><span class="titleWrap"><span class="">The Event name (ie TrackName R1)</span></span><span class="arrowWrap"><span class="arrow">&#8250;</span></span></a></li>
+							<li><a><span class="titleWrap"><span class="">The Event name (ie TrackName R2)</span></span><span class="arrowWrap"><span class="arrow">&#8250;</span></span></a></li>
+							<li><a><span class="titleWrap"><span class="">The Event name (ie TrackName R3)</span></span><span class="arrowWrap"><span class="arrow">&#8250;</span></span></a></li>
+						</ul>
+					</div>
                 </div>
             </div>
 
-
-
+			<!-- Buttons -->
             <div class="module">
                 <h2 class="center">Buttons</h2>
                 <button class="help_button" onclick="javascript:introJs().start().goToStep(7);">?</button>
@@ -270,28 +304,30 @@
                 </div>
             </div>
 
+			<!-- Inputs -->
             <div class="module">
                 <h2 class="center">Inputs</h2>
 
                 <button class="help_button" onclick="javascript:introJs().start().goToStep(10);">?</button>
                 <h3>Dropdowns</h3>
-<!--
-                <div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">
-                    <select class="styled">
-                        <option value="">choose preset...</option>
-                        <option value="one">two</option>
-                        <option value="two">something</option>
-                        <option value="three">4</option>
-                        <option value="four">5</option>
-                    </select>
-                </div>
--->
+
+                <!--<div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">-->
+                    <!--<select>-->
+                        <!--<option value="">choose preset...</option>-->
+                        <!--<option value="one">two</option>-->
+                        <!--<option value="two">something</option>-->
+                        <!--<option value="three">4</option>-->
+                        <!--<option value="four">5</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+				<!--<div class="clearspace"></div>-->
 
                 <div data-step="10" data-intro="Select boxes should be styled flat, with a light rounded border, and a simple down arrow to signify action. This helps to maintain a single, uncomplicated, unified look for all browsers, operating systems and devices, and allows us to provide a consistent visual experience.">
+					<h4>Primary dropdown</h4>
                     <select class="fancySelect luxInput">
-                        <option value="">choose preset...</option>
-                        <option value="one">two</option>
-                        <option value="two">something</option>
+                        <option value="">Choose Preset...</option>
+                        <option value="one">Two</option>
+                        <option value="two">Something</option>
                         <option value="three">Three</option>
                         <option value="four">Four</option>
                         <optgroup label="A Group ">
@@ -301,9 +337,26 @@
                         </optgroup>
                     </select>
                 </div>
-                <div class="clearspace"></div>
-                <h3>Radio Buttons</h3>
 
+				<div class="clearspace"></div>
+				<div>
+					<h4>Secondary dropdown</h4>
+					<select class="fancySelect luxInput ndDropdown">
+						<option value="">Secondary Dropdown...</option>
+						<option value="one">Two</option>
+						<option value="two">Something</option>
+						<option value="three">Three</option>
+						<option value="four">Four</option>
+						<optgroup label="A Group ">
+							<option value="five">Five</option>
+							<option value="six">Six</option>
+							<option value="seven">Seven</option>
+						</optgroup>
+					</select>
+				</div>
+
+				<div class="clearspace"></div>
+                <h3>Radio Buttons</h3>
                 <div class="example radio_buttons radio_buttons_labeled">
                     <p>Labeled</p>
                     <hr/>
@@ -333,8 +386,9 @@
                 <div class="clearspace"></div>
                 <h3>Check Boxes</h3>
 
-                    <input type="checkbox" class="icheck">
-                    <input type="checkbox" class="icheck" checked>
+                    <input type="checkbox" class="icheck" id="checkbox_1"><label for="checkbox_1">First Checkbox</label><br/><br/>
+                    <input type="checkbox" class="icheck" id="checkbox_2" checked><label for="checkbox_2">Second Checkbox</label><br/><br/>
+					<input type="checkbox" class="icheck" id="checkbox_3"><label for="checkbox_3">Third Checkbox</label><br/>
 
                 <div class="clearspace"></div>
                 <h3>Switches / Toggles </h3>
@@ -348,6 +402,7 @@
 
             </div>
 
+			<!-- Icons -->
             <div class="module">
                 <h2 class="center">Icons</h2>
                 <p>All Icon classes (including duplicates):</p>
@@ -496,6 +551,8 @@
                     <div class="icon small run"></div>
                 </div>
             </div>
+
+			<!-- Cheverons -->
             <div class="module">
                 <h2 class="center">Cheverons</h2>
                 <div class="clearspace"></div>
@@ -537,6 +594,7 @@
                 </div>
             </div>
 
+			<!-- Breadcrumb Navigation -->
             <div class="module">
                 <h2 class="center">Breadcrumb Navigation</h2>
 
@@ -639,15 +697,15 @@
                     </div>
                 </div>
             </div>
+
+			<!-- Time -->
             <div class="module">
                 <h2 class="center">Time</h2>
                 <span id="time_example_1" class="time">
                     <span class="warn">
                         <div class="icon x-small icon-sports-time"></div>
-                         Betting Closing in 
+                         Betting Closing
                     </span>
-
-
                     <span class="time_text">
                         <span class="time-until"></span> at
                         <span class="time-local"></span>
@@ -656,10 +714,10 @@
 
                 <div class="clearspace"></div>
                 <span id="time_example_2" class="time">
-                    
                 </span>
             </div>
 
+			<!-- Lists -->
             <div class="module">
                 <h2 class="center">Lists</h2>
                 <div class="clearspace"></div>
@@ -769,7 +827,7 @@
                                 <span class="title">The Event name (ie TrackName R2)</span>
                                 <span id="time_example_1" class="time">
                                     <span class="warn">
-                                        <div class="icon x-small icon-sports-time"></div>
+                                        <!--<div class="icon x-small icon-sports-time"></div>-->
                                          Betting Closing in 
                                     </span>
                                     <span class="time_text">
@@ -824,7 +882,7 @@
                                 <span class="title">The Event name (ie TrackName R2)</span>
                                 <span id="time_example_1" class="time">
                                     <span class="warn">
-                                        <div class="icon x-small icon-sports-time"></div>
+                                        <!--<div class="icon x-small icon-sports-time"></div>-->
                                          Betting Closing in 
                                     </span>
                                     <span class="time_text">
@@ -850,7 +908,7 @@
                                 <span class="title">The Event name (ie TrackName R2)</span>
                                 <span id="time_example_1" class="time">
                                     <span class="warn">
-                                        <div class="icon x-small icon-sports-time"></div>
+                                        <!--<div class="icon x-small icon-sports-time"></div>-->
                                          Betting Closing in 
                                     </span>
                                     <span class="time_text">
@@ -870,78 +928,78 @@
 
             </div>
 
+			<!-- Site Navigation -->
             <div class="module">
                 <h2 class="center">Site Navigation</h2>
+				<div class="clearspace"></div>
+
+				<h3>Left hand Nav</h3>
+				<nav>
+					<ul class="mainNav">
+						<div class="ribbon">
+							<div class="buttonPadding center">
+								<span class="button alternative login"><a>Login</a></span>
+								<span class="button alternative join"><a>Join</a></span>
+							</div>
+						</div>
+						<li>
+							<a class="active">Next To Go</a>
+						</li>
+						<li>
+							<a>Horse Racing</a>
+						</li>
+						<li>
+							<a>Harness Racing</a>
+						</li>
+						<li>
+							<a>Greyhound Racing</a>
+						</li>
+						<li class="navSeparator"></li>
+						<li>
+							<a>Help</a>
+						</li>
+					</ul>
+				</nav>
 
                 <div class="clearspace"></div>
-                <h3>Left hand Nav</h3>
-
+                <h3>Left hand Nav (Logged in)</h3>
                 <nav>
                     <ul class="mainNav">
-                        <li>
-                            <a class="active">
-                                <h3>Next To Go</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <span class="no-link">
-                                <h3>Racing</h3>
-                            </span>
-                        </li>
-                        <li>
-                            <a>
-                                Horse Racing
-                            </a>
-                            
-                        </li>
-                        <li>
-                            <a>
-                                Harness Racing
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                Greyhound Racing
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                <h3>Sports</h3>
-                            </a>
-                        </li>
+						<div class="ribbon">
+							<div><span class="ribbonText">Acc</span> <span class="ribbonValue">Username</span></div>
+							<div><span class="ribbonText">Bal</span> <span class="ribbonValue">$ 1,234</span></div>
+							<div><span class="ribbonText">Bonus Bets</span> <span class="ribbonValue">$ 1,234</span></div>
+							<div><span class="ribbonText">Credit Limit</span> <span class="ribbonValue">$ 1,234</span></div>
 
-                        <li>
-                            <span class="no-link">
-                                <h3>My Account</h3>
-                            </span>
-
-                            <ul class="accountInfo">
-                                <li>
-                                    Balance: 
-                                    <span class="userBalance">$10.06</span>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a>
-                                Account Overview
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                Statement
-                            </a>
-                        </li>
-                        <li>
-                            <a>
-                                Undecided
-                            </a>
-                        </li>
+							<div class="buttonPadding center">
+								<span class="button alternative"><a>My Account</a></span>
+								<span class="button alternative"><a>Make a Deposit</a></span>
+							</div>
+						</div>
+						<li>
+							<a class="active">Next To Go</a>
+						</li>
+						<li>
+							<a>Horse Racing</a>
+						</li>
+						<li>
+							<a>Harness Racing</a>
+						</li>
+						<li>
+							<a>Greyhound Racing</a>
+						</li>
+						<li class="navSeparator"></li>
+						<li>
+							<a>Logout</a>
+						</li>
+						<li>
+							<a>Help</a>
+						</li>
                     </ul>
                 </nav>
             </div>
 
-
+			<!-- Page Layout -->
             <div class="module">
                 <h2 class="center">Page Layout</h2>
                 <div class="pageLayoutExample">
@@ -955,18 +1013,14 @@
                 </div>
             </div>
 
-
-
+			<!-- Bet -->
             <div class="module">
                 <h2 class="center">Bet</h2>
 
+				<!--Single Bet -->
                 <div class="clearspace"></div>
-                <h3>Single Bet</h3>
-
-                <div class="clearspace"></div>
-
+                <h3 class="">Single Bet</h3>
                 <div class="bet selection clearfix">
-
                     <div class="selectionDetails clearfix">
                         <div class="selectionName">
                             <span class="selectionPosition">2: </span>
@@ -987,34 +1041,39 @@
                         </div>
 
                         <div class="ticketColumns">
-                            <div class="col_33 price">
+                            <div class="col_50 price">
                                 <div class="selectionPriceLabel">Price</div>
                                 <div class="selectionPrice">
                                     LuxMid
                                 </div>
                             </div>
-                            <div class="col_33 stake">
+                            <div class="col_50 stake">
                                 <div class="stakeLabel">Stake</div>
                                 <div class="stakeInputWrap">
                                     <input id="ember6594" class="ember-view ember-text-field" type="number" min="0">
                                 </div>
                             </div>
-                            <div class="col_33 actions">
-                                <a class="buttonDelete clearfix" data-ember-action="6596">Delete</a>
-                            </div>
                         </div>
+
+						<br/><br/>
+
+						<div class="ticketColumns">
+							<div class="bonusBetContainer">
+								<select id="ember1196" class="ember-view fancySelect luxInput" >
+									<option id="ember1208" class="ember-view">BONUS BET</option>
+									<option id="ember1209" class="ember-view" value="PB100::_::2">100.00</option>
+								</select>
+							</div>
+						</div>
 
                         <div class="ticketAvailableBets">
-
                         </div>
                     </div>
-
                 </div>
-                    <!-- -->
 
-                    <!-- -->
+				<!-- Multi Bet -->
                 <div class="clearspace"></div>
-                <h3>Multi Bet</h3>
+                <h3  class="">Multi Bet</h3>
                 <div class="bet selection multi clearfix">
                     <div class="selectionDetails clearfix">
                         <div class="ticketColumns clearfix">
@@ -1038,135 +1097,103 @@
                         </div>
                     </div>
                 </div>
-                    <!-- -->
 
-
-
-
+				<!-- Exotic Bet -->
                 <div class="clearspace"></div>
                 <h3>Exotic Bet</h3>
-
                 <div class="bet selection exotic">
                     <div class="selectionDetails exotic clearfix">
-
                         <div class="selectionName">Horse Racing, Kyneton</div>
                         <div class="selectionParentCategory">Race 5: Some Racename</div>
-
-                        <div class="selectionBetType">(VIC,
-                            Quaddie)
-                        </div>
-
-                        <div class="selectionDateTime time">event_datetime</div>
-
-                        <div class="selectionInfo">
-                            Race 5: 1 / Race 6: 2 / Race 7: 5 / Race 8: 5 
-                        </div>
+                        <div class="selectionBetType">(VIC,Quaddie)</div>
+                        <div class="selectionDateTime">11:28 12/06/2015</div>
+                        <div class="selectionInfo">Race 5: 1 / Race 6: 2 / Race 7: 5 / Race 8: 5</div>
 
                         <div class="ticketColumns">
-                            <div class="col_33 price">
+                            <div class="col_50 price">
                                 <div class="selectionPrice">Price</div>
                                 <div class="selectionPrice">product_short_name</div>
                             </div>
-                            <div class="col_33 stake">
+                            <div class="col_50 stake">
                                 <div class="stakeLabel">Stake</div>
                                 <div class="stakeInputWrap">
                                     <input type="number" min=0 value=0 />
                                 </div>
                             </div>
-                            <div class="col_33 actions">
-                                <a class="buttonDelete clearfix">Delete</a>
-                            </div>
                         </div>
-
                     </div>
                 </div>
 
-
-
+				<!-- Bet Ticket -->
                 <div class="clearspace"></div>
                 <h3>Bet Ticket</h3>
-
-                <div class="bet selection ticket">
+                <div class="bet selection ticket ticketBody">
                     <div class="selectionDetails clearfix">
                         <div class="selectionName">
                             <span class="selectionPosition">2: </span>
                             GOSHI
+							<div class="actions">
+								<a class="cancel">x</a>
+							</div>
                         </div>
-                        <div class="selectionBetType">
-                            (LuxMid,Win)
-                        </div>
+                        <div class="selectionBetType">(LuxMid,Win)</div>
                         <div class="selectionMarket">Racing Live</div>
-                        <div class="selectionParentCategory">
-                            Greyhound Racing,
-                        </div>
-                        <div class="selectionCategory">
-                            ALBION PARK
-                        </div>
-                        <div class="selectionEvent">
-                            4: A TEAM STUD
-                        </div>
+                        <div class="selectionParentCategory">Greyhound Racing,</div>
+                        <div class="selectionCategory">ALBION PARK</div>
+						<div class="selectionEvent">4: A TEAM STUD</div>
 
+						<div class="additionalOptions">
+							<div class="checkBoxWrap">
+								<input type="checkbox" name="winplace" value="winplace">Win/Place
+							</div>
+						</div>
 
-                        <div class="ticketColumns">
-                            <div class="col_33 price">
-                                <div class="selectionPriceLabel">Price</div>
-                                <div class="selectionPrice">
-                                    LuxMid
-                                </div>
-                            </div>
-                            <div class="col_33 stake">
-                                <div class="stakeLabel">Stake</div>
-                                <div class="stakeInputWrap">
-                                    <input id="ember6594" class="ember-view ember-text-field" type="number" min="0" />
-                                </div>
-                            </div>
-                            <div class="col_33 actions">
-                                <a class="buttonDelete clearfix" data-ember-action="6596">Delete</a>
-                            </div>
+                        <div class="ticketRow">
+							<span class="selectionPriceLabel">Price</span>
+							<span class="selectionPrice">LuxMid</span>
+							<span> | </span>
+							<span class="stakeLabel">Stake</span>
+							<input id="ember6594" class="ember-view ember-text-field" type="number" min="0"/>
+							<a class="buttonClear">Clear</a>
                         </div>
 
                         <div class="ticketAvailableBets">
 
                         </div>
                     </div>
-                    <div class="buttonsAndInputs clearfix">
-                        
-                        <div class="calc">
-                            <button>+50c</button>
-                            <button>+$1</button>
-                            <button>+$5</button>
-                            <button>+$10</button>
-                            <button>+$50</button>
-                            <button>+$100</button>
-                            <button>+$500</button>
-                            <button>+$1000</button>
-                        </div>
-                        <div class="buttonsWrap">
-                            <button class="buttonPlaceBet affirmative">Place Bet</button>
-                            <button class="buttonAddToBetslip alternative">Add To Betslip</button>
-                            <button class="buttonCancel negative">Cancel</button>
-                        </div>
-                    </div>
-                    
+					<div class="calc">
+						<button>+50c</button>
+						<button>+$1</button>
+						<button>+$5</button>
+						<button>+$10</button>
+						<button>+$50</button>
+						<button>+$100</button>
+						<button>+$500</button>
+						<button>+$1000</button>
+						<button class="buttonClear">Clear</button>
+					</div>
+					<div class="buttonWrap">
+						<button class="buttonPlaceBet affirmative">Place Bet</button>
+						<button class="buttonAddToBetslip alternative">Add to Betslip</button>
+					</div>
                 </div>
-
-
             </div>
 
-            <div class="module">
+			<!-- Betslip -->
+            <div class="module betslip">
                 <h2 class="center">Cart (Betslip)</h2>
-
                 <div class="clearspace"></div>
                     <div class="betslip">
-                        <h4 class="list_header">BETSLIP</h4>
-                        <h3 class="sub_header">Single Bets</h3>
-                        
+                        <div class="list_header">BET SLIP</div>
+                        <div class="sub_header list_header_invert">Single Bets</div>
                         <div class="bet selection clearfix">
-
                             <div class="selectionDetails clearfix">
                                 <div class="selectionName">
                                     <span class="selectionPosition">2: </span>
                                     GOSHI
+									<div class="actions">
+										<a class="delete">x</a>
+									</div>
                                 </div>
                                 <div class="selectionBetType">
                                     (LuxMid,Win)
@@ -1183,20 +1210,17 @@
                                 </div>
 
                                 <div class="ticketColumns">
-                                    <div class="col_33 price">
+                                    <div class="col_50 price">
                                         <div class="selectionPriceLabel">Price</div>
                                         <div class="selectionPrice">
                                             LuxMid
                                         </div>
                                     </div>
-                                    <div class="col_33 stake">
+                                    <div class="col_50 stake">
                                         <div class="stakeLabel">Stake</div>
                                         <div class="stakeInputWrap">
                                             <input id="ember6594" class="ember-view ember-text-field" type="number" min="0">
                                         </div>
-                                    </div>
-                                    <div class="col_33 actions">
-                                        <a class="buttonDelete clearfix" data-ember-action="6596">Delete</a>
                                     </div>
                                 </div>
 
@@ -1207,9 +1231,7 @@
 
                         </div>
 
-
-
-                        <h3 class="sub_header">Multis</h3>
+                        <div class="sub_header list_header_invert">Multis</div>
                         <div class="ticketColumnsWrap">
                             <div class="ticketColumnHeadings clearfix">
                                 <div class="col_33 name">
@@ -1232,7 +1254,7 @@
                         <div class="bet selection multi clearfix">
                             <div class="selectionDetails clearfix">
                                 <div class="placementDetails rejected">
-                                    <div class="notice">Error: {{multi.checkoutError.error_message}}</div>
+                                    <div class="notice">Error: Race has started</div>
                                 </div>
                                 <div class="ticketColumns clearfix">
                                     <div class="col_33 name">
@@ -1255,8 +1277,6 @@
                                 </div>
                             </div>
                         </div>
-
-
 
                         <div class="bet selection multi clearfix">
                             <div class="selectionDetails clearfix">
@@ -1264,7 +1284,7 @@
                                     <div class="notice">Bet placed successfully </div>
                                     <div class="betId">
                                         <span class="betIdLabel">ID: </span>
-                                        <span class="betIdValue">{{multi.betplaced.bet_id}}</span>
+                                        <span class="betIdValue">821354</span>
                                     </div>
                                 </div>
                                 <div class="ticketColumns clearfix">
@@ -1288,7 +1308,6 @@
                                 </div>
                             </div>
                         </div>
-
 
                         <div class="bet selection multi clearfix">
                             <div class="selectionDetails clearfix">
@@ -1319,61 +1338,66 @@
                             </div>
                         </div>
                         <div class="betslipFooter">
-                            <div class="col_50">
-                                <a class="buttonDelete clearfix">Clear All Bets</a>
-                            </div>
-                            <div class="col_50">
+                            <div class="col_66">
                                 <button class="affirmative">Place All Bets</button>
                             </div>
+							<div class="col_33">
+								<button class="buttonDelete clearfix">Clear All Bets</button>
+							</div>
                         </div>
 
                     </div>
                 </div>
 
-                <div class="module">
-                    <h2>Notify</h2>
-                    <button class="notifyTrigger">Try It</button>
-                    <div class="notifyListExampleWrap" style="position:relative;">
-                        <ul class="notifyList">
-                            
-                        </ul>
-                    </div>
-                </div>
+			<!-- Notification -->
+			<div class="module">
+				<h2>Notify</h2>
+				<button class="notifyTrigger">Try It</button>
+				<div class="notifyListExampleWrap" style="position:relative;">
+					<ul class="notifyList"></ul>
+				</div>
+			</div>
+
+			<!-- Example Notification -->
+			<div class="module notification">
+				<h2 class="center">Error and notification messaging - Static</h2>
+				<div class="notifyListExampleWrap">
+					<ul class="notifyList">
+						<li>
+							<div class="wrapper notifyWrapper">
+								<div class="message notify">
+									<h3><span>&#x2713;</span> Account Verified</h3>
+									<p>More information on IDV can be found below</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="wrapper alertWrapper">
+								<div class="message alert">
+									<h3><span>&#x274c;</span> Account Unverified <button class="alternative small">Verify Now</button></h3>
+									<p>More information on IDV can be found below</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Modal -->
+			<div class="module">
+				<h2>Modal</h2>
+				<button class="modalTrigger">Try It</button>
+				<div class="modalWrap">
+					<div class="modal">
+
+					</div>
+				</div>
+			</div>
 
 
-                <div class="module">
-                    <h2>Modal</h2>
-                    <button class="modalTrigger">Try It</button>
-                    <div class="modalWrap">
-                        <div class="modal">
-                            
-                        </div>
-                    </div>
-                </div>
-
-
-                <footer>
-                    <h1>
-                        <br>
-                    </h1>
-                </footer>
-
-            <script src="js/vendor.js"></script>
-            <!--<script src="js/notify.js"></script>-->
+		<script src="js/vendor.js"></script>
+		<!--<script src="js/notify.js"></script>-->
             <script src="js/main.js"></script>
-            <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <!--
-            <script>
-                (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-                e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-                e.src='//www.google-analytics.com/analytics.js';
-                r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-                ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-            </script>
-    -->
         </div>
-
-
     </body>
 </html>
