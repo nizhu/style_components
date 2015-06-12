@@ -570,7 +570,7 @@ body {
 .luxbet_list_page .results {
   position: absolute;
   bottom: 5px;
-  right: 40px;
+  right: 50px;
   color: #d8af23;
 }
 .luxbet_list_page.detailed li {
@@ -579,9 +579,12 @@ body {
 .luxbet_list_page.detailed li a {
   min-height: 45px;
 }
-.luxbet_list_page.detailed li .titleWrap {
-  margin-top: 4px;
+.luxbet_list_page.detailed li .titleWrap,
+.luxbet_list_page.detailed li .products {
   margin-left: 50px;
+}
+.luxbet_list_page.detailed li .titleWrap {
+  padding-top: 5px;
 }
 .luxbet_list_page.detailed li .titleWrap .title {
   line-height: normal;
@@ -599,7 +602,7 @@ body {
   border-top: 1px solid #dbdbdb;
 }
 .luxbet_list_page li:hover {
-  background-color: #dbdbdb;
+  background-color: #f8f8f8;
 }
 .luxbet_list_page li a {
   display: block;
@@ -631,34 +634,27 @@ body {
   top: 5%;
   bottom: 25%;
   margin: 0;
-  line-height: 0px;
+  line-height: 0;
 }
 .luxbet_list_page li .arrowWrap {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  height: auto;
+  height: 45px;
   width: 35px;
-  background: #ffffff;
 }
 .luxbet_list_page li .arrowWrap .arrow {
-  color: #848484;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  line-height: 35px;
-  font-size: 30px;
   display: block;
+  color: #dbdbdb;
+  height: 45px;
   width: 35px;
-  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
   text-align: center;
 }
 .luxbet_list_page li .titleWrap {
   display: block;
-  padding: 5px;
 }
 .luxbet_list_page li .titleWrap .title {
   display: inline-block;
@@ -669,17 +665,19 @@ body {
   white-space: pre-wrap;
   box-sizing: border-box;
   vertical-align: middle;
-  line-height: 45px;
-}
-.luxbet_list_page li .products {
-  margin-left: 45px;
-  margin-bottom: 5px;
+  line-height: 40px;
 }
 .luxbet_list_page li .products .product {
-  padding: 3px 5px;
-  border-radius: 5px;
-  color: #ffffff;
-  font-size: 12px;
+  background-color: transparent !important;
+  color: #848484;
+  padding-right: 5px;
+  font-size: 0.8em;
+}
+.luxbet_list_page li .products .product:after {
+  content: " | ";
+}
+.luxbet_list_page li .products .product:last-child:after {
+  content: "";
 }
 .luxbet_list_page li:active {
   -webkit-animation: list_item_color_change_default 750ms 1 normal;
@@ -687,75 +685,69 @@ body {
   -ms-animation: list_item_color_change_default 750ms 1 normal;
   -o-animation: list_item_color_change_default 750ms 1 normal;
   animation: list_item_color_change_default 750ms 1 normal;
-  -webkit-box-shadow: inset 0px 3px 5px 0px rgba(5, 5, 5, 0.15);
-  -moz-box-shadow: inset 0px 3px 5px 0px rgba(5, 5, 5, 0.15);
-  box-shadow: inset 0px 3px 5px 0px rgba(5, 5, 5, 0.15);
-}
-.luxbet_list_page li:active .arrowWrap {
-  background: #dbdbdb;
 }
 @keyframes list_item_color_change_default {
   25% {
     transform: scale(0.99);
-    background-color: #dbdbdb;
+    background-color: #848484;
   }
   95% {
     transform: scale(1.01);
   }
   100% {
-    background-color: #ffffff;
+    background-color: #dbdbdb;
     transform: scale(1);
   }
 }
 @-webkit-keyframes list_item_color_change_default {
   25% {
     -webkit-transform: scale(0.99);
-    background-color: #dbdbdb;
+    background-color: #848484;
   }
   95% {
     -webkit-transform: scale(1.01);
   }
   100% {
-    background-color: #ffffff;
+    background-color: #dbdbdb;
     -webkit-transform: scale(1);
   }
 }
 @-moz-keyframes list_item_color_change_default {
   25% {
     -moz-transform: scale(0.99);
-    background-color: #dbdbdb;
+    background-color: #848484;
   }
   95% {
     -moz-transform: scale(1.01);
   }
   100% {
-    background-color: #ffffff;
+    background-color: #dbdbdb;
     -moz-transform: scale(1);
   }
 }
 @-ms-keyframes list_item_color_change_default {
   25% {
     -ms-transform: scale(0.99);
-    background-color: #dbdbdb;
+    background-color: #848484;
   }
   95% {
     -ms-transform: scale(1.01);
   }
   100% {
-    background-color: #ffffff;
+    background-color: #dbdbdb;
     -ms-transform: scale(1);
   }
 }
 @-o-keyframes list_item_color_change_default {
   25% {
     -o-transform: scale(0.99);
-    background-color: #dbdbdb;
+    background-color: #848484;
   }
   95% {
     -o-transform: scale(1.01);
   }
   100% {
-    background-color: #ffffff;
+    background-color: #dbdbdb;
     -o-transform: scale(1);
   }
 }
@@ -770,30 +762,23 @@ body {
 .luxbet_list_page li .eventCount.right {
   color: #848484;
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   line-height: 40px;
-  font-size: 15px;
-  display: block;
+  display: inline-block;
   width: 35px;
-  height: 40px;
+  height: 100%;
   text-align: center;
 }
 button,
 .button {
   display: inline-block;
-  color: #ffffff;
   cursor: pointer;
-  border: 1px solid #ffffff;
-  background-color: #848484;
+  color: #848484;
+  border: 1px solid #848484;
+  background-color: transparent;
   margin: 5px;
-  min-width: 60px;
-  min-height: 35px;
-  font-size: 0.9em;
-  font-weight: bold;
-  -webkit-tap-highlight-color: none;
+  width: 200px;
+  height: 35px;
+  -webkit-tap-highlight-color: transparent;
   -webkit-border-radius: 3px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 3px;
@@ -881,6 +866,17 @@ button:active,
     background-color: #f8f8f8;
     -o-transform: scale(1);
   }
+}
+button.affirmative,
+.button.affirmative,
+button.alternative,
+.button.alternative,
+button.negative,
+.button.negative,
+button.supplementary,
+.button.supplementary {
+  color: #ffffff;
+  border-color: #ffffff;
 }
 button.affirmative,
 .button.affirmative {
@@ -1057,7 +1053,7 @@ button.negative:active,
     transform: scale(1.01);
   }
   100% {
-    background-color: #dbdbdb;
+    background-color: #f8f8f8;
     transform: scale(1);
   }
 }
@@ -1070,7 +1066,7 @@ button.negative:active,
     -webkit-transform: scale(1.01);
   }
   100% {
-    background-color: #dbdbdb;
+    background-color: #f8f8f8;
     -webkit-transform: scale(1);
   }
 }
@@ -1083,7 +1079,7 @@ button.negative:active,
     -moz-transform: scale(1.01);
   }
   100% {
-    background-color: #dbdbdb;
+    background-color: #f8f8f8;
     -moz-transform: scale(1);
   }
 }
@@ -1096,7 +1092,7 @@ button.negative:active,
     -ms-transform: scale(1.01);
   }
   100% {
-    background-color: #dbdbdb;
+    background-color: #f8f8f8;
     -ms-transform: scale(1);
   }
 }
@@ -1109,7 +1105,84 @@ button.negative:active,
     -o-transform: scale(1.01);
   }
   100% {
-    background-color: #dbdbdb;
+    background-color: #f8f8f8;
+    -o-transform: scale(1);
+  }
+}
+button.supplementary,
+.button.supplementary {
+  background-color: #d8af23;
+}
+button.supplementary:active,
+.button.supplementary:active {
+  -webkit-animation: button_color_change_supplementary 750ms 1 normal;
+  -moz-animation: button_color_change_supplementary 750ms 1 normal;
+  -ms-animation: button_color_change_supplementary 750ms 1 normal;
+  -o-animation: button_color_change_supplementary 750ms 1 normal;
+  animation: button_color_change_supplementary 750ms 1 normal;
+}
+@keyframes button_color_change_supplementary {
+  25% {
+    transform: scale(0.95);
+    background-color: #d8af23;
+  }
+  95% {
+    transform: scale(1.01);
+  }
+  100% {
+    background-color: #f1e6be;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes button_color_change_supplementary {
+  25% {
+    -webkit-transform: scale(0.95);
+    background-color: #d8af23;
+  }
+  95% {
+    -webkit-transform: scale(1.01);
+  }
+  100% {
+    background-color: #f1e6be;
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes button_color_change_supplementary {
+  25% {
+    -moz-transform: scale(0.95);
+    background-color: #d8af23;
+  }
+  95% {
+    -moz-transform: scale(1.01);
+  }
+  100% {
+    background-color: #f1e6be;
+    -moz-transform: scale(1);
+  }
+}
+@-ms-keyframes button_color_change_supplementary {
+  25% {
+    -ms-transform: scale(0.95);
+    background-color: #d8af23;
+  }
+  95% {
+    -ms-transform: scale(1.01);
+  }
+  100% {
+    background-color: #f1e6be;
+    -ms-transform: scale(1);
+  }
+}
+@-o-keyframes button_color_change_supplementary {
+  25% {
+    -o-transform: scale(0.95);
+    background-color: #d8af23;
+  }
+  95% {
+    -o-transform: scale(1.01);
+  }
+  100% {
+    background-color: #f1e6be;
     -o-transform: scale(1);
   }
 }
@@ -1128,6 +1201,10 @@ button a:focus,
   padding: 5px;
   width: auto;
   min-width: 80px;
+}
+button.short,
+.button.short {
+  width: 100px;
 }
 /* live betting and quick multi button on homepage and sport */
 .live-betting,
@@ -2946,7 +3023,7 @@ EOF Small
 .mainNav .ribbon {
   color: #ffffff;
   background-color: #bf1d40;
-  padding: 15px;
+  padding: 10px;
   line-height: 1.4em;
 }
 .mainNav .ribbon div {
@@ -2960,14 +3037,20 @@ EOF Small
   width: 100%;
   margin-top: 10px;
 }
+.mainNav .buttonPadding .button {
+  width: 44%;
+}
+.mainNav .buttonPadding .button a {
+  padding: 7px 0;
+}
 .mainNav .navSeparator {
   width: 85%;
   margin-left: 15px;
   border-bottom: 2px solid #848484;
 }
 .time {
-  color: #848484;
-  font-size: 12px;
+  color: #947818;
+  font-size: 0.8em;
 }
 .bet {
   background-color: #ffffff;
@@ -3522,6 +3605,7 @@ EOF Small
   padding-top: 10px;
 }
 .ticket .calc button {
+  border: none;
   background-color: #dbdbdb;
   color: #3d3d3d;
   font-weight: normal;
@@ -3760,12 +3844,7 @@ a:active {
   color: #131313;
 }
 .help_button {
-  border: solid 1px white;
-  -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
-  box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
-  background-color: gray;
-  border-radius: 50%;
+  border-radius: 100%;
   width: 1.8em;
   height: 1.8em;
   float: right;
@@ -3807,7 +3886,7 @@ a:active {
   text-align: center;
   margin-bottom: 10px;
 }
-.module .example .title {
+.module > .example > .title {
   border-bottom: inset 1px gray;
   margin-bottom: 15px;
   padding-left: 10px;
