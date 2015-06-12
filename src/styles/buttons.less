@@ -1,6 +1,10 @@
 button, .button {
 	//Local Variables
+	@local_border: 1px solid @local_default_colour_dark;
 	@local_border_radius: 3px;
+
+	@local_white: @white;
+	@local_black: @black;
 
 	@local_default_colour: @primary_colour;
 	@local_default_colour_light: @primary_colour_light;
@@ -13,30 +17,29 @@ button, .button {
 	@local_alternative_colour: @feature_colour;
 	@local_alternative_colour_light: @feature_colour_light;
 	@local_alternative_colour_dark: @feature_colour_dark;
+	
+	@local_supplementary_colour: @supplementary_colour;
+	@local_supplementary_colour_light: @supplementary_colour_light;
+	@local_supplementary_colour_dark: @supplementary_colour_dark;
 
-	@local_negative_colour: @primary_colour_dark;
-	@local_negative_colour_light: @primary_colour;
+	@local_negative_colour: @primary_colour;
+	@local_negative_colour_light: @primary_colour_light;
 	@local_negative_colour_dark: @primary_colour_dark;
 
 
 	display: inline-block;
-	color: @white;
 	cursor: pointer;
-	border: 1px solid @white;
-	background-color: @local_default_colour_dark;
+	color: @local_default_colour_dark;
+	border: @local_border;
+	background-color: transparent;
 	margin: 5px;
-	min-width: 60px;
-	min-height: 35px;
-	font-size: 0.9em;
-	font-weight: bold;
-	-webkit-tap-highlight-color: none;
+	width: 200px;
+	height: 35px;
+	-webkit-tap-highlight-color: transparent;
 	.border-radius(@local_border_radius);
 
 	&:hover, &:active, &:focus {
 		outline: 0;
-	}
-	&:focus {
-		//background-color: @supplementary_colour_dark;
 	}
 
 	&:active {
@@ -44,6 +47,11 @@ button, .button {
 	}
 	.button-click-keyframes(button_color_change_default, @local_default_colour, @local_default_colour_light, @local_default_colour_dark);
 
+
+	&.affirmative, &.alternative, &.negative, &.supplementary {
+		color: @local_white;
+		border-color: @local_white;
+	}
 
 	&.affirmative { background-color: @local_affirmative_colour; }
 	&.affirmative:active {
@@ -59,19 +67,29 @@ button, .button {
 	.button-click-keyframes(button_color_change_alternative, @local_alternative_colour, @local_alternative_colour_light, @local_alternative_colour_dark);
 
 
-	&.negative { background-color: @local_negative_colour; }
+	&.negative { background-color: @local_negative_colour_dark; }
 	&.negative:active {
 		.button-click-animation(button_color_change_negative);
 	}
 	.button-click-keyframes(button_color_change_negative, @local_negative_colour, @local_negative_colour_light, @local_negative_colour_dark);
 
+	&.supplementary { background-color: @local_supplementary_colour; }
+	&.supplementary:active {
+		.button-click-animation(button_color_change_supplementary);
+	}
+	.button-click-keyframes(button_color_change_supplementary, @local_supplementary_colour, @local_supplementary_colour_light, @local_supplementary_colour);
+
 	a, a:visited, a:hover, a:active, a:focus {
 		display: inline-block;
-		color: @white;
+		color: @local_white;
 		padding: 5px;
 		width: auto;
 		min-width: 80px;
 	}
+}
+
+button.short, .button.short{
+	width: 100px;
 }
 
 
@@ -83,7 +101,7 @@ button, .button {
 	font-weight: normal;
 	.border-radius(0);
 
-	span { color: @white; }
+	span { color: @local_white; }
 
 	.arrow {
 		position: relative;

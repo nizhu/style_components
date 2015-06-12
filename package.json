@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/amindunited/style_components.git"
+    "url": "https://github.com/artsworks/style_components.git"
   },
   "author": "amindunited",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/amindunited/style_components/issues"
+    "url": "https://github.com/artsworks/style_components/issues"
   },
-  "homepage": "https://github.com/amindunited/style_components",
+  "homepage": "https://github.com/artsworks/style_components",
   "devDependencies": {
     "broccoli": "^0.13.2",
     "broccoli-concat": "0.0.12",
