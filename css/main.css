@@ -519,21 +519,6 @@ body {
 .supplementary_colour_light {
   background-color: #f1e6be;
 }
-.colour_swatch {
-  margin: 1px;
-  color: black;
-  font-size: 10px;
-  border-radius: 5px;
-  padding-top: 15px;
-  padding: 20px 10px;
-  -webkit-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
-  box-shadow: 1px 1px 2px 0px rgba(50, 50, 50, 0.75);
-}
-.dark .colour_swatch,
-.black.colour_swatch {
-  color: white;
-}
 .list_header {
   display: inline-block;
   width: 100%;
@@ -1216,7 +1201,7 @@ button.medium,
 }
 button.short,
 .button.short {
-  width: 90px;
+  width: 95px;
   font-weight: bold;
   font-size: 0.8em;
 }
@@ -3843,10 +3828,14 @@ EOF Small
   width: 100px;
 }
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
 }
 [class^="introjs"] {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 .center {
@@ -3882,31 +3871,42 @@ a:active {
 .colour-table {
   table-layout: fixed;
   min-width: 700px;
-}
-.colour-table .row_header {
-  text-align: left;
-}
-.colour-table th {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  max-width: 100%;
+  font-size: 0.8em;
 }
 .colour-table tr td {
   width: 20%;
 }
+.colour-table th,
+.colour-table .row_header {
+  text-align: left;
+  padding-right: 10px;
+  font-weight: bold;
+  min-width: 70px;
+}
+.colour-table .colour_swatch {
+  color: black;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 20px 10px;
+}
+.colour-table .dark .colour_swatch,
+.colour-table .black.colour_swatch {
+  color: white;
+}
 .module {
-  position: relative;
+  display: inline-block;
   box-sizing: border-box;
-  padding-top: 15px;
+  border-radius: 5px;
+  position: relative;
   padding: 10px;
   width: 100%;
   min-height: 240px;
-  border-radius: 5px;
-  margin: 5px;
-  display: inline-block;
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.15);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.15);
-  box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.15);
+  margin: 10px 0;
+  overflow: auto;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.3);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.3);
+  box-shadow: 1px 1px 5px 0px rgba(50, 50, 50, 0.3);
 }
 .module > h2.center {
   text-align: center;
@@ -3918,9 +3918,9 @@ a:active {
   padding-left: 10px;
 }
 .module .example {
-  padding: 10px;
-  border-radius: 5px;
   box-sizing: border-box;
+  border-radius: 5px;
+  padding: 10px;
 }
 .module .pageLayoutExample {
   position: relative;
