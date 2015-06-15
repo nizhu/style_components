@@ -3084,7 +3084,10 @@ EOF Small
 }
 .bet .actions .delete {
   color: #bf1d40;
-  padding: 5px;
+  border: 1px solid #bf1d40;
+  border-radius: 100%;
+  padding: 0px 4px 2px 5px;
+  font-size: 0.8em;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -3650,7 +3653,10 @@ EOF Small
 }
 .ticket .actions .cancel {
   color: #bf1d40;
-  padding: 5px;
+  border: 1px solid #bf1d40;
+  border-radius: 100%;
+  padding: 0px 4px 2px 5px;
+  font-size: 0.8em;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
