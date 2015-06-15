@@ -54,7 +54,6 @@ $(function(){
     On Off toggle
 */
 $(function(){
-	console.log($('.jquery-onoff'));
 	$('.jquery-onoff').onoff();
 });
 
@@ -118,7 +117,6 @@ $(function(){
     $('.notifyTrigger').on('click', function(){
         var event = sampleNotification[sampleIndex];
         document.dispatchEvent(event);
-		console.log(sampleIndex);
 		sampleIndex++;
 		sampleIndex = (sampleIndex >= 3) ? 0 : sampleIndex;
     });
@@ -179,7 +177,6 @@ $(function(){
 		} else {
 			$('.ticketBodyExample #ember6594').val(0);
 		}
-		console.log('stake:', stake, e.target.id);
 	})
 
 	$('.ticketBodyExample .buttonClear').on('click' , function(e) {

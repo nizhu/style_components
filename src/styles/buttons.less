@@ -17,7 +17,7 @@ button, .button {
 	@local_alternative_colour: @feature_colour;
 	@local_alternative_colour_light: @feature_colour_light;
 	@local_alternative_colour_dark: @feature_colour_dark;
-	
+
 	@local_supplementary_colour: @supplementary_colour;
 	@local_supplementary_colour_light: @supplementary_colour_light;
 	@local_supplementary_colour_dark: @supplementary_colour_dark;
@@ -88,7 +88,10 @@ button, .button {
 	}
 }
 
-button.short, .button.short{
+button.longest, .button.longest { width: 90%; }
+button.long, .button.long { width: 70%; }
+button.medium, .button.medium { width: 50%; }
+button.short, .button.short {
 	width: 90px;
 	font-weight: bold;
 	.small;
