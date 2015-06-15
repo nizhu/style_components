@@ -89,7 +89,10 @@
 
 		.cancel {
 			color: @local_negative_colour;
-			padding: 5px;
+			border: 1px solid @local_negative_colour;
+			border-radius: 100%;
+			padding: 0px 4px 2px 5px;
+			.small;
 			.transition(all 0.5s ease);
 
 			&:hover {
