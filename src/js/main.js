@@ -181,4 +181,8 @@ $(function(){
 		}
 		console.log('stake:', stake, e.target.id);
 	})
+
+	$('.ticketBodyExample .buttonClear').on('click' , function(e) {
+		$('.ticketBodyExample #ember6594').val(0);
+	});
 });
