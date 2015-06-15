@@ -1202,6 +1202,18 @@ button a:focus,
   width: auto;
   min-width: 80px;
 }
+button.longest,
+.button.longest {
+  width: 90%;
+}
+button.long,
+.button.long {
+  width: 70%;
+}
+button.medium,
+.button.medium {
+  width: 50%;
+}
 button.short,
 .button.short {
   width: 90px;
@@ -3602,7 +3614,7 @@ EOF Small
 .ticket {
   margin-left: auto;
   margin-right: auto;
-  width: 320px;
+  width: 360px;
   background-color: #ffffff;
   color: #3d3d3d;
 }
