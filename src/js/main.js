@@ -79,14 +79,6 @@ $(function(){
     Notifications
 */
 $(function(){
-    var event = new CustomEvent('notify', {
-        'detail': {
-            notify_level: 'alert',//this param in currently not in use
-            notifyClass: 'alert',//this is the class name that will be added to the notify element (use it for styles or ref..)
-            message: "ALERT!"//this is the string that will be printed inside the notification
-        }
-    });
-
     var notificationEventArray = [
         new CustomEvent('notify', {
             'detail': {
@@ -112,32 +104,48 @@ $(function(){
     ];
 
     var notificationIndex = 0;
-
-    document.dispatchEvent(notificationEventArray[0]);//simply dispatch the event and notify will handle it
-
     window.setInterval(function(){
-        if (notificationIndex < 3) {
+        if (notificationIndex < 2) {
             notificationIndex++
             document.dispatchEvent(notificationEventArray[notificationIndex]);
-        } else { 
+        } else {
             notificationIndex = 0;
             document.dispatchEvent(notificationEventArray[notificationIndex]);
-            document.dispatchEvent(notificationEventArray[notificationIndex+1]);
         }
+    }, 2000);
 
-    }, 10000);
-
+	sampleIndex = 0;
     $('.notifyTrigger').on('click', function(){
-        var event = new CustomEvent('notify', {
-            'detail': {
-                notify_level: 'notify',//this param in currently not in use
-                notifyClass: 'notify',//this is the class name that will be added to the notify element (use it for styles or ref..)
-                message: "<h3><span>&#x2713;</span> Account Verified</h3><p>Notification From Button Click.<br/>More information on IDV can be found below</p>"//this is the string that will be printed inside the notification
-            }
-        });
+        var event = sampleNotification[sampleIndex];
         document.dispatchEvent(event);
+		console.log(sampleIndex);
+		sampleIndex++;
+		sampleIndex = (sampleIndex >= 3) ? 0 : sampleIndex;
     });
 
+	var sampleNotification = [
+		new CustomEvent('notify', {
+			'detail': {
+				notify_level: 'notify',//this param in currently not in use
+				notifyClass: 'notify',//this is the class name that will be added to the notify element (use it for styles or ref..)
+				message: "<h3><span>&#x2713;</span> Account Verified</h3><p>Notification From Button Click.<br/>More information on IDV can be found below</p>"//this is the string that will be printed inside the notification
+			}
+		}),
+		new CustomEvent('notify', {
+			'detail': {
+				notify_level: 'alert',
+				notifyClass: 'alert',
+				message: "<h3><span>&#x274c;</span> Account Unverified <button class='alternative small'>Verify Now</button></h3><br/><p>More information on IDV can be found below</p>"
+			}
+		}),
+		new CustomEvent('notify', {
+			'detail': {
+				notify_level: 'warn',
+				notifyClass: 'warn',
+				message: "<h3>Warning</h3><p>This is only a drill, please remain calm</p>"
+			}
+		})
+	];
 });
 
 /* Modal */
@@ -151,4 +159,26 @@ $(function(){
             $(this).removeClass('open');
         });
     });
+});
+
+/* Lefthand Navigation */
+$(function(){
+	$('.sitenav .mainNav').on('click' , function(e) {
+		$('.sitenav .mainNav a').removeClass('active');
+		$(e.target).addClass('active');
+	})
+});
+
+/* Ticket */
+$(function(){
+	$('.ticketBodyExample .calc button').on('click' , function(e) {
+		var stake = $('.ticketBodyExample #ember6594').val() ? parseFloat($('.ticketBodyExample #ember6594').val()) : 0;
+		var adder = parseFloat(e.target.id)/100;
+		if (adder) {
+			$('.ticketBodyExample #ember6594').val(stake+adder);
+		} else {
+			$('.ticketBodyExample #ember6594').val(0);
+		}
+		console.log('stake:', stake, e.target.id);
+	})
 });
