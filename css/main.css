@@ -1204,7 +1204,9 @@ button a:focus,
 }
 button.short,
 .button.short {
-  width: 100px;
+  width: 90px;
+  font-weight: bold;
+  font-size: 0.8em;
 }
 /* live betting and quick multi button on homepage and sport */
 .live-betting,
@@ -1278,7 +1280,7 @@ input .icheckbox_flat.checked:before {
   top: 0;
   left: 0;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 div .icheckbox_flat.disabled,
 .luxInput .icheckbox_flat.disabled,
@@ -1725,6 +1727,9 @@ input[type="tel"] {
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   padding: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 div[type="text"]:focus,
 .luxInput[type="text"]:focus,
