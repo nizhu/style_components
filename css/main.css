@@ -3057,6 +3057,9 @@ EOF Small
   color: #947818;
   font-size: 0.8em;
 }
+.time .message.closed {
+  color: #bf1d40;
+}
 .bet {
   background-color: #ffffff;
   padding: 10px;
