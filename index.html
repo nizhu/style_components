@@ -107,9 +107,9 @@
                             <th class="row_header">Dark </th>
                             <td class="">
                                 <div class="feature_colour_dark colour_swatch">
-                                    <div class="cmyk">C49 M84 Y68 K72</div>
-                                    <div class="rgb">R63 G10 B21</div>
-                                    <div class="hex">#3F0A15</div>
+                                    <div class="cmyk">C0 M98 Y70 K35</div>
+                                    <div class="rgb">R165 G18 B49</div>
+                                    <div class="hex">#A51231</div>
                                 </div>
                             </td>
                             <td class="">
@@ -367,12 +367,12 @@
                     <p>Labeled</p>
                     <hr/>
                     <div class="input_wrap col">
-                        <label for="radio_1">Option 1</label>
                         <input type="radio" name="iCheck" class="icheck" id="radio_1">
+						<label for="radio_1">Option 1</label>
                     </div>
                     <div class="input_wrap col">
-                        <label for="radio_2">Option 2</label>
                         <input type="radio" name="iCheck" class="icheck" id="radio_2" checked>
+						<label for="radio_2">Option 2</label>
                     </div>
                 </div>
 
@@ -380,14 +380,26 @@
                     <p>Yes / No (Positive / Negative)</p>
                     <hr/>
                     <div class="input_wrap affirmative col">
-                        <label for="radio_1">Yes</label>
                         <input type="radio" name="iCheck_3" class="icheck" id="radio_positive">
+						<label for="radio_positive">Yes</label>
                     </div>
                     <div class="input_wrap negative col">
-                        <label for="radio_2">No</label>
                         <input type="radio" name="iCheck_3" class="icheck" id="radio_negative" checked>
+						<label for="radio_negative">No</label>
                     </div>
                 </div>
+
+				<br/>
+				<div class="example radio_buttons radio_buttons_labeled">
+					<p>For use in a small area </p>
+					<hr/>
+					<div class="input_wrap radio_small">
+						<input type="radio" name="iCheck_2" class="icheck" id="radio_3"><label for="radio_3">Option 1</label>
+					</div>
+					<div class="input_wrap radio_small">
+						<input type="radio" name="iCheck_2" class="icheck" id="radio_4" checked><label for="radio_4">Option 2</label>
+					</div>
+				</div>
 
                 <div class="clearspace"></div>
                 <h3>Check Boxes</h3>
@@ -398,14 +410,12 @@
 
                 <div class="clearspace"></div>
                 <h3>Switches / Toggles </h3>
-                    <input type="checkbox" class="jquery-onoff luxInput" checked />
-
+				<input type="checkbox" class="jquery-onoff luxInput" checked />
 
 
                 <div class="clearspace"></div>
                 <h3>Stake</h3>
-                <input class="luxInput" type="text" placeholder="$"/>
-
+                <label for="stakeInput1">Stake </label><input id="stakeInput1" class="luxInput" type="number" min="0" step="0.5" placeholder="$"/>
             </div>
 
 			<!-- Icons -->
@@ -504,7 +514,7 @@
 
                     <div class="icon icon-sports-tennis"></div>
 
-                    <div class="icon icon-time"></div>
+					<div class="icon icon-time"></div>
 
                     <div class="icon icon-sports-volleyball"></div>
 
@@ -519,6 +529,8 @@
                     <div class="icon icon-other"></div>
 
                     <div class="icon icon-betslip"></div>
+
+					<div class="icon icon-tick"></div>
 
                 </div>
                 <div class="clearspace"></div>
@@ -709,7 +721,6 @@
                 <h2 class="center">Time</h2>
                 <span id="time_example_1" class="time">
                     <span class="warn">
-                        <div class="icon x-small icon-sports-time"></div>
                          Betting Closing
                     </span>
                     <span class="time_text">
@@ -1115,7 +1126,7 @@
                         <div class="selectionParentCategory">Race 5: Some Racename</div>
                         <div class="selectionBetType">(VIC,Quaddie)</div>
                         <div class="selectionDateTime">11:28 12/06/2015</div>
-                        <div class="selectionInfo">Race 5: 1 / Race 6: 2 / Race 7: 5 / Race 8: 5</div>
+                        <div class="selectionInfo">Race 5: 1 | Race 6: 2 | Race 7: 5 | Race 8: 5</div>
 
                         <div class="ticketColumns">
                             <div class="col_50 price">
@@ -1374,7 +1385,7 @@
 						<li>
 							<div class="wrapper notifyWrapper">
 								<div class="message notify">
-									<h3><span style="font-size: 35px;">&#x2713;</span> Account Verified</h3>
+									<h3><span class="icon small icon-tick" style="font-size: 35px; color: rgba(118, 157, 57, 1);"></span> Account Verified</h3>
 									<p>More information on IDV can be found below</p>
 								</div>
 							</div>
@@ -1397,9 +1408,11 @@
 				<button class="modalTrigger">Try It</button>
 				<div class="modalWrap">
 					<div class="modal">
-
 					</div>
 				</div>
+				<p class="modalParagraph">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus ipsum a ligula auctor luctus. Nullam dapibus dui ac hendrerit feugiat. Nam velit leo, elementum nec libero at, malesuada eleifend mi. Aenean a sodales nunc, vel consequat neque. Suspendisse sem urna, ullamcorper eu luctus sit amet, blandit id tortor. Phasellus et convallis ligula. Etiam sed turpis at lacus semper molestie quis a mi. Aliquam facilisis nibh magna, vel luctus erat accumsan nec. Phasellus ornare ullamcorper justo, id malesuada arcu pretium sed. Duis ornare erat in sagittis tristique. Aenean eu elementum nulla. Proin vehicula tempus risus vel condimentum. In tincidunt sapien et nulla lobortis, non feugiat neque faucibus. Cras at tellus a libero auctor mattis vitae quis nulla. Pellentesque velit ipsum, consectetur sed purus ut, hendrerit rutrum ipsum.
+				</p>
 			</div>
 
 
