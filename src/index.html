@@ -241,7 +241,7 @@
                 <h5>H5 Heading</h5>
                 <h6>H6 Heading</h6>
 
-                <div class="example" data-step="6" data-intro="All Heading uses HelveticaNeueBdCn, and progress in size from .9 to 2.0em. <br/> Here, set on a black backgound with white text the ">
+                <div class="example" data-step="6" data-intro="All Heading uses HelveticaNeueBdCn, and progress in size from .9 to 2.0em. <br/> Here, set on a black backgound with white text the " style="border: 2px solid #f8f8f8">
 
                     <div class="wrap">
                         <div class="list_header">Section Title <span class="float_right">Subsection Title</span></div>
@@ -403,10 +403,17 @@
 
                 <div class="clearspace"></div>
                 <h3>Check Boxes</h3>
+				<hr>
+				<input type="checkbox" class="icheck" id="checkbox_1"><label for="checkbox_1">First Checkbox</label><br/><br/>
+				<input type="checkbox" class="icheck" id="checkbox_2" checked><label for="checkbox_2">Second Checkbox</label><br/><br/>
+				<input type="checkbox" class="icheck" id="checkbox_3"><label for="checkbox_3">Third Checkbox</label><br/>
 
-                    <input type="checkbox" class="icheck" id="checkbox_1"><label for="checkbox_1">First Checkbox</label><br/><br/>
-                    <input type="checkbox" class="icheck" id="checkbox_2" checked><label for="checkbox_2">Second Checkbox</label><br/><br/>
-					<input type="checkbox" class="icheck" id="checkbox_3"><label for="checkbox_3">Third Checkbox</label><br/>
+				<div class="clearspace"></div>
+				<h3>Small checkboxes</h3>
+				<hr>
+				<input type="checkbox" name="winplace" value="winplace" class="icheck_small"><label>Win/Place</label><br/><br/>
+				<input type="checkbox" name="winplace" value="winplace" class="icheck_small"><label>Flexi</label>
+
 
                 <div class="clearspace"></div>
                 <h3>Switches / Toggles </h3>
@@ -1163,7 +1170,8 @@
 
 						<div class="additionalOptions">
 							<div class="checkBoxWrap">
-								<input type="checkbox" name="winplace" value="winplace">Win/Place
+								<input type="checkbox" name="winplace" value="winplace" class="icheck_small"><label>Win/Place</label>&nbsp;&nbsp;&nbsp;&nbsp;
+								<input type="checkbox" name="winplace" value="winplace" class="icheck_small"><label>Flexi</label>
 							</div>
 						</div>
 
@@ -1385,7 +1393,7 @@
 						<li>
 							<div class="wrapper notifyWrapper">
 								<div class="message notify">
-									<h3><span class="icon small icon-tick" style="font-size: 35px; color: rgba(118, 157, 57, 1);"></span> Account Verified</h3>
+									<h3><span class="icon small icon-tick" style="color: rgba(118, 157, 57, 1); line-height: 30px;"></span> Account Verified</h3>
 									<p>More information on IDV can be found below</p>
 								</div>
 							</div>
@@ -1393,7 +1401,7 @@
 						<li>
 							<div class="wrapper alertWrapper">
 								<div class="message alert">
-									<h3><span>&#x274c;</span> Account Unverified <button class="alternative small">Verify Now</button></h3>
+									<h3><span class="icon small icon-luxbet" style="color: rgba(191, 29, 64, 1); line-height: 30px;"></span> Account Unverified <button class="alternative small short" style="font-weight: normal;">Verify Now</button></h3>
 									<p>More information on IDV can be found below</p>
 								</div>
 							</div>

@@ -87,10 +87,34 @@ div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
 	.iradio_flat.checked.disabled {}
 
 
-
-	.icheckbox_flat + label, .iradio_flat + label {
+	.icheckbox_flat + label,
+	.iradio_flat + label {
 		padding-left: 10px;
 		font-size: 0.9em;
+	}
+
+
+	/* Small */
+	.icheckbox_small {
+		.icheckbox_flat;
+		width: 20px;
+		height: 20px;
+	}
+	.icheckbox_small.checked:before {
+		font-family: "LuxIcon";
+		content: '\e030';
+		color: @local_positive_colour;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 4px;
+		left: 0;
+		text-align: center;
+		font-size: .6em;
+	}
+	.icheckbox_small + label {
+		padding-left: 10px;
+		.small;
 	}
 
 

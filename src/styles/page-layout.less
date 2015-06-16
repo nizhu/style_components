@@ -1,6 +1,8 @@
 .applicationWrap {
-	background-color: @primary_colour;
-
+	@local_background: @primary_colour_light;
+	@local_background_main: @white;
+	
+	background-color: @local_background;
 	margin-left: auto;
 	margin-right: auto;
 	overflow-x: hidden;
@@ -19,12 +21,10 @@
 
 	main {
 		margin-bottom: 117px;//the height of the footer
-		.box-shadow(0px 3px 5px 0px rgba(5, 5, 5, 0.25));
 	}
 
 	.leftNavWrap {
-		background-color: @primary_colour;
-
+		background-color: @local_background;
 		width: 250px;
 		height: 100%;
 		top: 0;
@@ -40,7 +40,7 @@
 			content: " ";
 			height: auto;
 			min-height: 100%;
-			right: 0px;
+			right: 0;
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -49,12 +49,12 @@
 	}
 
 	.betslipWrap {
-		background-color: @primary_colour;
+		background-color: @local_background;
 		display: block;
 		position: absolute;
-		right: 0px;
-		top: 0px;
-		bottom: 0px;
+		right: 0;
+		top: 0;
+		bottom: 0;
 		height: auto;
 		min-height: 100%;
 		width: 250px;
@@ -66,7 +66,7 @@
 			content: " ";
 			height: auto;
 			min-height: 100%;
-			left: 0px;
+			left: 0;
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -76,41 +76,16 @@
 
 	.pageWrap {
 		position: absolute;
-		top: 0;
+		background-color: @local_background_main;
 		min-height: 100%;
-		background-color: @white;
-		left: 0px;
-		right: 0px;
+		top: 0;
+		left: 0;
+		right: 0;
 		.transform(translate3d(0, 0, 0));
 		.transition(transform .2s ease-in-out);
 
-		&:before {
-			content: " ";
-			height: auto;
-			min-height: 100%;
-			left: -5px;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			width: 5px;
-			-webkit-box-shadow: inset -3px 0 3px 0 rgba(5,5,5,0.25);
-			-moz-box-shadow: inset -3px 0 3px 0 rgba(5,5,5,0.25);
-			box-shadow: inset -3px 0 3px 0 rgba(5,5,5,0.25);
-		}
-
-		&:after {
-			content: " ";
-			height: auto;
-			min-height: 100%;
-			right: -5px;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			width: 5px;
-			-webkit-box-shadow: inset 3px 0 3px 0 rgba(5,5,5,0.25);
-			-moz-box-shadow: inset 3px 0 3px 0 rgba(5,5,5,0.25);
-			box-shadow: inset 3px 0 3px 0 rgba(5,5,5,0.25);
-		}
+		&:before {}
+		&:after {}
 	}
 
 	&.leftNav .pageWrap {
@@ -140,9 +115,7 @@
 	&.blur:not(.legacyStyles) {
 		.leftNavWrap, .pageWrap, .betslipWrap {
 			.translate3d(0, 0, 0);
-			//-webkit-filter: blur(3px);
 			.blur(3px);
-			//.transition(filter 200ms 100ms ease-in-out);
 		}
 	}
 
@@ -174,7 +147,7 @@ and (min-resolution: 264dpi)
 and (orientation : landscape) {
 
 	.applicationWrap .pageWrap {
-		left: 0px;
+		left: 0;
 		right: 250px;
 		overflow-x: visible;
 
@@ -206,13 +179,12 @@ and (orientation : landscape) {
 
 
 
-
 @media only screen
 and (orientation : portrait) {
 
 	.applicationWrap .pageWrap {
-		left: 0px;
-		right: 0px;
+		left: 0;
+		right: 0;
 		overflow-x: visible;
 
 		.transform(translate3d(0, 0, 0));
@@ -271,7 +243,14 @@ and (min-resolution: 200dpi) {
 
 	header ul.accountNav li:first-child a.menuButton { display: none;}
 	header ul.accountNav li:first-child a.menuButton:before { display: none; }
-
+	header ul.accountNav li#header_icon_nav,
+	header ul.accountNav li#header_icon_betslip {
+		position: absolute;
+	}
+	header ul.accountNav li#header_logo_luxbet {
+		width: 100%;
+		min-height: 33px;
+	}
 }
 
 

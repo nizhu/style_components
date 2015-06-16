@@ -56,13 +56,12 @@
 	li {
 		color: @local_black;
 		background-color: @local_white;
-		border: @local_border;
-		border-top: none;
+		border-top: @local_border;
 		min-height: @local_height;
 		padding-left: 5px;
 		position: relative;
 
-		&:first-child { border-top: @local_border; }
+		&:first-child { border-top: none; }
 		&:hover { background-color: @local_primary_light; }
 	}
 	li a {

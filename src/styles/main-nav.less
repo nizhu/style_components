@@ -2,6 +2,7 @@
 	@local_primary_colour_light: @primary_colour_light;
 	@local_primary_colour: @primary_colour;
 	@local_primary_colour_dark: @primary_colour_dark;
+	@local_secondary_colour_dark: @secondary_colour_dark;
 	@local_supplementary_colour: @supplementary_colour;
 
 	@local_feature_colour_light: @feature_colour_light;
@@ -9,10 +10,9 @@
 	@local_feature_colour: @feature_colour;
 
 	width: 250px;
-	background-color: @local_primary_colour;
+	background-color: @local_primary_colour_light;
 
 	li {
-		color: @white;
 		display: block;
 		width: 100%;
 		height: 100%;
@@ -20,8 +20,10 @@
 	}
 
 	li a {
+		color: @local_secondary_colour_dark;
 		margin: 0px 15px;
 		padding-bottom: 5px;
+		font-size: 16px;
 
 		&:hover {
 			border-bottom: 3px solid @local_feature_colour_dark;
@@ -61,6 +63,6 @@
 	.navSeparator {
 		width: 85%;
 		margin-left: 15px;
-		border-bottom: 2px solid @local_primary_colour_dark;
+		border-bottom: 1px solid @local_primary_colour;
 	}
 }

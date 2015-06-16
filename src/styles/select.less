@@ -96,7 +96,7 @@ div.fancy-select {
 	}
 
 	ul.options li.hover {
-		border-bottom: 1px solid @local_primary_dark;
+		background-color: @local_primary_light;
 		color: @local_black;
 	}
 
@@ -130,6 +130,10 @@ div.fancy-select {
 
 	.ndDropdown + div.trigger + ul.options li {
 		color: @local_secondary;
+	}
+
+	.ndDropdown + div.trigger + ul.options li.hover {
+		background-color: @local_secondary_light;
 	}
 
 	.ndDropdown + div.trigger + ul.options li.selected {
