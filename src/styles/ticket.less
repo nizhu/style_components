@@ -89,15 +89,11 @@
 
 		.cancel {
 			color: @local_negative_colour;
-			border: 1px solid @local_negative_colour;
-			border-radius: 100%;
-			padding: 0px 4px 2px 5px;
-			.small;
-			.transition(all 0.5s ease);
+			padding: 10px;
+			.transition(all 0.25s ease);
 
 			&:hover {
-				color: @white;
-				background-color: @local_negative_colour;
+				background-color: @local_negative_colour_light;
 			}
 		}
 	}
@@ -109,7 +105,7 @@
 	}
 
 	.placementDetails {
-		margin: 0px;
+		margin: 0;
 
 		.success {
 			background-color: @local_positive_colour_light;

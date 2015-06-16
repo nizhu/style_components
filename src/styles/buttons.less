@@ -22,9 +22,9 @@ button, .button {
 	@local_supplementary_colour_light: @supplementary_colour_light;
 	@local_supplementary_colour_dark: @supplementary_colour_dark;
 
-	@local_negative_colour: @primary_colour;
-	@local_negative_colour_light: @primary_colour_light;
-	@local_negative_colour_dark: @primary_colour_dark;
+	@local_negative_colour: @primary_colour_dark;
+	@local_negative_colour_light: @primary_colour;
+	@local_negative_colour_dark: @secondary_colour_dark;
 
 
 	display: inline-block;
@@ -36,6 +36,7 @@ button, .button {
 	width: 200px;
 	height: 35px;
 	-webkit-tap-highlight-color: transparent;
+	.transition(all 0.25s ease);
 	.border-radius(@local_border_radius);
 
 	&:hover, &:active, &:focus {
@@ -45,7 +46,8 @@ button, .button {
 	&:active {
 		.button-click-animation(button_color_change_default);
 	}
-	.button-click-keyframes(button_color_change_default, @local_default_colour, @local_default_colour_light, @local_default_colour_dark);
+	&:hover { background-color: @local_default_colour_light; }
+	.button-click-keyframes(button_color_change_default, none, @local_default_colour, none);
 
 
 	&.affirmative, &.alternative, &.negative, &.supplementary {
@@ -54,30 +56,34 @@ button, .button {
 	}
 
 	&.affirmative { background-color: @local_affirmative_colour; }
+	&.affirmative:hover { background-color: @local_affirmative_colour_dark; }
 	&.affirmative:active {
 		.button-click-animation(button_color_change_affirmative);
 	}
-	.button-click-keyframes(button_color_change_affirmative, @local_affirmative_colour, @local_affirmative_colour_light, @local_affirmative_colour_dark);
+	.button-click-keyframes(button_color_change_affirmative, @local_affirmative_colour, @local_affirmative_colour_dark, @local_affirmative_colour);
 
 
 	&.alternative { background-color: @local_alternative_colour; }
+	&.alternative:hover { background-color: @local_alternative_colour_dark; }
 	&.alternative:active {
 		.button-click-animation(button_color_change_alternative);
 	}
-	.button-click-keyframes(button_color_change_alternative, @local_alternative_colour, @local_alternative_colour_light, @local_alternative_colour_dark);
+	.button-click-keyframes(button_color_change_alternative, @local_alternative_colour, @local_alternative_colour_dark, @local_alternative_colour);
 
 
-	&.negative { background-color: @local_negative_colour_dark; }
+	&.negative { background-color: @local_negative_colour; }
+	&.negative:hover { background-color: @local_negative_colour_dark; }
 	&.negative:active {
 		.button-click-animation(button_color_change_negative);
 	}
-	.button-click-keyframes(button_color_change_negative, @local_negative_colour, @local_negative_colour_light, @local_negative_colour_dark);
+	.button-click-keyframes(button_color_change_negative, @local_negative_colour, @local_negative_colour_dark, @local_negative_colour);
 
 	&.supplementary { background-color: @local_supplementary_colour; }
+	&.supplementary:hover { background-color: @local_supplementary_colour_dark; }
 	&.supplementary:active {
 		.button-click-animation(button_color_change_supplementary);
 	}
-	.button-click-keyframes(button_color_change_supplementary, @local_supplementary_colour, @local_supplementary_colour_light, @local_supplementary_colour);
+	.button-click-keyframes(button_color_change_supplementary, @local_supplementary_colour, @local_supplementary_colour_dark, @local_supplementary_colour);
 
 	a, a:visited, a:hover, a:active, a:focus {
 		display: inline-block;

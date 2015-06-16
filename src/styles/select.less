@@ -11,42 +11,47 @@ div.fancy-select {
 	@local_secondary_light: @complimentary_colour_light;
 	@local_secondary_dark: @complimentary_colour_dark;
 
+	text-transform: capitalize;
+	font-size: 1em;
+	font-weight: normal;
+	.appearance(none);
+
 	select:active + div.trigger {
 		color: @local_primary;
 	}
 	select:focus + div.trigger {
-		box-shadow: none;
+		.box-shadow(none);
 	}
 
 	div.trigger {
+		color: @local_black;
 		background: @local_primary;
 		border: none;
-		color: @local_black;
-		font-weight: normal;
-		.box-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+		.box-shadow(none);
 	}
 	div.trigger:after {
 		border-top-color: @local_primary_dark;
-		color: @local_primary_dark;
 		top: 15px;
 	}
 
 	div.trigger.open {
-		background: @local_primary_dark;
-		color: @local_white;
+		color: @local_black;
+		background: @local_primary;
 		border: none;
 		box-shadow: none;
 	}
 	div.trigger.open:after {
-		border-top-color: @local_white;
+		border-top-color: transparent;
+		border-bottom-color: @local_primary_dark;
+		position: absolute;
+		top: 8px;
 	}
 
 	ul.options {
-		background: @local_primary;
-		border-radius: 4px;
-		border-top: none;
-		.box-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
-		.paperShadow;
+		background: @local_white;
+		border: 1px solid @local_primary;
+		border-radius: 0;
+		.box-shadow(none);
 	}
 
 	ul.options,
@@ -75,10 +80,10 @@ div.fancy-select {
 		color: @local_black;
 		margin-top: 20px;
 		margin-left: 10px;
-		font-weight: normal;
-		.small;
+		font-size: 1em;
 	}
 	ul.options ul li {
+		padding-bottom: 2px;
 		padding-left: 25px;
 		list-style-type: none;
 		list-style-position: inside;
@@ -86,37 +91,53 @@ div.fancy-select {
 	}
 
 	ul.options li.selected {
-		background: @local_primary_light;
-		color: @secondary_colour_dark;
+		background: @local_primary;
+		color: @local_black;
 	}
 
 	ul.options li.hover {
-		background: @local_primary_light;
-		color: @local_primary_dark;
+		border-bottom: 1px solid @local_primary_dark;
+		color: @local_black;
 	}
 
 
 
 	/* Secondary Dropdown */
 	.ndDropdown + div.trigger {
+		border: none;
 		background: @local_secondary_light;
 		color: @local_secondary;
+		.box-shadow(none);
 	}
 
 	.ndDropdown + div.trigger:after {
-		border-top-color: @local_secondary;
+		border-top-color: @local_primary_dark;
+		top: 15px;
+	}
+	.ndDropdown + div.trigger.open:after {
+		border-top-color: transparent;
+		border-bottom-color: @local_secondary;
+		position: absolute;
+		top: 8px;
 	}
 
 	.ndDropdown + div.trigger + ul.options {
-		background: @local_secondary_light;
+		border: 1px solid @local_secondary_light;
+		background: @local_white;
 		color: @local_secondary;
+		.box-shadow(none);
 	}
 
 	.ndDropdown + div.trigger + ul.options li {
 		color: @local_secondary;
 	}
 
+	.ndDropdown + div.trigger + ul.options li.selected {
+		background: @local_secondary_light;
+		color: @local_secondary;
+	}
+
 	.ndDropdown + div.trigger + ul.options h2 {
-		color: @local_secondary_dark;
+		color: @local_secondary;
 	}
 }

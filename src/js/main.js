@@ -3,15 +3,22 @@ $(function(){
 	var $cs = $('.styled').customSelect();
 });
 
-/*
-    iCheck, iRadio
-*/
+/* iCheck, iRadio */
 $(function(){
     $('input.icheck').iCheck({
         checkboxClass: 'icheckbox_flat',
         radioClass: 'iradio_flat',
         increaseArea: '20%' // optional
     });
+});
+
+/* Input Stake */
+$(function(){
+	$('#stakeInput1').blur(function() {
+		var stake = $('#stakeInput1').val();
+		stake = parseFloat(stake) ? parseFloat(stake).toFixed(2) : 0;
+		$('#stakeInput1').val(stake);
+	})
 });
 
 //On page / element load:
@@ -39,7 +46,7 @@ $(function(){
         mouseWheel: true,//Enable disable mouse wheel
         scrollbars: false,//show hide scrollbars
         bounce: true,//enable 'bouce' animation
-        preventDefault: true,//prevent default scroll events from triggering 
+        preventDefault: true//prevent default scroll events from triggering
     });
 });
 
@@ -83,14 +90,14 @@ $(function(){
             'detail': {
                 notify_level: 'alert',//this param in currently not in use
                 notifyClass: 'alert',//this is the class name that will be added to the notify element (use it for styles or ref..)
-                message: "ALERT!"//this is the string that will be printed inside the notification
+                message: "Alert!"//this is the string that will be printed inside the notification
             }
         }),
         new CustomEvent('notify', {
         'detail': {
                 notify_level: 'notify',//this param in currently not in use
                 notifyClass: 'notify',//this is the class name that will be added to the notify element (use it for styles or ref..)
-                message: "notify"//this is the string that will be printed inside the notification
+                message: "Notify"//this is the string that will be printed inside the notification
             }
         }),
         new CustomEvent('notify', {
@@ -133,14 +140,14 @@ $(function(){
 			'detail': {
 				notify_level: 'alert',
 				notifyClass: 'alert',
-				message: "<h3><span>&#x274c;</span> Account Unverified <button class='alternative small'>Verify Now</button></h3><br/><p>More information on IDV can be found below</p>"
+				message: "<h3><span>&#x274c;</span> Account Unverified</h3><p>Alert user for an event.<br/>More information on IDV can be found below</p>"
 			}
 		}),
 		new CustomEvent('notify', {
 			'detail': {
 				notify_level: 'warn',
 				notifyClass: 'warn',
-				message: "<h3>Warning</h3><p>This is only a drill, please remain calm</p>"
+				message: "<h3>Warning</h3><p>This is only a drill, please remain calm.<br/>More information on IDV can be found below</p>"
 			}
 		})
 	];
@@ -151,10 +158,12 @@ $(function(){
     $('.modalTrigger').on('click', function(e){
         var spinner = new Spinner().spin();
         $('.modal').append(spinner.el);
+		$('.modalParagraph').css('-webkit-filter', 'blur(3px)');
 
         $('.modal').addClass('open').on('click', function(){
             $(spinner.el, this).remove();
             $(this).removeClass('open');
+			$('.modalParagraph').css('-webkit-filter', '');
         });
     });
 });

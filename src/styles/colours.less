@@ -9,7 +9,7 @@
 
 
 @feature_colour: rgba(191, 29, 64, 1);
-@feature_colour_dark: rgba(63, 10, 21, 1);
+@feature_colour_dark: rgba(165, 18, 49, 1);
 @feature_colour_light: rgb(255, 244, 243);
 
 .feature_colour { background-color: @feature_colour; };
@@ -52,18 +52,3 @@
 .supplementary_colour { background-color: @supplementary_colour; };
 .supplementary_colour_dark { background-color: @supplementary_colour_dark; };
 .supplementary_colour_light { background-color: @supplementary_colour_light; };
-
-
-.colour_swatch {
-	margin:1px;
-	color: black;
-	font-size: 10px;
-	border-radius: 5px;
-	padding-top: 15px;
-	padding: 20px 10px;
-	.box-shadow(1px 1px 2px 0px rgba(50, 50, 50, 0.75));
-}
-
-.dark .colour_swatch, .black.colour_swatch {
-	color: white;
-}

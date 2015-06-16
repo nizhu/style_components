@@ -33,15 +33,16 @@ div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
 	.icheckbox_flat {}
 	.icheckbox_flat.checked {}
 	.icheckbox_flat.checked:before{
-		content: '\2713';
+		font-family: "LuxIcon";
+		content: '\e030';
 		color: @local_positive_colour;
-		width:100%;
-		height:100%;
-		position:absolute;
-		top: 0;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 4px;
 		left: 0;
-		text-align:center;
-		font-size: 1.6em;
+		text-align: center;
+		font-size: 1em;
 	}
 	.icheckbox_flat.disabled {
 		cursor: default;
@@ -74,6 +75,11 @@ div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
 	&.input_wrap.negative .iradio_flat {}
 	&.input_wrap.negative .iradio_flat.checked ins {}
 
+	&.input_wrap.radio_small { .small; padding: 3px 0;}
+	&.input_wrap.radio_small .iradio_flat {
+		width: 18px;
+		height: 18px;
+	}
 
 	.iradio_flat.disabled {
 		cursor: default;
@@ -146,16 +152,16 @@ div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
 
 	/* SWITCH */
 	.onoffswitch-label {
-		border: @local_border;
+		border: none;
 	}
 	.onoffswitch-inner:before {
 		background-color: @local_positive_colour;
-		border: @local_border;
+		border: none;
 		border-radius: 20px;
 	}
 	.onoffswitch-inner:after {
 		background-color: @local_primary_colour_dark;
-		border: @local_border;
+		border: none;
 		border-radius: 20px;
 		color: @local_white;
 	}
@@ -163,7 +169,7 @@ div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
 		width: 20px;
 		height: 20px;
 		border-radius: 100%;
-		border: @local_border;
+		border: none;
 	}
 	.onoffswitch:active {
 		transform: scale(0.97);
@@ -174,18 +180,12 @@ div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
 	&[type="text"], &[type="number"], &[type="password"], &[type="tel"] {
 		border: @local_border;
 		border-radius: 3px;
+		min-height: 35px;
 		padding: 5px;
 		.appearance(none);
-		&:focus {
+		&:focus, &:active {
 			outline: none;
-			border-color: @local_positive_colour;
-			background-color: @local_positive_colour_light;
 		}
-		&:active {
-			.button-click-animation(textinput_color_change);
-		}
-		.button-click-keyframes(textinput_color_change, @local_primary_colour, @local_primary_colour_light, @local_primary_colour_dark);
-
 	}
 }
 
@@ -207,6 +207,5 @@ div, .luxInput, div[class^='icheck'], div[class^='iradio'], input {
 	padding-right: 20px;
 }
 .module .example.radio_buttons label {
-	display: block;
 	box-sizing: border-box;
 }
