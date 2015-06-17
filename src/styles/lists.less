@@ -37,16 +37,17 @@
 
 	&.detailed {
 		li {
-			min-height: @local_height;
+			min-height: 50px; //@local_height;
 		}
 		li a {
 			min-height: @local_height;
 		}
-		li .titleWrap, li .products {
+		li .products {
 			margin-left: 50px;
 		}
 		li .titleWrap {
 			padding-top: 5px;
+			margin-left: 40px;
 		}
 		li .titleWrap .title {
 			line-height: normal;
@@ -58,7 +59,6 @@
 		background-color: @local_white;
 		border-top: @local_border;
 		min-height: @local_height;
-		padding-left: 5px;
 		position: relative;
 		.transition(all 250ms ease);
 
@@ -81,7 +81,7 @@
 		left: 0;
 		top: 25%;
 		bottom: 25%;
-		margin: 0;
+		margin: 0 0 0 5px;
 		color: @local_primary_dark;
 		&:after {
 			line-height: 20px;
@@ -94,7 +94,7 @@
 		left: 0;
 		top: 5%;
 		bottom: 25%;
-		margin: 0;
+		margin: 0 0 0 5px;
 		line-height: 0;
 	}
 	li .arrowWrap {
@@ -116,6 +116,7 @@
 	}
 	li .titleWrap {
 		display: block;
+		padding-left: 10px;
 
 		.title {
 			display: inline-block;

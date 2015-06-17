@@ -1,5 +1,5 @@
 .list_header {
-	display: inline-block;
+	display: block;
 	width: 100%;
 	padding: 30px 10px 5px 10px;
 	background-color: @primary_colour_light;
@@ -8,12 +8,13 @@
 }
 
 .list_header_invert {
-	display: inline-block;
+	display: block;
 	width: 100%;
 	padding: 10px;
 	background-color: @white;
 	color: @black;
-	border: solid 1px @primary_colour;
+	border-top: solid 1px @primary_colour;
+	border-bottom: solid 1px @primary_colour;
 }
 
 .list_header .float_right, .list_header_invert .float_right {

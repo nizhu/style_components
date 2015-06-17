@@ -94,7 +94,7 @@ button, .button {
 	}
 }
 
-button.longest, .button.longest { width: 90%; }
+button.longest, .button.longest { width: 100%; }
 button.long, .button.long { width: 70%; }
 button.medium, .button.medium { width: 50%; }
 button.short, .button.short {
@@ -108,16 +108,8 @@ button.short, .button.short {
 .live-betting, .quick-multi {
 	display: block;
 	padding: 10px;
-	margin: 0;
-	font-weight: normal;
-	.border-radius(0);
+	text-transform: uppercase;
 
-	span { color: @local_white; }
-
-	.arrow {
-		position: relative;
-		top: -12px;
-		float: right;
-		font-size: 30px;
-	}
+	span, span.arrowWrap span.arrow { color: @local_white; }
+	span.title { line-height: 1.8em; }
 }

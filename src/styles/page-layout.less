@@ -1,6 +1,7 @@
 .applicationWrap {
 	@local_background: @primary_colour_light;
 	@local_background_main: @white;
+	@local_primary: @primary_colour;
 	
 	background-color: @local_background;
 	margin-left: auto;
@@ -77,6 +78,8 @@
 	.pageWrap {
 		position: absolute;
 		background-color: @local_background_main;
+		border-left: 1px solid @local_primary;
+		border-right: 1px solid @local_primary;
 		min-height: 100%;
 		top: 0;
 		left: 0;
