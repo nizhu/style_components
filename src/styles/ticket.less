@@ -86,15 +86,22 @@
 
 	.actions {
 		float: right;
+		width: 20px;
+		height: 20px;
+		border: 1px solid @local_negative_colour;
+		.border-radius(100%);
+		.transition(all 250ms ease);
 
 		.cancel {
 			color: @local_negative_colour;
-			padding: 10px;
-			.transition(all 0.25s ease);
+			display: block;
+			padding: 0 5px;
+			line-height: 1.2em;
+			.small;
+		}
 
-			&:hover {
-				background-color: @local_negative_colour_light;
-			}
+		&.hover {
+			background-color: @local_negative_colour_light;
 		}
 	}
 

@@ -9,8 +9,12 @@
 	@local_feature_colour_dark: @feature_colour_dark;
 	@local_feature_colour: @feature_colour;
 
+	@local_white: @white;
+	@local_white_75: rgba(255, 255, 255, 0.75);;
+
 	width: 250px;
 	background-color: @local_primary_colour_light;
+
 
 	li {
 		display: block;
@@ -34,7 +38,7 @@
 	}
 
 	.ribbon {
-		color: @white;
+		color: @local_white_75;
 		background-color: @local_feature_colour;
 		padding: 10px;
 		line-height: 1.4em;
@@ -43,7 +47,7 @@
 
 		.ribbonText {}
 		.ribbonValue {
-			font-weight: bold;
+			color: @local_white;
 			margin-left: 10px;
 		}
 	}
