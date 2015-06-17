@@ -11,6 +11,10 @@ $(function(){
         radioClass: 'iradio_flat',
         increaseArea: '20%' // optional
     });
+	$('input.icheck_small').iCheck({
+		checkboxClass: 'icheckbox_small',
+		radioClass: 'iradio_small'
+	});
 });
 
 /* Input Stake */
@@ -63,6 +67,9 @@ $(function(){
 */
 $(function(){
 	$('.jquery-onoff').onoff();
+	$('.jquery-onoff').on('click', function(e){
+
+	});
 });
 
 /*
@@ -119,7 +126,7 @@ $(function(){
             notificationIndex = 0;
             document.dispatchEvent(notificationEventArray[notificationIndex]);
         }
-    }, 2000);
+    }, 20000);
 
 	sampleIndex = 0;
     $('.notifyTrigger').on('click', function(){
@@ -159,12 +166,12 @@ $(function(){
     $('.modalTrigger').on('click', function(e){
         var spinner = new Spinner().spin();
         $('.modal').append(spinner.el);
-		$('.modalParagraph').css('-webkit-filter', 'blur(3px)');
+		//$('.modalParagraph').css('-webkit-filter', 'blur(3px)');
 
         $('.modal').addClass('open').on('click', function(){
             $(spinner.el, this).remove();
             $(this).removeClass('open');
-			$('.modalParagraph').css('-webkit-filter', '');
+			//$('.modalParagraph').css('-webkit-filter', '');
         });
     });
 });

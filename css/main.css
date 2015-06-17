@@ -90,7 +90,7 @@ acronym {
   box-shadow: inset 0px 3px 5px 0px rgba(5, 5, 5, 0.15);
 }
 .applicationWrap {
-  background-color: #dbdbdb;
+  background-color: #f8f8f8;
   margin-left: auto;
   margin-right: auto;
   overflow-x: hidden;
@@ -111,12 +111,9 @@ acronym {
 }
 .applicationWrap main {
   margin-bottom: 117px;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.25);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.25);
-  box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.25);
 }
 .applicationWrap .leftNavWrap {
-  background-color: #dbdbdb;
+  background-color: #f8f8f8;
   width: 250px;
   height: 100%;
   top: 0;
@@ -138,19 +135,19 @@ acronym {
   content: " ";
   height: auto;
   min-height: 100%;
-  right: 0px;
+  right: 0;
   position: absolute;
   top: 0;
   bottom: 0;
   width: 5px;
 }
 .applicationWrap .betslipWrap {
-  background-color: #dbdbdb;
+  background-color: #f8f8f8;
   display: block;
   position: absolute;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
+  right: 0;
+  top: 0;
+  bottom: 0;
   height: auto;
   min-height: 100%;
   width: 250px;
@@ -168,7 +165,7 @@ acronym {
   content: " ";
   height: auto;
   min-height: 100%;
-  left: 0px;
+  left: 0;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -176,11 +173,11 @@ acronym {
 }
 .applicationWrap .pageWrap {
   position: absolute;
-  top: 0;
-  min-height: 100%;
   background-color: #ffffff;
-  left: 0px;
-  right: 0px;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -o-transform: translate3d(0, 0, 0);
@@ -190,32 +187,6 @@ acronym {
   -moz-transition: -moz-transform 0.2s ease-in-out;
   -o-transition: -o-transform 0.2s ease-in-out;
   transition: -webkit-transform 0.2s ease-in-out,-moz-transform 0.2s ease-in-out,-o-transform 0.2s ease-in-out,transform 0.2s ease-in-out;
-}
-.applicationWrap .pageWrap:before {
-  content: " ";
-  height: auto;
-  min-height: 100%;
-  left: -5px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  -webkit-box-shadow: inset -3px 0 3px 0 rgba(5, 5, 5, 0.25);
-  -moz-box-shadow: inset -3px 0 3px 0 rgba(5, 5, 5, 0.25);
-  box-shadow: inset -3px 0 3px 0 rgba(5, 5, 5, 0.25);
-}
-.applicationWrap .pageWrap:after {
-  content: " ";
-  height: auto;
-  min-height: 100%;
-  right: -5px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  -webkit-box-shadow: inset 3px 0 3px 0 rgba(5, 5, 5, 0.25);
-  -moz-box-shadow: inset 3px 0 3px 0 rgba(5, 5, 5, 0.25);
-  box-shadow: inset 3px 0 3px 0 rgba(5, 5, 5, 0.25);
 }
 .applicationWrap.leftNav .pageWrap {
   -webkit-transform: translate3d(250px, 0, 0);
@@ -279,7 +250,7 @@ acronym {
 /* Landscape tablets */
 @media only screen and (min-width: 768px) and (min-device-width: 768px) and (orientation: landscape), only screen and (min-width: 1024px) and (min-device-width: 1200px) and (min-device-pixel-ratio: 1.5) and (min-resolution: 264dpi) and (orientation: landscape) {
   .applicationWrap .pageWrap {
-    left: 0px;
+    left: 0;
     right: 250px;
     overflow-x: visible;
     -webkit-transform: translate3d(0, 0, 0);
@@ -326,8 +297,8 @@ acronym {
 }
 @media only screen and (orientation: portrait) {
   .applicationWrap .pageWrap {
-    left: 0px;
-    right: 0px;
+    left: 0;
+    right: 0;
     overflow-x: visible;
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
@@ -393,6 +364,14 @@ acronym {
   }
   header ul.accountNav li:first-child a.menuButton:before {
     display: none;
+  }
+  header ul.accountNav li#header_icon_nav,
+  header ul.accountNav li#header_icon_betslip {
+    position: absolute;
+  }
+  header ul.accountNav li#header_logo_luxbet {
+    width: 100%;
+    min-height: 33px;
   }
 }
 /* Large Devices, Wide Screens */
@@ -577,14 +556,17 @@ body {
 .luxbet_list_page li {
   color: #131313;
   background-color: #ffffff;
-  border: 1px solid #dbdbdb;
-  border-top: none;
+  border-top: 1px solid #dbdbdb;
   min-height: 45px;
   padding-left: 5px;
   position: relative;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
 }
 .luxbet_list_page li:first-child {
-  border-top: 1px solid #dbdbdb;
+  border-top: none;
 }
 .luxbet_list_page li:hover {
   background-color: #f8f8f8;
@@ -785,11 +767,11 @@ button:focus,
 }
 button:active,
 .button:active {
-  -webkit-animation: button_color_change_default 750ms 1 normal;
-  -moz-animation: button_color_change_default 750ms 1 normal;
-  -ms-animation: button_color_change_default 750ms 1 normal;
-  -o-animation: button_color_change_default 750ms 1 normal;
-  animation: button_color_change_default 750ms 1 normal;
+  -webkit-animation: button_color_change_default 250ms 1 normal;
+  -moz-animation: button_color_change_default 250ms 1 normal;
+  -ms-animation: button_color_change_default 250ms 1 normal;
+  -o-animation: button_color_change_default 250ms 1 normal;
+  animation: button_color_change_default 250ms 1 normal;
 }
 button:hover,
 .button:hover {
@@ -856,11 +838,11 @@ button.affirmative:hover,
 }
 button.affirmative:active,
 .button.affirmative:active {
-  -webkit-animation: button_color_change_affirmative 750ms 1 normal;
-  -moz-animation: button_color_change_affirmative 750ms 1 normal;
-  -ms-animation: button_color_change_affirmative 750ms 1 normal;
-  -o-animation: button_color_change_affirmative 750ms 1 normal;
-  animation: button_color_change_affirmative 750ms 1 normal;
+  -webkit-animation: button_color_change_affirmative 250ms 1 normal;
+  -moz-animation: button_color_change_affirmative 250ms 1 normal;
+  -ms-animation: button_color_change_affirmative 250ms 1 normal;
+  -o-animation: button_color_change_affirmative 250ms 1 normal;
+  animation: button_color_change_affirmative 250ms 1 normal;
 }
 @keyframes button_color_change_affirmative {
   25% {
@@ -912,11 +894,11 @@ button.alternative:hover,
 }
 button.alternative:active,
 .button.alternative:active {
-  -webkit-animation: button_color_change_alternative 750ms 1 normal;
-  -moz-animation: button_color_change_alternative 750ms 1 normal;
-  -ms-animation: button_color_change_alternative 750ms 1 normal;
-  -o-animation: button_color_change_alternative 750ms 1 normal;
-  animation: button_color_change_alternative 750ms 1 normal;
+  -webkit-animation: button_color_change_alternative 250ms 1 normal;
+  -moz-animation: button_color_change_alternative 250ms 1 normal;
+  -ms-animation: button_color_change_alternative 250ms 1 normal;
+  -o-animation: button_color_change_alternative 250ms 1 normal;
+  animation: button_color_change_alternative 250ms 1 normal;
 }
 @keyframes button_color_change_alternative {
   25% {
@@ -968,11 +950,11 @@ button.negative:hover,
 }
 button.negative:active,
 .button.negative:active {
-  -webkit-animation: button_color_change_negative 750ms 1 normal;
-  -moz-animation: button_color_change_negative 750ms 1 normal;
-  -ms-animation: button_color_change_negative 750ms 1 normal;
-  -o-animation: button_color_change_negative 750ms 1 normal;
-  animation: button_color_change_negative 750ms 1 normal;
+  -webkit-animation: button_color_change_negative 250ms 1 normal;
+  -moz-animation: button_color_change_negative 250ms 1 normal;
+  -ms-animation: button_color_change_negative 250ms 1 normal;
+  -o-animation: button_color_change_negative 250ms 1 normal;
+  animation: button_color_change_negative 250ms 1 normal;
 }
 @keyframes button_color_change_negative {
   25% {
@@ -1024,11 +1006,11 @@ button.supplementary:hover,
 }
 button.supplementary:active,
 .button.supplementary:active {
-  -webkit-animation: button_color_change_supplementary 750ms 1 normal;
-  -moz-animation: button_color_change_supplementary 750ms 1 normal;
-  -ms-animation: button_color_change_supplementary 750ms 1 normal;
-  -o-animation: button_color_change_supplementary 750ms 1 normal;
-  animation: button_color_change_supplementary 750ms 1 normal;
+  -webkit-animation: button_color_change_supplementary 250ms 1 normal;
+  -moz-animation: button_color_change_supplementary 250ms 1 normal;
+  -ms-animation: button_color_change_supplementary 250ms 1 normal;
+  -o-animation: button_color_change_supplementary 250ms 1 normal;
+  animation: button_color_change_supplementary 250ms 1 normal;
 }
 @keyframes button_color_change_supplementary {
   25% {
@@ -1136,6 +1118,7 @@ div[class^='iradio'],
 input {
   /* iCheck plugin flat skin, black
 	----------------------------------- */
+  /* Small */
   /* Default */
   /* affirmative */
   /* negative */
@@ -1248,6 +1231,49 @@ input .iradio_flat + label {
   padding-left: 10px;
   font-size: 0.9em;
 }
+div .icheckbox_small,
+.luxInput .icheckbox_small,
+div[class^='icheck'] .icheckbox_small,
+div[class^='iradio'] .icheckbox_small,
+input .icheckbox_small {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  width: 20px;
+  height: 20px;
+}
+div .icheckbox_small.checked:before,
+.luxInput .icheckbox_small.checked:before,
+div[class^='icheck'] .icheckbox_small.checked:before,
+div[class^='iradio'] .icheckbox_small.checked:before,
+input .icheckbox_small.checked:before {
+  font-family: "LuxIcon";
+  content: '\e030';
+  color: #769d39;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  text-align: center;
+  font-size: .6em;
+}
+div .icheckbox_small + label,
+.luxInput .icheckbox_small + label,
+div[class^='icheck'] .icheckbox_small + label,
+div[class^='iradio'] .icheckbox_small + label,
+input .icheckbox_small + label {
+  padding-left: 10px;
+  font-size: 0.8em;
+}
 div.iradio_flat:active,
 .luxInput.iradio_flat:active,
 div[class^='icheck'].iradio_flat:active,
@@ -1258,11 +1284,11 @@ div.iradio_flat:active ins,
 div[class^='icheck'].iradio_flat:active ins,
 div[class^='iradio'].iradio_flat:active ins,
 input.iradio_flat:active ins {
-  -webkit-animation: radio_button_select 750ms 1 normal;
-  -moz-animation: radio_button_select 750ms 1 normal;
-  -ms-animation: radio_button_select 750ms 1 normal;
-  -o-animation: radio_button_select 750ms 1 normal;
-  animation: radio_button_select 750ms 1 normal;
+  -webkit-animation: radio_button_select 250ms 1 normal;
+  -moz-animation: radio_button_select 250ms 1 normal;
+  -ms-animation: radio_button_select 250ms 1 normal;
+  -o-animation: radio_button_select 250ms 1 normal;
+  animation: radio_button_select 250ms 1 normal;
 }
 @keyframes radio_button_select {
   25% {
@@ -1314,11 +1340,11 @@ div.affirmative .iradio_flat:active ins,
 div[class^='icheck'].affirmative .iradio_flat:active ins,
 div[class^='iradio'].affirmative .iradio_flat:active ins,
 input.affirmative .iradio_flat:active ins {
-  -webkit-animation: radio_button_affirmative_select 750ms 1 normal;
-  -moz-animation: radio_button_affirmative_select 750ms 1 normal;
-  -ms-animation: radio_button_affirmative_select 750ms 1 normal;
-  -o-animation: radio_button_affirmative_select 750ms 1 normal;
-  animation: radio_button_affirmative_select 750ms 1 normal;
+  -webkit-animation: radio_button_affirmative_select 250ms 1 normal;
+  -moz-animation: radio_button_affirmative_select 250ms 1 normal;
+  -ms-animation: radio_button_affirmative_select 250ms 1 normal;
+  -o-animation: radio_button_affirmative_select 250ms 1 normal;
+  animation: radio_button_affirmative_select 250ms 1 normal;
 }
 @keyframes radio_button_affirmative_select {
   25% {
@@ -1377,11 +1403,11 @@ div.negative .iradio_flat:active ins,
 div[class^='icheck'].negative .iradio_flat:active ins,
 div[class^='iradio'].negative .iradio_flat:active ins,
 input.negative .iradio_flat:active ins {
-  -webkit-animation: radio_button_negative_select 750ms 1 normal;
-  -moz-animation: radio_button_negative_select 750ms 1 normal;
-  -ms-animation: radio_button_negative_select 750ms 1 normal;
-  -o-animation: radio_button_negative_select 750ms 1 normal;
-  animation: radio_button_negative_select 750ms 1 normal;
+  -webkit-animation: radio_button_negative_select 250ms 1 normal;
+  -moz-animation: radio_button_negative_select 250ms 1 normal;
+  -ms-animation: radio_button_negative_select 250ms 1 normal;
+  -o-animation: radio_button_negative_select 250ms 1 normal;
+  animation: radio_button_negative_select 250ms 1 normal;
 }
 @keyframes radio_button_negative_select {
   25% {
@@ -1428,11 +1454,11 @@ div.icheckbox_flat:active,
 div[class^='icheck'].icheckbox_flat:active,
 div[class^='iradio'].icheckbox_flat:active,
 input.icheckbox_flat:active {
-  -webkit-animation: checkbox_color_change_negative 750ms 1 normal;
-  -moz-animation: checkbox_color_change_negative 750ms 1 normal;
-  -ms-animation: checkbox_color_change_negative 750ms 1 normal;
-  -o-animation: checkbox_color_change_negative 750ms 1 normal;
-  animation: checkbox_color_change_negative 750ms 1 normal;
+  -webkit-animation: checkbox_color_change_negative 250ms 1 normal;
+  -moz-animation: checkbox_color_change_negative 250ms 1 normal;
+  -ms-animation: checkbox_color_change_negative 250ms 1 normal;
+  -o-animation: checkbox_color_change_negative 250ms 1 normal;
+  animation: checkbox_color_change_negative 250ms 1 normal;
 }
 @keyframes checkbox_color_change_negative {
   25% {
@@ -1692,7 +1718,7 @@ div.fancy-select ul.options li.selected {
   color: #131313;
 }
 div.fancy-select ul.options li.hover {
-  border-bottom: 1px solid #848484;
+  background-color: #f8f8f8;
   color: #131313;
 }
 div.fancy-select .ndDropdown + div.trigger {
@@ -1724,6 +1750,9 @@ div.fancy-select .ndDropdown + div.trigger + ul.options {
 div.fancy-select .ndDropdown + div.trigger + ul.options li {
   color: #769d39;
 }
+div.fancy-select .ndDropdown + div.trigger + ul.options li.hover {
+  background-color: #f2fae5;
+}
 div.fancy-select .ndDropdown + div.trigger + ul.options li.selected {
   background: #f2fae5;
   color: #769d39;
@@ -1747,7 +1776,6 @@ div.fancy-select .ndDropdown + div.trigger + ul.options h2 {
 .icon:after {
   font-family: "LuxIcon";
   content: '\e020';
-  color: #848484;
   width: 36px;
   height: 36px;
   display: inline-block;
@@ -2254,18 +2282,18 @@ div.fancy-select .ndDropdown + div.trigger + ul.options h2 {
 .keyframes(cheveron_color_change_default, @supplementary_colour, @supplementary_colour_light, @supplementary_colour_dark);
 */
 .icon-cheveron:active:before {
-  -webkit-animation: cheveron_click_default 750ms 1 normal;
-  -moz-animation: cheveron_click_default 750ms 1 normal;
-  -ms-animation: cheveron_click_default 750ms 1 normal;
-  -o-animation: cheveron_click_default 750ms 1 normal;
-  animation: cheveron_click_default 750ms 1 normal;
+  -webkit-animation: cheveron_click_default 250ms 1 normal;
+  -moz-animation: cheveron_click_default 250ms 1 normal;
+  -ms-animation: cheveron_click_default 250ms 1 normal;
+  -o-animation: cheveron_click_default 250ms 1 normal;
+  animation: cheveron_click_default 250ms 1 normal;
 }
 .icon-cheveron:active {
-  -webkit-animation: cheveron_click_default 750ms 1 normal;
-  -moz-animation: cheveron_click_default 750ms 1 normal;
-  -ms-animation: cheveron_click_default 750ms 1 normal;
-  -o-animation: cheveron_click_default 750ms 1 normal;
-  animation: cheveron_click_default 750ms 1 normal;
+  -webkit-animation: cheveron_click_default 250ms 1 normal;
+  -moz-animation: cheveron_click_default 250ms 1 normal;
+  -ms-animation: cheveron_click_default 250ms 1 normal;
+  -o-animation: cheveron_click_default 250ms 1 normal;
+  animation: cheveron_click_default 250ms 1 normal;
 }
 @keyframes cheveron_click_default {
   25% {
@@ -2333,18 +2361,18 @@ div.fancy-select .ndDropdown + div.trigger + ul.options h2 {
   }
 }
 .icon-cheveron.red:active:before {
-  -webkit-animation: cheveron_click_red 750ms 1 normal;
-  -moz-animation: cheveron_click_red 750ms 1 normal;
-  -ms-animation: cheveron_click_red 750ms 1 normal;
-  -o-animation: cheveron_click_red 750ms 1 normal;
-  animation: cheveron_click_red 750ms 1 normal;
+  -webkit-animation: cheveron_click_red 250ms 1 normal;
+  -moz-animation: cheveron_click_red 250ms 1 normal;
+  -ms-animation: cheveron_click_red 250ms 1 normal;
+  -o-animation: cheveron_click_red 250ms 1 normal;
+  animation: cheveron_click_red 250ms 1 normal;
 }
 .icon-cheveron.red:active {
-  -webkit-animation: cheveron_click_red 750ms 1 normal;
-  -moz-animation: cheveron_click_red 750ms 1 normal;
-  -ms-animation: cheveron_click_red 750ms 1 normal;
-  -o-animation: cheveron_click_red 750ms 1 normal;
-  animation: cheveron_click_red 750ms 1 normal;
+  -webkit-animation: cheveron_click_red 250ms 1 normal;
+  -moz-animation: cheveron_click_red 250ms 1 normal;
+  -ms-animation: cheveron_click_red 250ms 1 normal;
+  -o-animation: cheveron_click_red 250ms 1 normal;
+  animation: cheveron_click_red 250ms 1 normal;
 }
 @keyframes cheveron_click_red {
   25% {
@@ -2412,18 +2440,18 @@ div.fancy-select .ndDropdown + div.trigger + ul.options h2 {
   }
 }
 .icon-cheveron.green:active:before {
-  -webkit-animation: cheveron_click_green 750ms 1 normal;
-  -moz-animation: cheveron_click_green 750ms 1 normal;
-  -ms-animation: cheveron_click_green 750ms 1 normal;
-  -o-animation: cheveron_click_green 750ms 1 normal;
-  animation: cheveron_click_green 750ms 1 normal;
+  -webkit-animation: cheveron_click_green 250ms 1 normal;
+  -moz-animation: cheveron_click_green 250ms 1 normal;
+  -ms-animation: cheveron_click_green 250ms 1 normal;
+  -o-animation: cheveron_click_green 250ms 1 normal;
+  animation: cheveron_click_green 250ms 1 normal;
 }
 .icon-cheveron.green:active {
-  -webkit-animation: cheveron_click_green 750ms 1 normal;
-  -moz-animation: cheveron_click_green 750ms 1 normal;
-  -ms-animation: cheveron_click_green 750ms 1 normal;
-  -o-animation: cheveron_click_green 750ms 1 normal;
-  animation: cheveron_click_green 750ms 1 normal;
+  -webkit-animation: cheveron_click_green 250ms 1 normal;
+  -moz-animation: cheveron_click_green 250ms 1 normal;
+  -ms-animation: cheveron_click_green 250ms 1 normal;
+  -o-animation: cheveron_click_green 250ms 1 normal;
+  animation: cheveron_click_green 250ms 1 normal;
 }
 @keyframes cheveron_click_green {
   25% {
@@ -2776,18 +2804,19 @@ EOF Small
 */
 .mainNav {
   width: 250px;
-  background-color: #dbdbdb;
+  background-color: #f8f8f8;
 }
 .mainNav li {
-  color: #ffffff;
   display: block;
   width: 100%;
   height: 100%;
   line-height: 3.6em;
 }
 .mainNav li a {
+  color: #3d3d3d;
   margin: 0px 15px;
   padding-bottom: 5px;
+  font-size: 16px;
 }
 .mainNav li a:hover {
   border-bottom: 3px solid #a51231;
@@ -2796,7 +2825,7 @@ EOF Small
   border-bottom: 3px solid #bf1d40;
 }
 .mainNav .ribbon {
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.75);
   background-color: #bf1d40;
   padding: 10px;
   line-height: 1.4em;
@@ -2805,7 +2834,7 @@ EOF Small
   padding-bottom: 5px;
 }
 .mainNav .ribbon .ribbonValue {
-  font-weight: bold;
+  color: #ffffff;
   margin-left: 10px;
 }
 .mainNav .buttonPadding {
@@ -2821,7 +2850,7 @@ EOF Small
 .mainNav .navSeparator {
   width: 85%;
   margin-left: 15px;
-  border-bottom: 2px solid #848484;
+  border-bottom: 1px solid #dbdbdb;
 }
 .time {
   color: #947818;
@@ -2854,16 +2883,28 @@ EOF Small
 }
 .bet .actions {
   float: right;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #bf1d40;
+  -webkit-border-radius: 100%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 100%;
+  -moz-background-clip: padding;
+  border-radius: 100%;
+  background-clip: padding-box;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
 }
 .bet .actions .delete {
   color: #bf1d40;
-  padding: 10px;
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  display: block;
+  padding: 0 5px;
+  line-height: 1.2em;
+  font-size: 0.8em;
 }
-.bet .actions .delete:hover {
+.bet .actions.hover {
   background-color: #fff4f3;
 }
 .bet .ticketColumns {
@@ -2873,7 +2914,9 @@ EOF Small
   text-align: right;
 }
 .bet .bonusBetContainer {
-  padding: 5px 0;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
 }
 .bet .placementDetails.success,
 .bet .placementDetails.rejectedCombins,
@@ -2899,6 +2942,8 @@ EOF Small
   width: 90%;
 }
 .betslip .header {
+  color: #ffffff;
+  background-color: #848484;
   padding: 10px;
   font-weight: bold;
 }
@@ -2931,6 +2976,8 @@ EOF Small
   border-color: #848484;
   background-color: #f8f8f8;
   color: #848484;
+  padding: 0;
+  font-size: 0.8em;
 }
 .betslip .betSuccessAccountInfo {
   background-color: #f2fae5;
@@ -3182,164 +3229,105 @@ EOF Small
 .modal {
   background-color: #131313;
   position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: auto;
   width: auto;
-  opacity: 0.7;
-  -webkit-animation: modal_close_keyframes 750ms 1 ease-in normal forwards;
-  -moz-animation: modal_close_keyframes 750ms 1 ease-in normal forwards;
-  -ms-animation: modal_close_keyframes 750ms 1 ease-in normal forwards;
-  -o-animation: modal_close_keyframes 750ms 1 ease-in normal forwards;
-  animation: modal_close_keyframes 750ms 1 ease-in normal forwards;
+  -webkit-animation: modal_close_keyframes 250ms 1 ease-in normal forwards;
+  -moz-animation: modal_close_keyframes 250ms 1 ease-in normal forwards;
+  -ms-animation: modal_close_keyframes 250ms 1 ease-in normal forwards;
+  -o-animation: modal_close_keyframes 250ms 1 ease-in normal forwards;
+  animation: modal_close_keyframes 250ms 1 ease-in normal forwards;
+  display: none;
 }
 .modal.open {
-  -webkit-animation: modal_open_keyframes 750ms 1 ease-in normal forwards;
-  -moz-animation: modal_open_keyframes 750ms 1 ease-in normal forwards;
-  -ms-animation: modal_open_keyframes 750ms 1 ease-in normal forwards;
-  -o-animation: modal_open_keyframes 750ms 1 ease-in normal forwards;
-  animation: modal_open_keyframes 750ms 1 ease-in normal forwards;
+  -webkit-animation: modal_open_keyframes 250ms 1 ease-in normal forwards;
+  -moz-animation: modal_open_keyframes 250ms 1 ease-in normal forwards;
+  -ms-animation: modal_open_keyframes 250ms 1 ease-in normal forwards;
+  -o-animation: modal_open_keyframes 250ms 1 ease-in normal forwards;
+  animation: modal_open_keyframes 250ms 1 ease-in normal forwards;
+  display: block;
 }
 @keyframes modal_close_keyframes {
   0% {
-    transform: scale(1);
-  }
-  5% {
-    transform: scale(0.98);
-  }
-  10% {
-    transform: scale(1.01);
+    opacity: 0.7;
   }
   100% {
-    transform: scale(0);
+    opacity: 0;
   }
 }
 @-webkit-keyframes modal_close_keyframes {
   0% {
-    -webkit-transform: scale(1);
-  }
-  1% {
-    -webkit-transform: scale(0.95);
-  }
-  5% {
-    -webkit-transform: scale(1.01);
+    -webkit-opacity: 0.7;
   }
   100% {
-    -webkit-transform: scale(0);
+    -webkit-opacity: 0;
   }
 }
 @-moz-keyframes modal_close_keyframes {
   0% {
-    -moz-transform: scale(1);
-  }
-  1% {
-    -moz-transform: scale(0.95);
-  }
-  5% {
-    -moz-transform: scale(1.01);
+    -moz-opacity: 0.7;
   }
   100% {
-    -moz-transform: scale(0);
+    -moz-opacity: 0;
   }
 }
 @-o-keyframes modal_close_keyframes {
   0% {
-    -o-transform: scale(1);
-  }
-  1% {
-    -o-transform: scale(0.95);
-  }
-  5% {
-    -o-transform: scale(1.01);
+    -o-opacity: 0.7;
   }
   100% {
-    -o-transform: scale(0);
+    -o-opacity: 0;
   }
 }
 @-ms-keyframes modal_close_keyframes {
   0% {
-    -ms-transform: scale(1);
-  }
-  1% {
-    -ms-transform: scale(0.95);
-  }
-  5% {
-    -ms-transform: scale(1.01);
+    -ms-opacity: 0.7;
   }
   100% {
-    -ms-transform: scale(0);
+    -ms-opacity: 0;
   }
 }
 @keyframes modal_open_keyframes {
   0% {
-    transform: scale(0);
-  }
-  95% {
-    transform: scale(1.01);
-  }
-  99% {
-    transform: scale(0.98);
+    opacity: 0;
   }
   100% {
-    transform: scale(1);
+    opacity: 0.7;
   }
 }
 @-webkit-keyframes modal_open_keyframes {
   0% {
-    -webkit-transform: scale(0);
-  }
-  95% {
-    -webkit-transform: scale(1.01);
-  }
-  99% {
-    -webkit-transform: scale(0.98);
+    -webkit-opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
+    -webkit-opacity: 0.7;
   }
 }
 @-moz-keyframes modal_open_keyframes {
   0% {
-    -moz-transform: scale(0);
-  }
-  95% {
-    -moz-transform: scale(1.01);
-  }
-  99% {
-    -moz-transform: scale(0.98);
+    -moz-opacity: 0;
   }
   100% {
-    -moz-transform: scale(1);
+    -moz-opacity: 0.7;
   }
 }
 @-o-keyframes modal_open_keyframes {
   0% {
-    -o-transform: scale(0);
-  }
-  95% {
-    -o-transform: scale(1.01);
-  }
-  99% {
-    -o-transform: scale(0.98);
+    -o-opacity: 0;
   }
   100% {
-    -o-transform: scale(1);
+    -o-opacity: 0.7;
   }
 }
 @-ms-keyframes modal_open_keyframes {
   0% {
-    -ms-transform: scale(0);
-  }
-  95% {
-    -ms-transform: scale(1.01);
-  }
-  99% {
-    -ms-transform: scale(0.98);
+    -ms-opacity: 0;
   }
   100% {
-    -ms-transform: scale(1);
+    -ms-opacity: 0.7;
   }
 }
 .ticketWrap {
@@ -3422,16 +3410,28 @@ EOF Small
 }
 .ticket .actions {
   float: right;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #bf1d40;
+  -webkit-border-radius: 100%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 100%;
+  -moz-background-clip: padding;
+  border-radius: 100%;
+  background-clip: padding-box;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease;
 }
 .ticket .actions .cancel {
   color: #bf1d40;
-  padding: 10px;
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  display: block;
+  padding: 0 5px;
+  line-height: 1.2em;
+  font-size: 0.8em;
 }
-.ticket .actions .cancel:hover {
+.ticket .actions.hover {
   background-color: #fff4f3;
 }
 .ticket .selectionName {
@@ -3494,11 +3494,11 @@ EOF Small
   cursor: pointer;
 }
 .tabs .tab:active {
-  -webkit-animation: tab_color_change_default 750ms 1 normal;
-  -moz-animation: tab_color_change_default 750ms 1 normal;
-  -ms-animation: tab_color_change_default 750ms 1 normal;
-  -o-animation: tab_color_change_default 750ms 1 normal;
-  animation: tab_color_change_default 750ms 1 normal;
+  -webkit-animation: tab_color_change_default 250ms 1 normal;
+  -moz-animation: tab_color_change_default 250ms 1 normal;
+  -ms-animation: tab_color_change_default 250ms 1 normal;
+  -o-animation: tab_color_change_default 250ms 1 normal;
+  animation: tab_color_change_default 250ms 1 normal;
 }
 @keyframes tab_color_change_default {
   25% {
@@ -3690,6 +3690,13 @@ a:active {
   content: ' ';
   display: table-cell;
   clear: both;
+}
+.module .betslip {
+  width: 250px;
+  margin: 0 auto;
+}
+.module .icon {
+  color: #848484;
 }
 .clearspace {
   margin: 10px 0;
