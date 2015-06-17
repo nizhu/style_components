@@ -174,6 +174,8 @@ acronym {
 .applicationWrap .pageWrap {
   position: absolute;
   background-color: #ffffff;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
   min-height: 100%;
   top: 0;
   left: 0;
@@ -499,7 +501,7 @@ body {
   background-color: #f1e6be;
 }
 .list_header {
-  display: inline-block;
+  display: block;
   width: 100%;
   padding: 30px 10px 5px 10px;
   background-color: #f8f8f8;
@@ -507,12 +509,13 @@ body {
   text-transform: uppercase;
 }
 .list_header_invert {
-  display: inline-block;
+  display: block;
   width: 100%;
   padding: 10px;
   background-color: #ffffff;
   color: #131313;
-  border: solid 1px #dbdbdb;
+  border-top: solid 1px #dbdbdb;
+  border-bottom: solid 1px #dbdbdb;
 }
 .list_header .float_right,
 .list_header_invert .float_right {
@@ -538,17 +541,17 @@ body {
   color: #d8af23;
 }
 .luxbet_list_page.detailed li {
-  min-height: 45px;
+  min-height: 50px;
 }
 .luxbet_list_page.detailed li a {
   min-height: 45px;
 }
-.luxbet_list_page.detailed li .titleWrap,
 .luxbet_list_page.detailed li .products {
   margin-left: 50px;
 }
 .luxbet_list_page.detailed li .titleWrap {
   padding-top: 5px;
+  margin-left: 40px;
 }
 .luxbet_list_page.detailed li .titleWrap .title {
   line-height: normal;
@@ -558,7 +561,6 @@ body {
   background-color: #ffffff;
   border-top: 1px solid #dbdbdb;
   min-height: 45px;
-  padding-left: 5px;
   position: relative;
   -webkit-transition: all 250ms ease;
   -moz-transition: all 250ms ease;
@@ -587,7 +589,7 @@ body {
   left: 0;
   top: 25%;
   bottom: 25%;
-  margin: 0;
+  margin: 0 0 0 5px;
   color: #848484;
 }
 .luxbet_list_page li .category-icon:after {
@@ -600,7 +602,7 @@ body {
   left: 0;
   top: 5%;
   bottom: 25%;
-  margin: 0;
+  margin: 0 0 0 5px;
   line-height: 0;
 }
 .luxbet_list_page li .arrowWrap {
@@ -622,6 +624,7 @@ body {
 }
 .luxbet_list_page li .titleWrap {
   display: block;
+  padding-left: 10px;
 }
 .luxbet_list_page li .titleWrap .title {
   display: inline-block;
@@ -1070,7 +1073,7 @@ button a:focus,
 }
 button.longest,
 .button.longest {
-  width: 90%;
+  width: 100%;
 }
 button.long,
 .button.long {
@@ -1091,25 +1094,17 @@ button.short,
 .quick-multi {
   display: block;
   padding: 10px;
-  margin: 0;
-  font-weight: normal;
-  -webkit-border-radius: 0px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0px;
-  -moz-background-clip: padding;
-  border-radius: 0px;
-  background-clip: padding-box;
+  text-transform: uppercase;
 }
 .live-betting span,
-.quick-multi span {
+.quick-multi span,
+.live-betting span.arrowWrap span.arrow,
+.quick-multi span.arrowWrap span.arrow {
   color: #ffffff;
 }
-.live-betting .arrow,
-.quick-multi .arrow {
-  position: relative;
-  top: -12px;
-  float: right;
-  font-size: 30px;
+.live-betting span.title,
+.quick-multi span.title {
+  line-height: 1.8em;
 }
 div,
 .luxInput,
@@ -2819,10 +2814,10 @@ EOF Small
   font-size: 16px;
 }
 .mainNav li a:hover {
-  border-bottom: 3px solid #a51231;
+  border-bottom: 2px solid #a51231;
 }
 .mainNav li a.active {
-  border-bottom: 3px solid #bf1d40;
+  border-bottom: 2px solid #bf1d40;
 }
 .mainNav .ribbon {
   color: rgba(255, 255, 255, 0.75);
