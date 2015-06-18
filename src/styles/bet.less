@@ -8,16 +8,18 @@
 
 	background-color: @white;
 	padding: 10px;
-	border: solid 1px @primary_colour;
+	border-top: solid 1px @primary_colour;
+	border-bottom: solid 1px @primary_colour;
 
 	.col_33 {
 		width: 33%;
 	}
 
 	.selectionName {
+		color: @local_positive_colour;
 		font-size: 1.4em;
 		font-weight: bold;
-		color: @local_positive_colour;
+		width: 85%;
 	}
 	.selectionBetType {
 		.small;
@@ -39,9 +41,10 @@
 		.delete {
 			color: @local_negative_colour;
 			display: block;
-			padding: 0 5px;
-			line-height: 1.2em;
-			.small;
+			font-size: 1.3em;
+			font-weight: bold;
+			line-height: .9em;
+			padding: 0 4px;
 		}
 
 		&.hover {
