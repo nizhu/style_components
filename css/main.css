@@ -80,9 +80,9 @@ acronym {
   border: 0;
 }
 .paperShadow {
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.3);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.3);
-  box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.3);
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.75);
 }
 .paperShadow-inset {
   -webkit-box-shadow: inset 0px 3px 5px 0px rgba(5, 5, 5, 0.15);
@@ -2856,16 +2856,26 @@ EOF Small
 }
 .bet {
   background-color: #ffffff;
+  border-top: solid 1px #dbdbdb;
+  border-bottom: solid 1px #dbdbdb;
   padding: 10px;
-  border: solid 1px #dbdbdb;
 }
 .bet .col_33 {
   width: 33%;
 }
+.bet .betId a {
+  color: #769d39;
+  text-decoration: underline;
+}
+.bet .betId a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
 .bet .selectionName {
+  color: #769d39;
   font-size: 1.4em;
   font-weight: bold;
-  color: #769d39;
+  width: 85%;
 }
 .bet .selectionBetType {
   font-size: 0.8em;
@@ -2895,9 +2905,10 @@ EOF Small
 .bet .actions .delete {
   color: #bf1d40;
   display: block;
-  padding: 0 5px;
-  line-height: 1.2em;
-  font-size: 0.8em;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: .9em;
+  padding: 0 4px;
 }
 .bet .actions.hover {
   background-color: #fff4f3;
@@ -2993,9 +3004,9 @@ EOF Small
   margin: 0;
   padding: 0;
   width: 100%;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.3);
-  -moz-box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.3);
-  box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.3);
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.75);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(5, 5, 5, 0.75);
   /* SOF animateInBlind */
 }
 .notifyList li {
@@ -3422,17 +3433,19 @@ EOF Small
 .ticket .actions .cancel {
   color: #bf1d40;
   display: block;
-  padding: 0 5px;
-  line-height: 1.2em;
-  font-size: 0.8em;
+  font-size: 1.3em;
+  font-weight: bold;
+  line-height: .9em;
+  padding: 0 4px;
 }
 .ticket .actions.hover {
   background-color: #fff4f3;
 }
 .ticket .selectionName {
+  color: #769d39;
   font-size: 1.4em;
   font-weight: bold;
-  color: #769d39;
+  width: 85%;
 }
 .ticket .placementDetails {
   margin: 0;
