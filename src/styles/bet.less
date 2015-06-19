@@ -7,12 +7,22 @@
 	@local_alert_colour_light: @supplementary_colour_light;
 
 	background-color: @white;
-	padding: 10px;
 	border-top: solid 1px @primary_colour;
 	border-bottom: solid 1px @primary_colour;
+	padding: 10px;
 
 	.col_33 {
 		width: 33%;
+	}
+
+	.betId a {
+		color: @local_positive_colour;
+		text-decoration: underline;
+
+		&:hover {
+			font-weight: bold;
+			text-decoration: none;
+		}
 	}
 
 	.selectionName {
